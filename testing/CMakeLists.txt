@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( MiniRhexV2_Testing)
+include_directories(${..})
+add_executable( test_desired ../gait_parameters.cpp ../pd_control.cpp ../leg_info.cpp ../control_parameters.cpp ../desired_values.cpp desired_values_test.cpp)
+add_executable( test_conversions ../control_parameters.cpp ../conversions.cpp conversions_test.cpp)

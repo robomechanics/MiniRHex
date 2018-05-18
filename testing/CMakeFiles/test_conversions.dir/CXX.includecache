@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/control_parameters.cpp
+control_parameters.h
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/control_parameters.h
+
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/control_parameters.h
+
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/conversions.cpp
+control_parameters.h
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/control_parameters.h
+conversions.h
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/conversions.h
+algorithm
+-
+stdio.h
+-
+math.h
+-
+
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/conversions.h
+
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/testing/conversions_test.cpp
+../conversions.h
+/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/conversions.h
+stdio.h
+-
+
