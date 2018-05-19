@@ -1,11 +1,13 @@
-# MiniRHex
+# MiniRHex: An Open-source Walking Hexapod
 
-## MiniRHex setup instructions
+![MiniRHex Prototype](Images/mini1.png)
+
+## Setup instructions
 
 ### Hardware
+![Assembly Instructions](Assembly_Instructions.pdf)
 
 ### Software
-
 1. Install OpenCM IDE from http://www.robotis.us/opencmide/
 2. Clone primary repository at https://github.com/robomechanics/MiniRHex.git
 3. Clone support repository at https://github.com/nikolaif399/zero_finder.git
