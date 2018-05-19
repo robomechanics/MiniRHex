@@ -7,7 +7,7 @@ This page demonstrates the design and capabilities of MiniRHex, a $200 hardware 
 
 ### Hardware
 Assembly Instructions available in git repository under Assembly_Instructions.pdf
-![MiniRHex Prototype](Images/RHex_Mini.jpg)
+![MiniRHex CAD](Images/RHex_Mini.JPG)
 
 ### Software
 1. Install OpenCM IDE from http://www.robotis.us/opencmide/
