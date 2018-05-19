@@ -81,7 +81,7 @@ void update_gait_internal_params(leg& l, int startTime){
 int num_gaits = 6;
 
 float mini1Zeros[6] = {-3.22, -6.15, -7.03, -17.29, 0, 4.39};
-float mini2Zeros[6] = {-5.27, -65.04, 0.29, 0.59, 2.05};
+float mini2Zeros[6] = {-0.59, -17.87, -1.76, 0.88, -5.27, -1.76};
 
 float *zeros = (active_mini == 1) ? mini1Zeros : mini2Zeros;
 

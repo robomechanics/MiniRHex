@@ -26,10 +26,8 @@ struct leg_info_header{
   float kp;
   float kd;
 
-
   //computed from above in internal params
   
-
   float recovery_speed;
   float ground_speed;
   float thetas[5]; //0 through 4
