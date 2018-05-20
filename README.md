@@ -22,7 +22,7 @@ Assembly Instructions available in git repository under Assembly_Instructions.pd
 7. Use user button on robot to toggle through gaits (stand, forward, left, reverse, right, pronk)
 
 ### Specifications
-![MiniRHex Specifications](Images/Spec_Chart.png)
+![MiniRHex Specifications](Images/spec_chart.png)
 
 
 
