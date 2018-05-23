@@ -80,18 +80,25 @@ void update_gait_internal_params(leg& l, int startTime){
 //stand forward left back right pronk
 int num_gaits = 6;
 
+/*
+MODIFY THESE ARRAYS TO CONFIGURE ROBOT
+(mini1 and mini2 are our two prototypes, ignore mini2 array if you're only using one robot)
+be sure to set active_mini to 1 in gait_parameters.cpp
+*/
 float mini1Zeros[6] = {-3.22, -6.15, -7.03, -17.29, 0, 4.39};
 float mini2Zeros[6] = {-0.59, -17.87, -1.76, 0.88, -5.27, -1.76};
+int IDS[6] = {1, 2, 3, 4, 5, 6};
+
+///////////////////////
 
 float *zeros = (active_mini == 1) ? mini1Zeros : mini2Zeros;
 
-leg fake_leg0 = {0, 0, {1,  1,  1,  1, 1},      0,   0,       false, false, false}; //this leg is a spacer in the array, only used to make each leg's index be equal to its number
-leg leg1 =      {1, 0, {1, -1, -1,  1, 1},    0, zeros[0],  false, false, false};
-leg leg2 =      {2, 0, {1, -1, -1,  1, 1},    0, zeros[1],  false, false, false};
-leg leg3 =      {3, 0, {1, -1, -1,  1, 1},    0, zeros[2],  false, false, false};
-leg leg4 =      {4, 0, {1,  1, -1, -1, 1},    0, zeros[3],  true,  false, false};
-leg leg5 =      {5, 0, {1,  1, -1, -1, 1},    0, zeros[4],  true,  false, false};
-leg leg6 =      {6, 0, {1,  1, -1, -1, 1},    0, zeros[5],  true,  false, false};
-
+leg fake_leg0 = {0, 0, {1,  1,  1,  1, 1},    0,   0,       false, false, false}; //this leg is a spacer in the array, only used to make each leg's index be equal to its number
+leg leg1 =      {IDS[0], 0, {1, -1, -1,  1, 1},    0, zeros[0],  false, false, false};
+leg leg2 =      {IDS[1], 0, {1, -1, -1,  1, 1},    0, zeros[1],  false, false, false};
+leg leg3 =      {IDS[2], 0, {1, -1, -1,  1, 1},    0, zeros[2],  false, false, false};
+leg leg4 =      {IDS[3], 0, {1,  1, -1, -1, 1},    0, zeros[3],  true,  false, false};
+leg leg5 =      {IDS[4], 0, {1,  1, -1, -1, 1},    0, zeros[4],  true,  false, false};
+leg leg6 =      {IDS[5], 0, {1,  1, -1, -1, 1},    0, zeros[5],  true,  false, false};
 leg legs[] = {fake_leg0, leg1, leg2, leg3, leg4, leg5, leg6};
 

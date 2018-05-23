@@ -1,7 +1,7 @@
 #include "gait_parameters.h"
 #include "leg_info.h"
 
-int active_mini = 2; //Mini 1 vs Mini 2
+int active_mini = 1; //Mini 1 vs Mini 2
 int initial_gait = STAND;
 
 int walk_period = (active_mini == 2) ? 720:1500;
