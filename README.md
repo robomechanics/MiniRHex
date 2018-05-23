@@ -21,11 +21,6 @@ Several variables will have to be configured for each leg before we can upload c
 
 ![MiniRHex CAD](Images/RHex_Mini_IDS.JPG)
 
-Open OpenCM IDE, open calculate_zeros and run
-5. Pull up serial monitor, move legs to face directly downward and copy zeros over to array in leg_info.cpp
-6. Open MiniRHex.ino, attach micro-usb to robot and download code to robot
-7. Use user button on robot to toggle through gaits (stand, forward, left, reverse, right, pronk)
-
 ### Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
