@@ -8,7 +8,7 @@ MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notab
 ## Setup Instructions
 
 ### Hardware
-Assembly Instructions available at https://github.com/robomechanics/MiniRHex/assembly_instructions.pdf
+Assembly Instructions available at https://github.com/robomechanics/MiniRHex/blob/master/assembly_instructions.pdf
 ![Leg assembly close-up](Images/1.jpg)
 
 ### Software
