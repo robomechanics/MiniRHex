@@ -1,4 +1,4 @@
-#include "control_parameters.h"
+#include "leg.h"
 #include "conversions.h"
 #include <algorithm>    // std::min
 #include <stdio.h>

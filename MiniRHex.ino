@@ -23,7 +23,8 @@ float actual_vel;
 float actual_theta;
 float control_signal;
 float actual_p;
-
+float kp_hold = .008;
+float kd_hold = 1.0;
 
 //Deadzone
 int dead_buffer = 40;
