@@ -85,7 +85,11 @@ MODIFY THESE ARRAYS TO CONFIGURE ROBOT
 (mini1 and mini2 are our two prototypes, ignore mini2 array if you're only using one robot)
 be sure to set active_mini to 1 in gait_parameters.cpp
 */
-float mini1Zeros[6] = {-3.22, -6.15, -7.03, -17.29, 0, 4.39};
+float mini1Zeros[6] = {-3.22, -6.15, -7.03, -17.29, 0, 4.39}; //miniRHex Black
+//float mini1Zeros[6] = {0.29, 1.46, 0.29, -2.34, 1.17, 0.29}; //miniRHex Orange
+//float mini1Zeros[6] = {0, 1.17, -0.88, 0.29, -1.46, -0.29}; // miniRHex Blue
+//float mini1Zeros[6] = {0.59, -19.04, -1.76, -17.29,-0.59,-15.53}; //miniRHex Purple
+
 float mini2Zeros[6] = {-0.59, -17.87, -1.76, 0.88, -5.27, -1.76};
 int IDS[6] = {1, 2, 3, 4, 5, 6};
 
