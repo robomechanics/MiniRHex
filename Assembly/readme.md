@@ -79,4 +79,4 @@ legs until high friction surface forms on each leg.
 
 ![wiring diagram](Images/MiniRhex_wiring_diagram.PNG)
  
-
+ 
