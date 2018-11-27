@@ -23,6 +23,7 @@ serve as the foundation for the robot.
 5. Prepare the mainboard for use.
   a. Solder the battery connector onto one positive pinhole and one negative pinhole
   for power. The location on the board is shown below
+  
   ![Power pin location](Images/MiniRhex_power_pins.PNG)
   
 6. First, connect the battery case and mainboard to the foundation, with the USB port facing outwards
