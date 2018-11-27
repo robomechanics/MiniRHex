@@ -1,21 +1,21 @@
 # MiniRHex Assembly Instructions
 
 1. Solidworks files available in /CAD
-  a. Any updated or changed SolidWorks parts will be uploaded here
+    a. Any updated or changed SolidWorks parts will be uploaded here
   
 2. Look at the MiniRhexHardware file to see the needed parts and links to the items.
-  a. McMaster: M3 locknuts, button head screws, and spacer; 3mm acrylic
+    a. McMaster: M3 locknuts, button head screws, and spacer; 3mm acrylic
   
 b. Amazon: Battery, Plastidip, charger, and battery connectors
-  c. Robotis: Main board, Dynamixels, Bluetooth(optional)
+    c. Robotis: Main board, Dynamixels, Bluetooth(optional)
   
 3. Print the following (PLA), .stl files can be found in /CAD/STL
-  a. 6 servo sleeve parts, for best results print with the back side on the build plate
-  b. 4 shaft-edge parts,
-  c. 2 shaft-mid parts,
-  d. 1 battery case part,
-  e. 6 leg parts.
-  f. if you have access to an Ultimaker 3 Extended printer gcode can be found in /STL
+    a. 6 servo sleeve parts, for best results print with the back side on the build plate
+    b. 4 shaft-edge parts,
+    c. 2 shaft-mid parts,
+    d. 1 battery case part,
+    e. 6 leg parts.
+    f. if you have access to an Ultimaker 3 Extended printer gcode can be found in /STL
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
