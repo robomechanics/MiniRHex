@@ -8,13 +8,13 @@
     b. Amazon: Battery, Plastidip, charger, and battery connectors
     c. Robotis: Main board, Dynamixels, Bluetooth(optional)
   
-3. Print the following (PLA), .stl files can be found in /CAD/STL \n
-    a. 6 servo sleeve parts, for best results print with the back side on the build plate \n
-    b. 4 shaft-edge parts /n
-    c. 2 shaft-mid parts /n
-    d. 1 battery case part /n
-    e. 6 leg parts /n
-    f. if you have access to an Ultimaker 3 Extended printer gcode can be found in /STL /n
+3. Print the following (PLA), .stl files can be found in /CAD/STL
+    a. 6 servo sleeve parts, for best results print with the back side on the build plate 
+    b. 4 shaft-edge parts
+    c. 2 shaft-mid parts 
+    d. 1 battery case part 
+    e. 6 leg parts
+    f. if you have access to an Ultimaker 3 Extended printer gcode can be found in /STL 
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
