@@ -22,7 +22,8 @@ serve as the foundation for the robot.
 
 5. Prepare the mainboard for use.
   a. Solder the battery connector onto one positive pinhole and one negative pinhole
-  for power. The location on the board is shown in /Assembly - MiniRhex_power_pins
+  for power. The location on the board is shown below
+  ![Power pin location](Images/MiniRhex_power_pins.png)
   
 6. First, connect the battery case and mainboard to the foundation, with the USB port facing outwards
   a. Connections:
@@ -74,5 +75,6 @@ legs until high friction surface forms on each leg.
 
 16.Upload code using the micro-USB port.
 
-17.Take electronic wires that come with the servos, and connect them like /Assembly - MiniRhex_wiring_diagram.png
+17.Take electronic wires that come with the servos, and connect them like below
+![wiring diagram](Images/MiniRhex_wiring_diagram.png)
 
