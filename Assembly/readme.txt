@@ -1,4 +1,4 @@
-# MiniRHex Assembly Instructions
+MiniRHex Assembly Instructions
 
 1. Solidworks files available in /CAD
     a. Any updated or changed SolidWorks parts will be uploaded here
