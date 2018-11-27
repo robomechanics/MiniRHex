@@ -1,12 +1,12 @@
 # MiniRHex Assembly Instructions
 
 1. Solidworks files available in /CAD
-: a. Any updated or changed SolidWorks parts will be uploaded here
+  * a. Any updated or changed SolidWorks parts will be uploaded here
   
 2. Look at the MiniRhexHardware file to see the needed parts and links to the items.
-    a. McMaster: M3 locknuts, button head screws, and spacer; 3mm acrylic
-    b. Amazon: Battery, Plastidip, charger, and battery connectors
-    c. Robotis: Main board, Dynamixels, Bluetooth(optional)
+  * a. McMaster: M3 locknuts, button head screws, and spacer; 3mm acrylic
+  * b. Amazon: Battery, Plastidip, charger, and battery connectors
+  * c. Robotis: Main board, Dynamixels, Bluetooth(optional)
   
 3. Print the following (PLA), .stl files can be found in /CAD/STL
     a. 6 servo sleeve parts, for best results print with the back side on the build plate 
