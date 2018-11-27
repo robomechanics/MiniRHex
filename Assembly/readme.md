@@ -5,8 +5,7 @@
   
 2. Look at the MiniRhexHardware file to see the needed parts and links to the items.
     a. McMaster: M3 locknuts, button head screws, and spacer; 3mm acrylic
-  
-b. Amazon: Battery, Plastidip, charger, and battery connectors
+    b. Amazon: Battery, Plastidip, charger, and battery connectors
     c. Robotis: Main board, Dynamixels, Bluetooth(optional)
   
 3. Print the following (PLA), .stl files can be found in /CAD/STL \n
