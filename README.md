@@ -57,9 +57,11 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 ## Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
-## Useful Links
+# Useful Links
 [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
+
 [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+
 [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git)
 
 
