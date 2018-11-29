@@ -30,7 +30,7 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 4. Upload the code
 5. Repeat steps b-d for each servo
 
-### Setting Leg Zeros
+### Set Leg Zeros
 1. Clone support repository at [https://github.com/nikolaif399/zero_finder.git](https://github.com/nikolaif399/zero_finder.git)
 2. Manually rotate each leg to be as close to straight down as possible
 3. Download zero_finder.ino to the OpenCM
