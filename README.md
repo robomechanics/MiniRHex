@@ -6,6 +6,7 @@ MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notab
 
 ![Payload Demonstration](Images/Brick_carrying.png)
 ## Setup Instructions
+Building a MiniRhex require access to a 3D printer and laser cutter. The links for off the shelf parts can be found below.
 
 ### Parts List
 The Parts List and Links to order can be found in https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx
@@ -26,7 +27,7 @@ Next we need to set the servo zeros of each dynamixel. Due to slighly mechanical
 
 ![MiniRHex CAD](Images/RHex_Mini_IDS.JPG)
 
-### Operation Instructions
+## Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
 2. Open MiniRHex.ino in the OpenCM IDE, check that under "Tools",
 3. "Board" is set to ROBOTIS OpenCM9.04
@@ -41,7 +42,7 @@ Next we need to set the servo zeros of each dynamixel. Due to slighly mechanical
 12. Press the "RESET" button again to return to the standing behavior
 
 
-### Specifications
+## Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
 
