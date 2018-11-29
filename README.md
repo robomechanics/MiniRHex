@@ -11,15 +11,15 @@ MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notab
 Building a MiniRhex requires access to a 3D printer and laser cutter. The links for off the shelf parts can be found below.
 ![MiniRHex Prototype](Images/mini1.jpg)
 
-### Parts List
+### Acquire Parts
 The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
 
-### Assembly Instructions
+### Assemble Robot
 Assembly Instructions available at [Assembly](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
 
 ![Leg assembly close-up](Images/1.jpg)
 
-### Software
+### Install Software
 1. Install OpenCM IDE from [http://www.robotis.us/opencmide/](http://www.robotis.us/opencmide/)
 2. Clone primary repository at [https://github.com/robomechanics/MiniRHex.git](https://github.com/robomechanics/MiniRHex.git)
 
@@ -29,7 +29,6 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 3. Attach only the corresponding servo to the board (disconnect any other servos)
 4. Upload the code
 5. Repeat steps b-d for each servo
-
 
 ### Setting Leg Zeros
 1. Clone support repository at [https://github.com/nikolaif399/zero_finder.git](https://github.com/nikolaif399/zero_finder.git)
@@ -57,6 +56,12 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 
 ## Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
+
+## Useful Links
+[Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
+[Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+[MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git)
+
 
 
 
