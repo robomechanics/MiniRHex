@@ -27,6 +27,19 @@ Next we need to set the servo zeros of each dynamixel. Due to slighly mechanical
 ![MiniRHex CAD](Images/RHex_Mini_IDS.JPG)
 
 ### Operation Instructions
+1. Connect the MiniRHex to your computer via the Micro USB port
+2. Open MiniRHex.ino in the OpenCM IDE, check that under "Tools",
+3. "Board" is set to ROBOTIS OpenCM9.04
+4. "Port" is set to the correct COM port (whichever COM port is added when MiniRhex is plugged in)
+5. Ensure the motor zeros in leg_info.cpp are correct
+6. Set desired gait parameters in gait_parameters.cpp
+7. Click the download icon in the upper left corner of the OpenCM IDE (wait until it reports "Done Downloading")
+8. Disconnect the Micro USB cable and connect the battery
+9. Flip the power switch on the OpenCM board
+10. Press the "RESET" button, make sure all motor LEDs are green
+11. Press "USER SW" to execute the code!
+12. Press the "RESET" button again to return to the standing behavior
+
 
 ### Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
