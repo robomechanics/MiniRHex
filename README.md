@@ -20,23 +20,19 @@ Assembly Instructions available at https://github.com/robomechanics/MiniRHex/tre
 2. Clone primary repository at https://github.com/robomechanics/MiniRHex.git
 
 ### Configure Servo ID's
-Several variables will have to be configured for each leg before we can upload code from the primary repository. First, we need to match the ID of each dynamixel servo to the diagram shown below. ID's can be changed using the OpenCM board and Robotis Example scripts. In the openCM IDE, go to File>Examples>Dynamixel Easy>b_setID. This script will let you set the ID number for a single servo attached through the openCM board. Change the NEW_ID variable to the ID number you are wanting to set, attach a single servo to the board and upload the code. Repeat this process for each servo. 
-
-Set the Servo IDs
-In the openCM IDE, go to File>Examples>Dynamixel Easy>b_setID
-Change the NEW_ID variable to the ID number according to the diagram below
-Attach only the corresponding servo to the board (disconnect any other servos)
-Upload the code
-Repeat steps b-d for each servo
-Set the motor zeros in leg_info.cpp
-Clone support repository at https://github.com/nikolaif399/zero_finder.git
-Manually rotate each leg to be as close to straight down as possible
-Download zero_finder.ino to the OpenCM
-Open the serial monitor in the IDE and copy the zeros (printing) to the zeros array in leg_info.cpp
+1. In the openCM IDE, go to File>Examples>Dynamixel Easy>b_setID
+2. Change the NEW_ID variable to the ID number according to the diagram below
+3. Attach only the corresponding servo to the board (disconnect any other servos)
+4. Upload the code
+5. Repeat steps b-d for each servo
 
 
 ### Setting Leg Zeros
-Next we need to set the servo zeros of each dynamixel. Due to slighly mechanical differences and leg mounting imperfections, each leg's zero position may not naturally point straight down. To fix, Clone support repository at https://github.com/nikolaif399/zero_finder.git and run zero_finder.ino on the OpenCM. Manually rotate each leg to be as close to straight down as possible. Open the serial monitor in the IDE and copy the zeros (printing) to the zeros array in leg_info.cpp.
+1. Clone support repository at https://github.com/nikolaif399/zero_finder.git
+2. Manually rotate each leg to be as close to straight down as possible
+3. Download zero_finder.ino to the OpenCM
+4. Open the serial monitor in the IDE and copy the zeros (printing) to the zeros array in leg_info.cpp
+
 
 ![MiniRHex CAD](Images/RHex_Mini_IDS.JPG)
 
