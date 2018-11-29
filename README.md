@@ -12,12 +12,13 @@ Building a MiniRhex require access to a 3D printer and laser cutter. The links f
 The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
 
 ### Assembly Instructions
-Assembly Instructions available at https://github.com/robomechanics/MiniRHex/tree/master/Assembly
+Assembly Instructions available at [Assembly](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+
 ![Leg assembly close-up](Images/1.jpg)
 
 ### Software
-1. Install OpenCM IDE from http://www.robotis.us/opencmide/
-2. Clone primary repository at https://github.com/robomechanics/MiniRHex.git
+1. Install OpenCM IDE from [http://www.robotis.us/opencmide/](http://www.robotis.us/opencmide/)
+2. Clone primary repository at [https://github.com/robomechanics/MiniRHex.git](https://github.com/robomechanics/MiniRHex.git)
 
 ### Configure Servo ID's
 1. In the openCM IDE, go to File>Examples>Dynamixel Easy>b_setID
@@ -28,11 +29,10 @@ Assembly Instructions available at https://github.com/robomechanics/MiniRHex/tre
 
 
 ### Setting Leg Zeros
-1. Clone support repository at https://github.com/nikolaif399/zero_finder.git
+1. Clone support repository at [https://github.com/nikolaif399/zero_finder.git](https://github.com/nikolaif399/zero_finder.git)
 2. Manually rotate each leg to be as close to straight down as possible
 3. Download zero_finder.ino to the OpenCM
 4. Open the serial monitor in the IDE and copy the zeros (printing) to the zeros array in leg_info.cpp
-
 
 ![MiniRHex CAD](Images/RHex_Mini_IDS.JPG)
 
