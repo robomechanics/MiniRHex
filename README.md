@@ -3,7 +3,7 @@ Contact: nflowers@andrew.cmu.edu
 ![MiniRHex Running](Images/still.bmp)
 
 
-MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex was designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
+MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
 
 ![Payload Demonstration](Images/Brick_carrying.png)
 
@@ -12,10 +12,10 @@ Building a MiniRhex requires access to a 3D printer and laser cutter. The links 
 ![MiniRHex Prototype](Images/mini1.jpg)
 
 ### Acquire Parts
-The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
+The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx).
 
 ### Assemble Robot
-Assembly Instructions available at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+Assembly Instructions available at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly).
 
 ![Leg assembly close-up](Images/1.jpg)
 
@@ -60,12 +60,12 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 # _______________________________________________
 
 # Useful Links
-### Parts List
-The part list can be found at [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
+## Parts List
+The part list can be found at [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx).
 ### Assembly Instructions
-The assembly instructions can be found at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+The assembly instructions can be found at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly).
 ### MiniRhex Repository
-The MiniRhex repository can be found at [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git)
+The MiniRhex repository can be found at [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git).
 
 
 
