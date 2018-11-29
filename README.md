@@ -11,19 +11,19 @@ MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notab
 Building a MiniRhex requires access to a 3D printer and laser cutter. The links for off the shelf parts can be found below.
 ![MiniRHex Prototype](Images/mini1.jpg)
 
-## Parts List
+### Parts List
 The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
 
-## Assembly Instructions
+### Assembly Instructions
 Assembly Instructions available at [Assembly](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
 
 ![Leg assembly close-up](Images/1.jpg)
 
-## Software
+### Software
 1. Install OpenCM IDE from [http://www.robotis.us/opencmide/](http://www.robotis.us/opencmide/)
 2. Clone primary repository at [https://github.com/robomechanics/MiniRHex.git](https://github.com/robomechanics/MiniRHex.git)
 
-## Configure Servo ID's
+### Configure Servo ID's
 1. In the openCM IDE, go to File>Examples>Dynamixel Easy>b_setID
 2. Change the NEW_ID variable to the ID number according to the diagram below
 3. Attach only the corresponding servo to the board (disconnect any other servos)
@@ -31,7 +31,7 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 5. Repeat steps b-d for each servo
 
 
-## Setting Leg Zeros
+### Setting Leg Zeros
 1. Clone support repository at [https://github.com/nikolaif399/zero_finder.git](https://github.com/nikolaif399/zero_finder.git)
 2. Manually rotate each leg to be as close to straight down as possible
 3. Download zero_finder.ino to the OpenCM
@@ -55,7 +55,7 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 
 ![MiniRHex Running](Images/still2.bmp)
 
-# Specifications
+## Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
 
