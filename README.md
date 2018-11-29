@@ -15,7 +15,7 @@ Building a MiniRhex requires access to a 3D printer and laser cutter. The links 
 The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
 
 ### Assemble Robot
-Assembly Instructions available at [Assembly](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+Assembly Instructions available at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
 
 ![Leg assembly close-up](Images/1.jpg)
 
@@ -54,15 +54,16 @@ Assembly Instructions available at [Assembly](https://github.com/robomechanics/M
 
 ![MiniRHex Running](Images/miniOnRock.bmp)
 
-## Robot Specifications
+# Robot Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
 # Useful Links
-[Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
-
-[Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
-
-[MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git)
+### Parts List
+The part list can be found at [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx)
+### Assembly Instructions
+The assembly instructions can be found at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly)
+### MiniRhex Repository
+The MiniRhex repository can be found at [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git)
 
 
 
