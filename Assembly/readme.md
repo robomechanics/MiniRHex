@@ -75,7 +75,7 @@ legs until high friction surface forms on each leg.
   * Charge if below:  7.0V
   * Dispose if below: 5.0V
 
-15. Upload code using the micro-USB port. More detailed instructions can be found [here](https://robomechanics.github.io/MiniRHex)
+15. Upload code using the micro-USB port. More detailed instructions can be found [here](https://robomechanics.github.io/MiniRHex).
 
 16. Take electronic wires that come with the servos, and connect them like below
 
