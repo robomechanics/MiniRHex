@@ -1,6 +1,67 @@
 # MiniRHex: An Open-source Walking Hexapod
-Contact: nflowers@andrew.cmu.edu
+
+Links to images are on the Github page in the [Images folder](https://github.com/robomechanics/MiniRHex/tree/master/Images).
+
+![MiniRHex Running](IMG_2519.jpg)
+
+![MiniRHex Running](miniOnRock.bmp)
+
 ![MiniRHex Running](still.bmp)
 
+![MiniRHex Running](still2.bmp)
 
-MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
+![MiniRHex Running](Brick_carrying.png)
+
+![MiniRHex Running](20171206_161031.jpg)
+
+![MiniRHex Running](1.jpg)
+
+![MiniRHex Running](mini1.jpg)
+
+![MiniRHex Running](RHex_Mini_IDS.JPG)
+
+![MiniRHex Running](MiniRHex_wiring_diagram.png)
+
+![MiniRHex Running](20171206_160414.jpg)
+
+![MiniRHex Running](20171206_160550.jpg)
+
+![MiniRHex Running](20171206_160609.jpg)
+
+![MiniRHex Running](20171206_160616.jpg)
+
+![MiniRHex Running](20171206_160636.jpg)
+
+![MiniRHex Running](20171206_160647.jpg)
+
+![MiniRHex Running](20171206_160700.jpg)
+
+![MiniRHex Running](20171206_160718.jpg)
+
+![MiniRHex Running](20171206_160725.jpg)
+
+![MiniRHex Running](20171206_160744.jpg)
+
+![MiniRHex Running](20171206_160756.jpg)
+
+![MiniRHex Running](20171206_160806.jpg)
+
+![MiniRHex Running](20171206_160814.jpg)
+
+![MiniRHex Running](20171206_160822.jpg)
+
+![MiniRHex Running](20171206_160839.jpg)
+
+![MiniRHex Running](20171206_160903.jpg)
+
+![MiniRHex Running](20171206_160936.jpg)
+
+![MiniRHex Running](20171206_161002.jpg)
+
+![MiniRHex Running](20171206_161014.jpg)
+
+![MiniRHex Running](20171206_161021.jpg)
+
+![MiniRHex Running](20171206_161049.jpg)
+
+Contact: nflowers@andrew.cmu.edu
