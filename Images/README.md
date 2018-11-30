@@ -2,13 +2,13 @@
 
 Links to images are on the Github page in the [Images folder](https://github.com/robomechanics/MiniRHex/tree/master/Images).
 
-![MiniRHex Running](IMG_2519.jpg)
-
 ![MiniRHex Running](miniOnRock.bmp)
 
 ![MiniRHex Running](still.bmp)
 
 ![MiniRHex Running](still2.bmp)
+
+![MiniRHex Running](IMG_2519.jpg)
 
 ![MiniRHex Running](Brick_carrying.png)
 
