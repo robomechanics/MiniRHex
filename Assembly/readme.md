@@ -42,13 +42,15 @@ legs until high friction surface forms on each leg.
 8. Connect four of the six legs to edge shafts (shorter shafts).
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Connection: M3 socket head x 10 mm
-  * Ensure that there are two legs facing each direction (two for each side of the robot)
+  * Ensure that there are two legs facing each direction as shown below
   
 9. Connect the other two legs to the mid shafts (longer shaft).
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Connection: M3 socket head x 10 mm
   * For one of the two connections, be sure to switch the orientation of the leg
-  because those will be attached to the opposite side of the robot.
+  as shown below.
+  
+  ![Leg Orientation](Images/minirhex_motor_orientation.JPG)
   
 10. Connect each shaft-leg apparatus to the Dynamixel XL-320 servo motor.
   * Orientation: Make sure the half circle each leg forms faces the front of the robot:
