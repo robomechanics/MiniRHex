@@ -62,12 +62,14 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 # Useful Links
 ### Parts List
 The part list can be found at [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx).
-### Assembly Instructions
-The assembly instructions can be found at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly).
 ### MiniRhex Repository
 The MiniRhex repository can be found at [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git).
-
-
+### Cite MiniRHex
+If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
+### Images
+![MiniRHex Running](Images/miniOnRock.bmp)
+### Video Links
+Check out the Robomechanics Lab [YouTube Page](http://www.youtube.com) for videos of MiniRHex in action!
 
 
 
