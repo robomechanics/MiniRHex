@@ -1,4 +1,0 @@
-/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/testing/CMakeFiles/rebuild_cache.dir
-/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/testing/CMakeFiles/edit_cache.dir
-/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/testing/CMakeFiles/test_conversions.dir
-/Users/nikolaiflowers/Documents/ROBOTIS/MiniRHex/testing/CMakeFiles/test_desired.dir
