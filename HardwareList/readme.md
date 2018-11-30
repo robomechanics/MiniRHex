@@ -23,6 +23,6 @@
 | Leg | 6 | | "" |
 | Battery Case | 1 | | "" | 
 | Printing Subtotal | ~275g PLA | ~$5.50 | (Cost estimate is for material only, assuming an Ultimaker 3 Extended and the recommended gcode file from /CAD) |
-| **Total** | | **$258.14** | (as of 11-30-18) |
+| **Total** | | **$225.24** | (as of 11-30-18 without Bluetooth) |
 
 *Parts list also available as Excel Sheet, download above*
