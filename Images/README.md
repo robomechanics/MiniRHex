@@ -1,4 +1,4 @@
-# MiniRHex: An Open-source Walking Hexapod
+# Image Gallery of MiniRHex
 
 Links to images are on the Github page in the [Images folder](https://github.com/robomechanics/MiniRHex/tree/master/Images).
 
