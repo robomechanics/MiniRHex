@@ -1,6 +1,6 @@
 # Image Gallery of MiniRHex
 
-Links to images are on the Github page in the [Images folder](https://github.com/robomechanics/MiniRHex/tree/master/Images).
+Links to all images are on the Github page in the [Images folder](https://github.com/robomechanics/MiniRHex/tree/master/Images).
 
 ![MiniRHex Running](miniOnRock.bmp)
 
