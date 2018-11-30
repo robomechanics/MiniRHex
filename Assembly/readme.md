@@ -72,7 +72,7 @@ legs until high friction surface forms on each leg.
   * Connect such that no wires interfere with leg rotation.
 14. Charge battery(ies) and check voltage(s).
 
-15. Upload code using the micro-USB port.
+15. Upload code using the micro-USB port. More detailed instructions can be found ![here](https://robomechanics.github.io/MiniRHex)
 
 16. Take electronic wires that come with the servos, and connect them like below
 
