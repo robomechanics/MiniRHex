@@ -71,6 +71,9 @@ legs until high friction surface forms on each leg.
 13. Connect the servos to the mainboard.
   * Connect such that no wires interfere with leg rotation.
 14. Charge battery(ies) and check voltage(s).
+  * Maximum voltage:  8.4V
+  * Charge if below:  7.0V
+  * Dispose if below: 5.0V
 
 15. Upload code using the micro-USB port. More detailed instructions can be found [here](https://robomechanics.github.io/MiniRHex)
 
