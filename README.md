@@ -1,7 +1,5 @@
-# MiniRHex: An Open-source Walking Hexapod
 Contact: nflowers@andrew.cmu.edu
 ![MiniRHex Running](Images/still.bmp)
-
 
 MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
 
@@ -56,8 +54,6 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 # Robot Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
-# -----------------------------------------------
-
 # Useful Links
 ### Parts List
 The part list can be found at [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/MiniRhexHardware.xlsx).
@@ -69,7 +65,7 @@ If referencing MiniRHex in a paper, please cite [this abstract](http://www.andre
 See the [image gallery](https://github.com/robomechanics/MiniRHex/tree/master/Images) for more  MiniRHex pictures.
 
 ![MiniRHex Running](Images/miniOnRock.bmp)
-### Video Links
+### Videos
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/channel/UCKD78aZAsdB9-JTwrt6Q1KA) for videos of MiniRHex in action!
 
 
