@@ -41,8 +41,8 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 # Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
 2. Open MiniRHex.ino in the OpenCM IDE, check that under "Tools",
- * 1. "Board" is set to ROBOTIS OpenCM9.04
- * 2. "Port" is set to the correct COM port (whichever COM port is added when MiniRhex is plugged in)
+  1. "Board" is set to ROBOTIS OpenCM9.04
+  2. "Port" is set to the correct COM port (whichever COM port is added when MiniRhex is plugged in)
 3. Ensure the motor zeros in leg_info.cpp are correct
 4. Set desired gait parameters in gait_parameters.cpp
 5. Click the download icon in the upper left corner of the OpenCM IDE (wait until it reports "Done Downloading")
