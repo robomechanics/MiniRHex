@@ -68,13 +68,13 @@ legs until high friction surface forms on each leg.
   * Orientation: Be sure all legs face forward (semicircle faces the mainboard).
   * Connection: M3 button head x 10 mm, M3 nut
   
-14. Connect the servos to the mainboard.
+13. Connect the servos to the mainboard.
   * Connect such that no wires interfere with leg rotation.
-15. Charge battery(ies) and check voltage(s).
+14. Charge battery(ies) and check voltage(s).
 
-16. Upload code using the micro-USB port.
+15. Upload code using the micro-USB port.
 
-17. Take electronic wires that come with the servos, and connect them like below
+16. Take electronic wires that come with the servos, and connect them like below
 
 ![wiring diagram](Images/MiniRhex_wiring_diagram.PNG)
  
