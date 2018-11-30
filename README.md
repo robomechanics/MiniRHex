@@ -12,7 +12,7 @@ Building a MiniRhex requires access to a 3D printer and laser cutter. The links 
 ![MiniRHex Prototype](Images/mini1.jpg)
 
 ### Acquire Parts
-The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/Hardware List.git).
+The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/blob/master/HardwareList).
 
 ### Assemble Robot
 Assembly Instructions available at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly).
@@ -69,7 +69,7 @@ If referencing MiniRHex in a paper, please cite [this abstract](http://www.andre
 ### Images
 ![MiniRHex Running](Images/miniOnRock.bmp)
 ### Video Links
-Check out the Robomechanics Lab [YouTube Page](http://www.youtube.com) for videos of MiniRHex in action!
+Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/channel/UCKD78aZAsdB9-JTwrt6Q1KA) for videos of MiniRHex in action!
 
 
 
