@@ -66,7 +66,8 @@ The MiniRhex repository can be found at [MiniRhex Repository](https://github.com
 ### Cite MiniRHex
 If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
 ### Images
-See the [image gallery](Images/README.md) for more  MiniRHex pictures.
+See the [image gallery](ree/master/Images/README.md) for more  MiniRHex pictures.
+
 ![MiniRHex Running](Images/miniOnRock.bmp)
 ### Video Links
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/channel/UCKD78aZAsdB9-JTwrt6Q1KA) for videos of MiniRHex in action!
