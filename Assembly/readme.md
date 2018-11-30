@@ -76,6 +76,6 @@ legs until high friction surface forms on each leg.
 
 16. Take electronic wires that come with the servos, and connect them like below
 
-![wiring diagram](Images/MiniRhex_wiring_diagram.png)
+![wiring diagram](Images/MiniRHex_wiring_diagram.png)
  
  
