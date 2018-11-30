@@ -42,8 +42,7 @@ legs until high friction surface forms on each leg.
 8. Connect four of the six legs to edge shafts (shorter shafts).
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Connection: M3 socket head x 10 mm
-  * For two of the four connections, be sure to switch the orientation of the leg
-  because those will be attached to the opposite side of the robot.
+  * Ensure that there are two legs facing each direction (two for each side of the robot)
   
 9. Connect the other two legs to the mid shafts (longer shaft).
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
