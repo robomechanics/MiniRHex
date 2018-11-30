@@ -50,7 +50,7 @@ legs until high friction surface forms on each leg.
   * For one of the two connections, be sure to switch the orientation of the leg
   because those will be attached to the opposite side of the robot.
   
-10.Connect each shaft-leg apparatus to the Dynamixel XL-320 servo motor.
+10. Connect each shaft-leg apparatus to the Dynamixel XL-320 servo motor.
   * Orientation: Make sure the half circle each leg forms faces the front of the robot:
   towards the side with the mainboard.
   * Detach the center screw in the servo horn, and pry off the horn itself.
@@ -62,19 +62,19 @@ legs until high friction surface forms on each leg.
     to the servo motor.
     * Connection: center screw that came with the servo
 
-12.Slide each servo into a servo sleeve.
+11. Slide each servo into a servo sleeve.
 
-13.Connect each servo sleeve to the foundation.
+12. Connect each servo sleeve to the foundation.
   * Orientation: Be sure all legs face forward (semicircle faces the mainboard).
   * Connection: M3 button head x 10 mm, M3 nut
   
-14.Connect the servos to the mainboard.
+14. Connect the servos to the mainboard.
   * Connect such that no wires interfere with leg rotation.
 15. Charge battery(ies) and check voltage(s).
 
-16.Upload code using the micro-USB port.
+16. Upload code using the micro-USB port.
 
-17.Take electronic wires that come with the servos, and connect them like below
+17. Take electronic wires that come with the servos, and connect them like below
 
 ![wiring diagram](Images/MiniRhex_wiring_diagram.PNG)
  
