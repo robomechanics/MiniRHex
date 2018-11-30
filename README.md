@@ -1,4 +1,4 @@
-<h2>MiniRHex: An Open-Source Hexapod Robot</h2>
+<bold>MiniRHex: An Open-Source Hexapod Robot</bold>
 
 ![MiniRHex Running](Images/still.bmp)
 Contact: nflowers@andrew.cmu.edu
