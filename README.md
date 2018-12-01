@@ -41,7 +41,7 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 
 # Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
-2. Open MiniRHex.ino in the OpenCM IDE and chec that under "Tools":
+2. Open MiniRHex.ino in the OpenCM IDE and check that under "Tools":
    - "Board" is set to ROBOTIS OpenCM9.04
    - "Port" is set to the correct COM port (whichever COM port is added when MiniRhex is plugged in)
 3. Ensure the motor zeros in leg_info.cpp are correct
