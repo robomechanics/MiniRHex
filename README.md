@@ -9,6 +9,7 @@ MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notab
 
 # Setup Instructions
 Building a MiniRhex requires access to a 3D printer and laser cutter. The links for off the shelf parts can be found below.
+
 ![MiniRHex Prototype](Images/mini1.jpg)
 
 ### Acquire Parts
@@ -65,7 +66,7 @@ The MiniRhex repository can be found at [MiniRhex Repository](https://github.com
 ### Cite MiniRHex
 If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
 ### Images
-See the [image gallery](https://github.com/robomechanics/MiniRHex/tree/master/Images) for more  MiniRHex pictures.
+See the [image gallery](https://github.com/robomechanics/MiniRHex/tree/master/Images) for more MiniRHex pictures.
 
 ![MiniRHex Running](Images/miniOnRock.bmp)
 ### Videos
