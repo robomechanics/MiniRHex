@@ -64,4 +64,7 @@ Links to all images are on the Github page in the [Images folder](https://github
 
 ![MiniRHex Running](20171206_161049.jpg)
 
+### MiniRHex Homepage
+[Return to homepage](https://robomechanics.github.io/MiniRHex/).
+
 Contact: nflowers@andrew.cmu.edu
