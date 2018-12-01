@@ -66,7 +66,7 @@ The MiniRhex repository can be found at [MiniRhex Repository](https://github.com
 ### Cite MiniRHex
 If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
 ### Images
-See the [image gallery](/Images) for more MiniRHex pictures.
+See the [image gallery](/MiniRHex/Images) for more MiniRHex pictures.
 
 ![MiniRHex Running](Images/miniOnRock.bmp)
 ### Videos
