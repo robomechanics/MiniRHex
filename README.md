@@ -53,8 +53,6 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 9. Press "USER SW" to execute the code!
 10. Press the "RESET" button again to return to the standing behavior
 
-![MiniRHex Running](Images/miniOnRock.bmp)
-
 # Robot Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
 
@@ -74,6 +72,8 @@ See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for mo
 ![MiniRHex Running](Images/miniOnRock.bmp)
 ### Videos
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/watch?v=ldLXVDNCCzc&list=PLxHmBiQi0bD2aFgPKIrXhYXCCOGhTQmmk) for videos of MiniRHex in action!
+
+{% youtube ldLXVDNCCzc %}
 
 # Contributors
 * Nikolai Flowers (BS ME '20)
