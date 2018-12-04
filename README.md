@@ -65,19 +65,7 @@ The part list can be found at [Parts List](https://github.com/robomechanics/Mini
 The MiniRhex repository can be found at [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git).
 ### Cite MiniRHex
 If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
-Use this BibTeX for citations:
->@inproceedings{abs:barragan-minirhex-2018,
->author = {Monica Barragan and Nikolai Flowers and Aaron M. Johnson},
->title = {{MiniRHex}: A Small, Open-source, Fully Programmable Walking Hexapod},
->booktitle = {Robotics: Science and Systems Workshop on ``Design and Control of Small Legged Robots''},
->year = {2018},
->month = {June},
->address= {Pittsburgh, PA},
->type  = {workshop abstract},
->url_PDF = {http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf},
->url_Project = {https://github.com/robomechanics/MiniRHex},
->url_Info = {http://intra.ece.ucr.edu/~kkarydis/rss18/}
->}
+Use [this BibTeX](https://github.com/robomechanics/MiniRHex/blob/master/citation.txt) for citations.
 ### Images
 See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for more MiniRHex pictures.
 
