@@ -18,6 +18,12 @@ Links to all images are on the Github page in the [Images folder](https://github
 
 ![MiniRHex Running](mini1.jpg)
 
+![MiniRHex Running](minirhex%20outreach%201.jpg)
+
+![MiniRHex Running](minirhex%20outreach%202.jpg)
+
+![MiniRHex Running](minirhex%20outreach%203.jpg)
+
 ![MiniRHex Running](RHex_Mini_IDS.JPG)
 
 ![MiniRHex Running](MiniRHex_wiring_diagram.png)
