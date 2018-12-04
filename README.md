@@ -71,7 +71,7 @@ See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for mo
 
 ![MiniRHex Running](Images/miniOnRock.bmp)
 ### Videos
-Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/channel/UCKD78aZAsdB9-JTwrt6Q1KA) for videos of MiniRHex in action!
+Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/watch?v=ldLXVDNCCzc&list=PLxHmBiQi0bD2aFgPKIrXhYXCCOGhTQmmk) for videos of MiniRHex in action!
 
 # Contributors
 * Nikolai Flowers (BS ME '20)
