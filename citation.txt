@@ -1,0 +1,12 @@
+@inproceedings{abs:barragan-minirhex-2018,
+ author = {Monica Barragan and Nikolai Flowers and Aaron M. Johnson},
+ title = {{MiniRHex}: A Small, Open-source, Fully Programmable Walking Hexapod},
+ booktitle = {Robotics: Science and Systems Workshop on ``Design and Control of Small Legged Robots''},
+ year = {2018},
+ month = {June},
+ address= {Pittsburgh, PA},
+ type  = {workshop abstract},
+ url_PDF = {http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf},
+ url_Project = {https://github.com/robomechanics/MiniRHex},
+ url_Info = {http://intra.ece.ucr.edu/~kkarydis/rss18/}
+}
