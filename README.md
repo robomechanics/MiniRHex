@@ -74,14 +74,14 @@ See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for mo
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/channel/UCKD78aZAsdB9-JTwrt6Q1KA) for videos of MiniRHex in action!
 
 # Contributors
-Nikolai Flowers (BS ME '20)
-Barrett Werner (MS ME '19)
-Monica Barragan (BS ME '19)
-Cameron Selby (MS ME '18)
-Scott Phillips (BS ME '20)
-John Payne (Ph.D ME)
-Joe Norby (Ph.D ME)
-Aaron Johnson (Advisor)
+* Nikolai Flowers (BS ME '20)
+* Barrett Werner (MS ME '19)
+* Monica Barragan (BS ME '19)
+* Cameron Selby (MS ME '18)
+* Scott Phillips (BS ME '20)
+* John Payne (Ph.D ME)
+* Joe Norby (Ph.D ME)
+* Aaron Johnson (Advisor)
 
 
 
