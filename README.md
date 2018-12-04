@@ -73,8 +73,6 @@ See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for mo
 ### Videos
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/watch?v=ldLXVDNCCzc&list=PLxHmBiQi0bD2aFgPKIrXhYXCCOGhTQmmk) for videos of MiniRHex in action!
 
-{{ oembed http://www.youtube.com/watch?v=ldLXVDNCCzc }}
-
 # Contributors
 * Nikolai Flowers (BS ME '20)
 * Barrett Werner (MS ME '19)
