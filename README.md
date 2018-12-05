@@ -3,7 +3,7 @@
 ![MiniRHex Running](Images/miniOnStumpScaled.jpg)
 Contact: nflowers@andrew.cmu.edu
 
-MiniRHex is a miniature scale hexapod heavily based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
+MiniRHex is a miniature scale hexapod based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
 
 ![Payload Demonstration](Images/Brick_carrying.png)
 
@@ -29,7 +29,7 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 2. Change the NEW_ID variable to the ID number according to the diagram below
 3. Attach only the corresponding servo to the board (disconnect any other servos)
 4. Upload the code
-5. Repeat steps b-d for each servo
+5. Repeat for each servo
 
 ### Set Leg Zeros
 1. Clone support repository at [https://github.com/nikolaif399/zero_finder.git](https://github.com/nikolaif399/zero_finder.git)
@@ -43,7 +43,7 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 1. Connect the MiniRHex to your computer via the Micro USB port
 2. Open MiniRHex.ino in the OpenCM IDE and check that under "Tools":
    - "Board" is set to ROBOTIS OpenCM9.04
-   - "Port" is set to the correct COM port (whichever COM port is added when MiniRhex is plugged in)
+   - "Port" is set to the correct COM port (whichever COM port is added when MiniRHex is plugged in)
 3. Ensure the motor zeros in leg_info.cpp are correct
 4. Set desired gait parameters in gait_parameters.cpp
 5. Click the download icon in the upper left corner of the OpenCM IDE (wait until it reports "Done Downloading")
@@ -59,8 +59,8 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 # Useful Links
 ### Parts List
 The part list can be found at [Parts List](https://github.com/robomechanics/MiniRHex/tree/master/HardwareList).
-### MiniRhex Repository
-The MiniRhex repository can be found at [MiniRhex Repository](https://github.com/robomechanics/MiniRHex.git).
+### MiniRHex Repository
+The MiniRHex repository can be found at [MiniRHex Repository](https://github.com/robomechanics/MiniRHex.git).
 ### Cite MiniRHex
 If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
 Use [this BibTeX](https://github.com/robomechanics/MiniRHex/blob/master/citation.txt) for citations:
