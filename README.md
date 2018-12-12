@@ -3,7 +3,7 @@
 ![MiniRHex Running](Images/miniOnStumpScaled.jpg)
 Contact: nflowers@andrew.cmu.edu
 
-MiniRHex is a miniature scale hexapod based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
+MiniRHex is a miniature scale hexapod designed by the [Robomechanics Lab](https://www.cmu.edu/me/robomechanicslab/) based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
 
 ![Payload Demonstration](Images/Brick_carrying.png)
 
@@ -74,6 +74,7 @@ See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for mo
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/watch?v=ldLXVDNCCzc&list=PLxHmBiQi0bD2aFgPKIrXhYXCCOGhTQmmk) for videos of MiniRHex in action!
 
 # Contributors
+MiniRHex was designed by the following people in the [Robomechanics Lab](https://www.cmu.edu/me/robomechanicslab/)
 * Nikolai Flowers (BS ME '20)
 * Barrett Werner (MS ME '19)
 * Monica Barragan (BS ME '19)
