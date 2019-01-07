@@ -4,6 +4,7 @@
 |------|--------------------|-------|------|
 | **McMaster-Carr Parts** | | | |
 | Screws | 44 | $6.08 | https://www.mcmaster.com/#94500A223 |
+| Additional Screws for Servo Horn | 6 | $5.90 | https://www.mcmaster.com/92005a078 |
 | Nuts | 32 | $3.36 | https://www.mcmaster.com/#90576A102 |
 | 1/8" acrylic, 7.5" x 4" (min) | 1 | $5.73 | https://www.mcmaster.com/8560k275 |
 | Spacer | 4 | $4.48 | https://www.mcmaster.com/#93657A203 |
@@ -23,6 +24,6 @@
 | Leg | 6 | | "" |
 | Battery Case | 1 | | "" | 
 | Printing Subtotal | ~275g PLA | ~$5.50 | (Cost estimate is for material only, assuming an Ultimaker 3 Extended and the recommended gcode file from /CAD) |
-| **Total** | | **$201.45** | (as of 11-30-18 without Bluetooth or battery charger) |
+| **Total** | | **$207.35** | (as of 1-07-19 without Bluetooth or battery charger) |
 
 *Parts list also available as Excel Sheet, download above*
