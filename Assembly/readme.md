@@ -62,7 +62,7 @@ legs until high friction surface forms on each leg.
   * Align the horn (now connected to the leg apparatus) to its key on the body of the servo.
     * Once the horn is flush against the body, connect the horn/shaft/leg apparatus
     to the servo motor.
-    * Connection: center screw that came with the servo
+    * Connection: M2.5x25 bolts from McMaster
 
 11. Slide each servo into a servo sleeve.
 
