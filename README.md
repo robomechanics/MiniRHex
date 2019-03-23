@@ -31,6 +31,8 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 4. Upload the code
 5. Repeat for each servo
 
+If the configuration was successful, the servo you are configuring should move back and forth.
+
 ### Set Leg Zeros
 1. Clone support repository at [https://github.com/nikolaif399/zero_finder.git](https://github.com/nikolaif399/zero_finder.git)
 2. Manually rotate each leg to be as close to straight down as possible
