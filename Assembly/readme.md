@@ -24,6 +24,8 @@
  * 6 leg parts (2g each)(6 legs) = 12g
  
  The total amount adds to 117g.
+ 
+ After printing, there are supports inside the servo sleeves, shaft-edge parts and shaft-mid parts. Ensure that you remove the supports inside the prints before moving on.
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
