@@ -15,6 +15,7 @@
  * 2 shaft-mid parts (shaft-mid.STL)
  * 1 battery case part (Battery case.STL)
  * 6 leg parts (leg.STL)
+ 
  The expected amount of PLA used to print is around:
  * 6 servo sleeve parts at (11g each)(6 sleeves) = 66g
  * 4 shaft-edge parts at (3g each)(4 shaft edges) = 12g
