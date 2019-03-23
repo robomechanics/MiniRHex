@@ -22,6 +22,7 @@
  * 2 shaft-mid parts at (5g each)(2 shaft-mid parts) = 10g
  * 1 battery case part (17g each)(1 case) = 17g
  * 6 leg parts (2g each)(6 legs) = 12g
+ 
  The total amount adds to 117g.
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
