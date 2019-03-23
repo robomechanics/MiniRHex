@@ -28,13 +28,15 @@
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
 
+Check to make sure the screws fit through the holes. If not, drill them out before moving on.
+
 5. Prepare the mainboard for use.
  * Solder the battery connector onto one positive pinhole and one negative pinhole
   for power. The location on the board is shown below:
   
   ![Power pin location](Images/MiniRHex_powerpins.png)
   
-6. First, connect the battery case and mainboard to the foundation, with the USB port facing outwards
+6. First, connect the battery case and mainboard to the foundation, with the USB port facing outwards (see step 16. for complete MiniRHex layout).
  * Connections:
     * Battery case: M3 button head x 10 mm, M3 nut
     * Mainboard: M3 spacer, M3 button head x 10 mm, M3 lock nut
@@ -42,19 +44,35 @@ serve as the foundation for the robot.
   * The mainboard’s micro-USB port should face out.
   * The mainboard will be towards the front of the robot.
   
-7. Next, prepare the legs by using Plastidip (either dip or spray) and coating each of the six
+  Place nuts on top of the board so it doesn't interfere with MiniRHex's movement. It is not recommended to place the nut underneath the board.
+  
+  For attatching the mainboard, place spacer in between the mainboard and the acrylic base, then the nut on top of the mainboard.
+  
+7. Next, prepare the legs by using Plastidip (either dip or spray) and coating around 75% of each of the six
 legs until high friction surface forms on each leg.
   * Between each coat, let dry for at least one hour.
   * Make sure the dip is evenly coated around the leg.
   * Do not cover the through holes for the screws.
   
 8. Connect four of the six legs to edge shafts (shorter shafts).
+   
+   Due to the nature of 3-D printing, you may need to file down your leg shafts in order for the legs to sit comfortably or drill out the holes in the legs.
+   
+   Next, tap the leg shafts. (NEED MORE INFO HERE)
+
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
+  * Ensure that the leg is flush and lays flat against the shaft.
   * Connection: M3 socket head x 10 mm
   * Ensure that there are two legs facing each direction as shown below
   
 9. Connect the other two legs to the mid shafts (longer shaft).
+
+   Similarly, you may need to first file and drill the leg shafts.
+   
+   Again, tap the leg shafts before inserting screws. 
+   
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
+  * Ensure that the leg is flush and lays flat against the shaft.
   * Connection: M3 socket head x 10 mm
   * For one of the two connections, be sure to switch the orientation of the leg
   as shown below.
@@ -65,7 +83,8 @@ legs until high friction surface forms on each leg.
   * Orientation: Make sure the half circle each leg forms faces the front of the robot:
   towards the side with the mainboard.
   * Detach the center screw in the servo horn, and pry off the horn itself.
-    * The horn looks like a small, black plastic cylinder.
+    * The horn looks like a small, black plastic cylinder with 4 holes.
+  * On the side of the horn there will be tick mark, and on the opposite side, two tick marks. When aligning the legs into the servo horn, ensure that when placing the servo horn back on the motor that the single tick mark is facing downwards, towards the bottom of the servo.
   * Align the 4 through holes on the servo horn with the 4 extruded pieces on the shaft
   face (the shaft length doesn’t matter).
   * Align the horn (now connected to the leg apparatus) to its key on the body of the servo.
@@ -74,6 +93,10 @@ legs until high friction surface forms on each leg.
     * Connection: M2.5x25 bolts from McMaster
 
 11. Slide each servo into a servo sleeve.
+
+Before connecting each servo sleeve to the foundation, configure each of the servo IDs by connecting them with the provided wires individually to the mainboard. 
+
+Instructions on how to [Configure Servo IDs](https://github.com/robomechanics/MiniRHex#configure-servo-ids).
 
 12. Connect each servo sleeve to the foundation.
   * Orientation: Be sure all legs face forward (semicircle faces the mainboard).
