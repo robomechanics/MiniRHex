@@ -15,13 +15,20 @@
  * 2 shaft-mid parts (shaft-mid.STL)
  * 1 battery case part (Battery case.STL)
  * 6 leg parts (leg.STL)
+ The expected amount of PLA used to print is around:
+ * 6 servo sleeve parts at (11g each)(6 sleeves) = 66g
+ * 4 shaft-edge parts at (3g each)(4 shaft edges) = 12g
+ * 2 shaft-mid parts at (5g each)(2 shaft-mid parts) = 10g
+ * 1 battery case part (17g each)(1 case) = 17g
+ * 6 leg parts (2g each)(6 legs) = 12g
+ The total amount adds to 117g.
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
 
 5. Prepare the mainboard for use.
  * Solder the battery connector onto one positive pinhole and one negative pinhole
-  for power. The location on the board is shown below
+  for power. The location on the board is shown below:
   
   ![Power pin location](Images/MiniRHex_powerpins.png)
   
