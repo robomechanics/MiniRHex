@@ -60,7 +60,9 @@ legs until high friction surface forms on each leg.
    
    Due to the nature of 3-D printing, you may need to file down your leg shafts in order for the legs to sit comfortably or drill out the holes in the legs.
    
-   Next, tap the leg shafts. (NEED MORE INFO HERE)
+   Next, tap the leg shafts using a m3 tap.
+   
+   Connect the legs to ethe shafts using a m3 screw.
 
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Ensure that the leg is flush and lays flat against the shaft.
