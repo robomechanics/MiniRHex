@@ -76,7 +76,7 @@ legs until high friction surface forms on each leg.
    
    Next, tap the leg shafts using a m3 tap.
    
-   Connect the legs to ethe shafts using a m3 screw.
+   Connect the legs to leg shafts using a m3 screw.
 
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Ensure that the leg is flush and lays flat against the shaft.
