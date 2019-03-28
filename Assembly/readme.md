@@ -68,7 +68,7 @@ legs until high friction surface forms on each leg.
   
   The legs should look as follows:
   
-  ![Final Legs](Images/final_leg)
+  ![Final Legs](Images/final_leg.jpg)
   
 8. Connect four of the six legs to edge shafts (shorter shafts).
    
