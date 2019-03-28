@@ -27,15 +27,15 @@
  
  After printing, there are supports inside the servo sleeves, shaft-edge parts and shaft-mid parts. Ensure that you remove the supports inside the prints before moving on. They should look like this:
  
- ![Shaft-mid](Images/final_mid)
+ ![Shaft-mid](Images/final_mid.jpg)
  
- ![Shaft-edge](Images/final_else)
+ ![Shaft-edge](Images/final_else.jpg)
  
- ![Servo_sleeve](Images/final_servo_sleeve)
+ ![Servo_sleeve](Images/final_servo_sleeve.jpg)
  
  All in all, the parts should look as follows:
  
- ![Everything](Images/final_all)
+ ![Everything](Images/final_all.png)
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
