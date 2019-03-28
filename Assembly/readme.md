@@ -25,7 +25,17 @@
  
  The total amount adds to 117g.
  
- After printing, there are supports inside the servo sleeves, shaft-edge parts and shaft-mid parts. Ensure that you remove the supports inside the prints before moving on.
+ After printing, there are supports inside the servo sleeves, shaft-edge parts and shaft-mid parts. Ensure that you remove the supports inside the prints before moving on. They should look like this:
+ 
+ ![Shaft-mid](Images/final_mid)
+ 
+ ![Shaft-edge](Images/final_else)
+ 
+ ![Servo_sleeve](Images/final_servo_sleeve)
+ 
+ All in all, the parts should look as follows:
+ 
+ ![Everything] (Images/final_all)
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
@@ -55,6 +65,10 @@ legs until high friction surface forms on each leg.
   * Between each coat, let dry for at least one hour.
   * Make sure the dip is evenly coated around the leg.
   * Do not cover the through holes for the screws.
+  
+  The legs should look as follows:
+  
+  ![Final Legs](Images/final_leg)
   
 8. Connect four of the six legs to edge shafts (shorter shafts).
    
