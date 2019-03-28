@@ -35,7 +35,7 @@
  
  All in all, the parts should look as follows:
  
- ![Everything] (Images/final_all)
+ ![Everything](Images/final_all)
   
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
 serve as the foundation for the robot.
