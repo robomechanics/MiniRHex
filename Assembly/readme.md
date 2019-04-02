@@ -120,7 +120,7 @@ Instructions on how to [Configure Servo IDs](https://github.com/robomechanics/Mi
   * Orientation: Be sure all legs face forward (semicircle faces the mainboard).
   * Connection: M3 button head x 10 mm, M3 nut
   
-  Again, it is recommended that the M3 nuts are placed on top of the board as opposed ot the bottom of the board.
+  Again, it is recommended that the M3 nuts are placed on top of the board as opposed to the bottom of the board.
   
 13. Connect the servos to the mainboard.
   * Connect such that no wires interfere with leg rotation.
