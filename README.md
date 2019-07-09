@@ -20,7 +20,7 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 
 ![Leg assembly close-up](Images/1.jpg)
 
-Be sure to align the bottom slots!!!
+BE SURE TO ALIGN THE BOTTOM SLOTS!!!
 ![Please align the bottom slots](Assembly/Images/slots.jpg)
 
 ### Install Software

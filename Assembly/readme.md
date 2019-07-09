@@ -109,6 +109,7 @@ legs until high friction surface forms on each leg.
     * Once the horn is flush against the body, connect the horn/shaft/leg apparatus
     to the servo motor.
     * Connection: M2.5x25 bolts from McMaster
+  * Be sure to align the bottom slots!
   ![Slot Orientation](Images/slots.jpg)
 
 11. Slide each servo into a servo sleeve.
