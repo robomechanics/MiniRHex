@@ -20,6 +20,9 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 
 ![Leg assembly close-up](Images/1.jpg)
 
+Be sure to align the bottom slots!!!
+![Please align the bottom slots](Assembly/Images/slots.jpg)
+
 ### Install Software
 1. Install OpenCM IDE from [http://www.robotis.us/opencmide/](http://www.robotis.us/opencmide/)
 2. Clone primary repository at [https://github.com/robomechanics/MiniRHex.git](https://github.com/robomechanics/MiniRHex.git)
@@ -66,8 +69,8 @@ The MiniRHex repository can be found at [MiniRHex Repository](https://github.com
 ### Cite MiniRHex
 If referencing MiniRHex in a paper, please cite [this abstract](http://www.andrew.cmu.edu/user/amj1/papers/RSS2018ws_MiniRHex.pdf).
 Use [this BibTeX](https://github.com/robomechanics/MiniRHex/blob/master/citation.txt) for citations:
-> M. Barragan, N. Flowers, and A. M. Johnson. "MiniRHex: A Small, Open-source, Fully Programmable Walking Hexapod". In *Robotics: Science and Systems Workshop on ``Design and Control of Small Legged Robots''*, Pittsburgh, PA, June 2018. 
- 
+> M. Barragan, N. Flowers, and A. M. Johnson. "MiniRHex: A Small, Open-source, Fully Programmable Walking Hexapod". In *Robotics: Science and Systems Workshop on ``Design and Control of Small Legged Robots''*, Pittsburgh, PA, June 2018.
+
 ### Images
 See the [image gallery](https://robomechanics.github.io/MiniRHex/Images/) for more MiniRHex pictures.
 
