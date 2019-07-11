@@ -1,9 +1,9 @@
 #include "gait_parameters.h"
 #include "leg_info.h"
 
-float kp_walk = 0;
-float kd_walk = 0;
-int walk_period = 0;
+float kp_walk = 0.03;
+float kd_walk = 1.0;
+int walk_period = 2000;
 
 // ---------------- EDIT HERE ---------------- //
 

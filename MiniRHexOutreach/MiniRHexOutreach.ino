@@ -13,7 +13,7 @@ Behavior behaviors[] = {
 //  { gait, duration(millisecs) }
     { START, 0 },
     { STAND, 1000 },
-    { WALK, 30000 },
+    { WALK, 3000 },
     { END, 0 }
 };
 int b_idx = 0;
@@ -37,6 +37,9 @@ void loop() {
             b_idx++;
             minirhex.updateGait(all_gaits[behaviors[b_idx].gait]);
             t_start = millis();
+        }
+        else {
+            minirhex.updateGait(all_gaits[STAND]);
         }
     }
 
