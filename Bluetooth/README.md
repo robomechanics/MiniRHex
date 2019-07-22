@@ -14,7 +14,7 @@ The MiniRHex uses the [BT210 bluetooth module](http://www.robotis.us/bt-210/) fr
 
 3. Pair your PC with the board and open the Arduino IDE or the OpenCM IDE
 
-4. Go to Tools->Serial Port and select the bluetooh connection (should have ROBOTIS_210 somewhere in the name)
+4. Go to Tools->Serial Port and select the bluetooth connection (should have ROBOTIS_210 somewhere in the name)
 ![BT210 connection](Images/connect.png)
 
 5. Open the Serial Monitor
@@ -34,3 +34,7 @@ The MiniRHex uses the [BT410 bluetooth module](http://www.robotis.us/bt-410/) fr
 2. Turn on the MiniRHex by flipping the switch and press the reset button (the black rectangular button)
 
 3. Visit our [MobiMini repository](https://github.com/robomechanics/MobiMini) for some mobile applications that work with the BT410. There are both Andriod and iOS versions available. Android studio and/or Xcode may be required to install these apps. Direct download: https://github.com/robomechanics/MobiMini.git
+
+iOS app:
+
+<img src="Images/ios.png" width="400"/>
