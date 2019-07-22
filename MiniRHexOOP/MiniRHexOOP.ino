@@ -1,5 +1,4 @@
 #include "robot.h"
-#include "behavior.h"
 
 // Dynamixel Setup //
 #define DXL_BUS_SERIAL1 1  //Dynamixel on Serial1(USART1) <-OpenCM9.04

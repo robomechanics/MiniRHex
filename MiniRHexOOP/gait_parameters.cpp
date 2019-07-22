@@ -132,4 +132,4 @@ Gait pronk_gait {
     {0, 0, 0, 0, 0, 0, 0}
 };
 
-Gait all_gaits[TOTAL_GAITS] = {stand_gait, walk_gait, reverse_gait, left_gait, right_gait, pronk_gait};
+Gait all_gaits[TOTAL_GAITS] = {stand_gait, walk_gait, left_gait, reverse_gait, right_gait, pronk_gait};

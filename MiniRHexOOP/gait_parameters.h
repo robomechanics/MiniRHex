@@ -17,8 +17,8 @@ struct Gait {
 
 #define STAND 0
 #define WALK 1
-#define REVERSE 2
-#define LEFT 3
+#define LEFT 2
+#define REVERSE 3
 #define RIGHT 4
 #define PRONK 5
 
