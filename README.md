@@ -44,6 +44,9 @@ If the configuration was successful, the servo you are configuring should move b
 
 ![MiniRHex CAD](Images/RHex_Mini_IDS.JPG)
 
+### Bluetooth (Optional)
+See [Bluetooth Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Bluetooth).
+
 # Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
 2. Open MiniRHex.ino in the OpenCM IDE and check that under "Tools":
