@@ -5,7 +5,7 @@
 | **McMaster-Carr Parts** | | | |
 | M3 x 0.50 mm Thread, 10 mm  Button Head Screws | 44 | $6.08 | https://www.mcmaster.com/#94500A223 |
 | M3 x 0.50 mm Thread, 15 mm | 12 | $4.80 | https://www.mcmaster.com/92095a119 |
-| M3 x 0.45 mm Thread, 25 mm (Additional Screws for Servo Horn) | 6 | $5.90 | https://www.mcmaster.com/92005a078 |
+| M2.5 x 0.45 mm Thread, 25 mm (Additional Screws for Servo Horn) | 6 | $5.90 | https://www.mcmaster.com/92005a078 |
 | M3 Locknuts | 32 | $3.36 | https://www.mcmaster.com/#90576A102 |
 | 1/8" acrylic, 20 cm x 12 cm (min) | 1 | $5.73 | https://www.mcmaster.com/8560k275 |
 | Spacer | 4 | $4.48 | https://www.mcmaster.com/#93657A203 |
