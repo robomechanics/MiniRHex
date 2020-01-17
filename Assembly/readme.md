@@ -1,19 +1,30 @@
+Note that while photographs do not reflect the most recent 3D printed parts as of 1/2020, the assembly instructions are largely unaffected.
+
+# Required Equipment
+
+* 3D printer
+* Laser cutter (or saw + hand drill)
+* File, edge trimmer, or other tool for cleaning up 3D printed parts
+* Soldering iron
+* 2mm hex head allen key
+* Pliers
+* M3 x 0.5 mm tap
+
 # MiniRHex Assembly Instructions
 
 1. Solidworks files available in /CAD
  * Any updated or changed SolidWorks parts will be uploaded here
 
 2. Look at the MiniRhexHardware file to see the needed parts and links to the items.
-  * McMaster: M3 locknuts, button head screws, and spacer; 3mm acrylic
-  * Amazon: Battery, Plastidip, charger, and battery connectors
+  * McMaster: M3 locknuts, button head screws, spacers, and 3mm acrylic
+  * Amazon: Battery, Plastidip, charger, velcro straps for battery, and battery connectors
   * Robotis: Main board, Dynamixels, Bluetooth(optional)
 
-3. If you have access to an Ultimaker 3, simply upload and print using the extended printer gcode, in /CAD/STL, called     MiniRhex_full_print_compressed.gcode.gz.
-   Otherwise, print the following (PLA), .stl files can be found in /CAD/STL
- * 6 servo sleeve parts (servo sleeve.STL), for best results print with the back side on the build plate
- * 4 shaft-edge parts (shaft-edge.STL)
- * 2 shaft-mid parts (shaft-mid.STL)
- * 1 battery case part (Battery case.STL)
+3. Print the following parts. .stl files can be found in /CAD/STL. It is recommended that you print with PLA, but not required. Print all parts with support, and at least 20% infill. You may want a brim on your parts to ensure good bed adhesion.
+ * 6 servo sleeve parts (servo sleeve.STL), for best results print with the back side on the build plate.
+ * 4 shaft-edge parts (shaft-edge.STL), for best results print with the circular crossection flush with the buildplate.
+ * 2 shaft-mid parts (shaft-mid.STL), for best results print with the circular crossection flush with the buildplate.
+ * 1 battery case part (Battery case.STL), for best results print with base on the buildplate
  * 6 leg parts (leg.STL)
 
  The expected amount of PLA used to print is around:
@@ -23,9 +34,9 @@
  * 1 battery case part (17g each)(1 case) = 17g
  * 6 leg parts (2g each)(6 legs) = 12g
 
- The total amount adds to 117g.
+ The total amount adds to 117g, but will vary depending on your printing parameters.
 
- After printing, there are supports inside the servo sleeves, shaft-edge parts and shaft-mid parts. Ensure that you remove the supports inside the prints before moving on. They should look like this:
+ After printing, ensure that you remove the supports inside the prints before moving on. There will be support material in the shaft pieces, servo sleeves, and under the battery case. They should look like this:
 
  ![Shaft-mid](Images/final_mid.jpg)
 
@@ -36,9 +47,11 @@
  All in all, the parts should look as follows:
 
  ![Everything](Images/final_all.png)
+ 
+ Make sure to trim any excess material from the parts.
 
 4. Open base.sldprt and save as a .dxf file. Use this file to laser cut 3-mm thick acrylic to
-serve as the foundation for the robot.
+serve as the foundation for the robot. If you wish, you can substitute wood for acrylic, but make sure the thickness matches, as the screw length is based off of the base thickness. If you do not have access to a laser cutter, print out the DXF file of the base plate on printer paper and use it as a guide to hand drill holes with a 3.4 mm bit into thin wood.
 
 Check to make sure the screws fit through the holes. If not, drill them out before moving on.
 
@@ -50,18 +63,16 @@ Check to make sure the screws fit through the holes. If not, drill them out befo
 
 6. First, connect the battery case and mainboard to the foundation, with the USB port facing outwards (see step 16. for complete MiniRHex layout).
  * Connections:
-    * Battery case: M3 button head x 10 mm, M3 nut
-    * Mainboard: M3 spacer, M3 button head x 10 mm, M3 lock nut
+    * Battery case: M3 button head x 10 mm, M3 nut. The lock nuts should seat into the hex cutouts inside the battery case.
+    * Mainboard: M3 spacer, M3 button head x 10 mm, M3 lock nut. Place the locknuts above the mainboard, not below the base.
   * Battery case is near the center of the foundation.
   * The mainboard’s micro-USB port should face out.
   * The mainboard will be towards the front of the robot.
 
-  Place nuts on top of the board so it doesn't interfere with MiniRHex's movement. It is not recommended to place the nut underneath the board.
-
   For attatching the mainboard, place spacer in between the mainboard and the acrylic base, then the nut on top of the mainboard.
 
 7. Next, prepare the legs by using Plastidip (either dip or spray) and coating around 75% of each of the six
-legs until high friction surface forms on each leg.
+legs until a high friction surface forms on each leg.
   * Between each coat, let dry for at least one hour.
   * Make sure the dip is evenly coated around the leg.
   * Do not cover the through holes for the screws.
@@ -72,26 +83,24 @@ legs until high friction surface forms on each leg.
 
 8. Connect four of the six legs to edge shafts (shorter shafts).
 
-   Due to the nature of 3-D printing, you may need to file down your leg shafts in order for the legs to sit comfortably or drill out the holes in the legs.
+   Check that the legs sit flush on the shafts when the two mounting holes are aligned. If not, use a file or edge trimmer to clean the edge of the part until they do.
 
-   Next, tap the leg shafts using a m3 tap.
+   Next, tap the leg shafts using a M3 tap. If you do not have a tap, you may be able to thread the screw directly into the part - do so very carefully to avoid stripping.
 
-   Connect the legs to leg shafts using a m3 screw.
+   Connect the legs to leg shafts using the 15 mm long M3 screws.
 
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Ensure that the leg is flush and lays flat against the shaft.
-  * Connection: M3 socket head x 10 mm
+  * Connection: M3 socket head x 15 mm
   * Ensure that there are two legs facing each direction as shown below
 
 9. Connect the other two legs to the mid shafts (longer shaft).
 
-   Similarly, you may need to first file and drill the leg shafts.
-
-   Again, tap the leg shafts before inserting screws.
+   Again, check that the legs sit flush on the shafts and tap the leg shafts before inserting screws.
 
   * Align the leg through holes with the holes on the cut-out portion of the shaft.
   * Ensure that the leg is flush and lays flat against the shaft.
-  * Connection: M3 socket head x 10 mm
+  * Connection: M3 socket head x 15 mm
   * For one of the two connections, be sure to switch the orientation of the leg
   as shown below.
 
@@ -108,7 +117,7 @@ legs until high friction surface forms on each leg.
   * Align the horn (now connected to the leg apparatus) to its key on the body of the servo.
     * Once the horn is flush against the body, connect the horn/shaft/leg apparatus
     to the servo motor.
-    * Connection: M2.5x25 bolts from McMaster
+    * Connection: M2.5 x 25 mm bolts from McMaster
   * Be sure to align the bottom slots!
   ![Slot Orientation](Images/slots.jpg)
 
@@ -120,9 +129,9 @@ Instructions on how to [Configure Servo IDs](https://github.com/robomechanics/Mi
 
 12. Connect each servo sleeve to the foundation.
   * Orientation: Be sure all legs face forward (semicircle faces the mainboard).
-  * Connection: M3 button head x 10 mm, M3 nut
+  * Connection: M3 button head x 10 mm, M3 locknut
 
-  Again, it is recommended that the M3 nuts are placed on top of the board as opposed to the bottom of the board.
+The locknuts should seat into the hex cutouts on the servo sleeves.
 
 13. Connect the servos to the mainboard.
   * Connect such that no wires interfere with leg rotation.
