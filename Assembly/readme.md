@@ -6,7 +6,8 @@ Note that while photographs do not reflect the most recent 3D printed parts as o
 * Laser cutter (or saw + hand drill)
 * File, edge trimmer, or other tool for cleaning up 3D printed parts
 * Soldering iron
-* 2mm hex head allen key
+* 2 mm hex head allen key
+* Small Phillips head screwdriver
 * Pliers
 * M3 x 0.5 mm tap
 
