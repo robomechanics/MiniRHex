@@ -62,7 +62,9 @@ Check to make sure the screws fit through the holes. If not, drill them out befo
 
   ![Power pin location](Images/MiniRHex_powerpins.png)
 
-6. First, connect the battery case and mainboard to the foundation, with the USB port facing outwards (see step 16. for complete MiniRHex layout).
+6. First, we connect the battery case and mainboard to the foundation, with the USB port facing outwards (see step 16. for complete MiniRHex layout). 
+
+Before mounting the battery case to the base, thread one 8"x1/2" velcro strap through the holes in the bottom so that the strap runs under the case.
  * Connections:
     * Battery case: M3 button head x 10 mm, M3 nut. The lock nuts should seat into the hex cutouts inside the battery case.
     * Mainboard: M3 spacer, M3 button head x 10 mm, M3 lock nut. Place the locknuts above the mainboard, not below the base.
