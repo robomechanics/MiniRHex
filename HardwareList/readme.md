@@ -3,8 +3,9 @@
 | Item | Quantity per Robot | Price | Link |
 |------|--------------------|-------|------|
 | **McMaster-Carr Parts** | | | |
-| M3 x 0.5mm Thread, 10mm  Button Head Screws | 44 | $6.08 | https://www.mcmaster.com/#94500A223 |
-| M3 x 0.50 mm Thread, 25mm | 12 | $5.90 | https://www.mcmaster.com/92095a186 |
+| M3 x 0.50 mm Thread, 10 mm  Button Head Screws | 44 | $6.08 | https://www.mcmaster.com/#94500A223 |
+| M3 x 0.50 mm Thread, 15 mm | 12 | $4.80 | https://www.mcmaster.com/92095a119 |
+| M3 x 0.45 mm Thread, 25 mm (Additional Screws for Servo Horn) | 6 | $5.90 | https://www.mcmaster.com/92005a078 |
 | M3 Locknuts | 32 | $3.36 | https://www.mcmaster.com/#90576A102 |
 | 1/8" acrylic, 20 cm x 12 cm (min) | 1 | $5.73 | https://www.mcmaster.com/8560k275 |
 | Spacer | 4 | $4.48 | https://www.mcmaster.com/#93657A203 |
@@ -25,6 +26,6 @@
 | Leg | 6 | | "" |
 | Battery Case | 1 | | "" | 
 | Printing Subtotal | ~275g PLA | ~$5.50 | (Cost estimate is for material only, assuming an Ultimaker 3 Extended and the recommended gcode file from /CAD) |
-| **Total** | | **$211.84** | (as of 1-07-19 without Bluetooth or battery charger) |
+| **Total** | | **$216.64** | (as of 1-07-19 without Bluetooth or battery charger) |
 
 *Parts list also available as Excel Sheet, download above*
