@@ -1,6 +1,10 @@
-#ifndef conversions
-#define conversions
+#ifndef _CONVERSIONS_H
+#define _CONVERSIONS_H
 
+// Inherent to design
+extern const unsigned short theta_circle; // theta for one revolution
+extern const unsigned short theta_dead; // theta range of deadzone
+extern const unsigned short theta_up; // theta of middle of deadzone
 
 // V refers to units used in calculation (degrees per millisecond)
 // dynV refers to command velocity sent to dynamixels (ranges from [0-2048), >1023 is opposite direction)
@@ -14,4 +18,5 @@ float P_to_Theta(int P);
 int Theta_to_P(float theta);
 float ThetaR_to_Theta(float theta);
 float Theta_to_ThetaR(float theta);
+
 #endif
