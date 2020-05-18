@@ -47,12 +47,22 @@ If the configuration was successful, the servo you are configuring should move b
 ### Bluetooth (Optional)
 See [Bluetooth Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Bluetooth).
 
+# Installation (Arduino)
+1. Click on File -> Preferences in the top menu (or Arduino -> Preferences)
+2. In the "Additional Board Managers URLs" text field copy and paste
+```https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCM9.04/master/arduino/opencm_release/package_opencm9.04_index.json```
+3. Exit Preferences and click on Tools -> Board -> Boards Manager
+4. Search for "Opencm", select version "0.0.3", and install. This may take a while, so grab a cup of coffee!
+5. After that is done, close the window, click on Tools -> Board -> OpemCM9.04 Board. And now you can upload code to the MiniRHes with Arduino!
+6. To upload code see below instructions.
+7. Note: MiniRHexduino code is only compatible with newer OpemCM9.04 boards, that is, ones with silver switches; it does not work well with boards with black switches!
+
 # Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
-2. Open MiniRHex.ino in the OpenCM IDE and check that under "Tools":
+2. Open MiniRHex.ino in the OpenCM or Arduino IDE and check that under "Tools":
    - "Board" is set to ROBOTIS OpenCM9.04
    - "Port" is set to the correct COM port (whichever COM port is added when MiniRHex is plugged in)
-3. Ensure the motor zeros in leg_info.cpp are correct
+3. Ensure the motor zeros in leg_info.cpp are correct (optional)
 4. Set desired gait parameters in gait_parameters.cpp
 5. Click the download icon in the upper left corner of the OpenCM IDE (wait until it reports "Done Downloading")
 6. Disconnect the Micro USB cable and connect the battery
