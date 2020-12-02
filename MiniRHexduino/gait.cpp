@@ -28,6 +28,7 @@ const float leg_phase1 = 0.50;
 const float leg_phase2 = 0.0;
 
 
+
 // -------------------------------------- //
 
 const Gait stand_gait {
@@ -111,26 +112,36 @@ const float leg_phase3c = 0.25;
 
 const int walk_periodc = 2500; // 2000;
 
+
+
+//Tail Parameters 
+const float tail_dutyf = 0.42;
+const float tail_sweep = 40.0;
+const float tail_down = 20.0;
+const float tail_phase1 = 0.50;
+const float tail_phase2 = 0.0;
+
+
 const Gait climbing_gait {
     WALK,
     kp_walk, kd_walk,
-    {leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep},
-    {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down},
-    {-1, -1, -1, -1, -1, -1},
-    {walk_period, walk_period, walk_period, walk_period, walk_period, walk_period},
-    {leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf},
-    {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2}
+    {leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep, tail_sweep},
+    {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down, tail_down},
+    {-1, -1, -1, -1, -1, -1, -1},
+    {walk_period, walk_period, walk_period, walk_period, walk_period, walk_period, 0},
+    {leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, tail_dutyf},
+    {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2, tail_phase2}
 };
 
 const Gait test_gait {
     WALK,
     kp_walk, kd_walk,
-    {leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc},
-    {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down},
-    {-1, -1, -1, -1, -1, -1},
-    {walk_periodc, walk_periodc, walk_periodc, walk_periodc, walk_periodc, walk_periodc},
-    {leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc},
-    {leg_phase1c, leg_phase3c, leg_phase2c, leg_phase1c, leg_phase3c, leg_phase2c}
+    {leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, tail_sweep},
+    {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down, tail_down},
+    {-1, -1, -1, -1, -1, -1, -1},
+    {walk_periodc, walk_periodc, walk_periodc, walk_periodc, walk_periodc, walk_periodc, 0},
+    {leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, tail_dutyf},
+    {leg_phase1c, leg_phase3c, leg_phase2c, leg_phase1c, leg_phase3c, leg_phase2c, tail_phase2}
 };
 
 const Gait gait_order[TOTAL_GAITS] = {climbing_gait, test_gait, stand_gait, walk_gait, reverse_gait, left_gait, right_gait};
