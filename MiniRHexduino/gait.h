@@ -1,15 +1,13 @@
 #ifndef _GAIT_PARAMETERS_H
 #define _GAIT_PARAMETERS_H
 
-#define TOTAL_GAITS 7
+#define TOTAL_GAITS 5
 
 #define STAND 0
 #define WALK 1
 #define REVERSE 2
 #define LEFT 3
 #define RIGHT 4
-#define CLIMB 5
-#define TEST 6  
 
 struct Gait 
 {
@@ -25,12 +23,10 @@ struct Gait
 };
 
 extern const Gait gait_order[TOTAL_GAITS];
-extern const Gait climbing_gait;
 extern const Gait stand_gait;
 extern const Gait walk_gait;
 extern const Gait reverse_gait;
 extern const Gait right_gait;
 extern const Gait left_gait;
-extern const Gait test_gait;
 
 #endif
