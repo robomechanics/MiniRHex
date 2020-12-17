@@ -16,12 +16,12 @@ struct Gait
   int id;
   float kp;
   float kd;
-  float theta_s[6];
-  float theta_d[6];
-  int leg_dir[6];
-  int t_cc[6];
-  float duty_f[6];
-  float phases[6];
+  float theta_s[7];
+  float theta_d[7];
+  int leg_dir[7];
+  int t_cc[7];
+  float duty_f[7];
+  float phases[7];
 };
 
 extern const Gait gait_order[TOTAL_GAITS];
