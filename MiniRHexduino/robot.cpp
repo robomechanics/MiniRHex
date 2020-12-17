@@ -12,8 +12,6 @@ Robot::Robot(Dynamixel * dxl) : Dxl(dxl)
   legs[3] = Leg(4, 3, 0, 0, 0, stand_gait, 0,  true, false, false);
   legs[4] = Leg(5, 4, 0, 0, 0, stand_gait, 0,  true, false, false);
   legs[5] = Leg(6, 5, 0, 0, 0, stand_gait, 0,  true, false, false);
-  legs[6] = Leg(7, 6, 0, 0, 0, stand_gait, 0,  true, false, false);
-  // gonna change these parameters in testing
 }
 
 void Robot::startup()
