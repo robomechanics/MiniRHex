@@ -144,4 +144,4 @@ const Gait test_gait {
     {leg_phase1c, leg_phase3c, leg_phase2c, leg_phase1c, leg_phase3c, leg_phase2c, tail_phase2}
 };
 
-const Gait gait_order[TOTAL_GAITS] = {climbing_gait, test_gait, stand_gait, walk_gait, reverse_gait, left_gait, right_gait};
+const Gait gait_order[TOTAL_GAITS] = {walk_gait, test_gait, stand_gait, walk_gait, reverse_gait, left_gait, right_gait};

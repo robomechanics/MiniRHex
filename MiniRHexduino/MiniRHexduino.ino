@@ -26,14 +26,18 @@ void handle_button_press() {
 }
 
 void setup() {
+  
   MiniRHex.startup();
   Serial2.begin(57600);
+  
   pinMode(BOARD_BUTTON_PIN, INPUT_PULLDOWN); // setup user button
   pinMode(BOARD_LED_PIN, OUTPUT); // setup LED
+  
 }
 
 unsigned long t = millis();
 void loop() {
+  delay(5000);
   // Every second, find max voltage supplied to each leg and compare with nominal // 
   if (millis() - t > 1000) {
     t = millis();
@@ -41,7 +45,7 @@ void loop() {
   }
   // button control //
   handle_button_press();
-  
   MiniRHex.update();
-  MiniRHex.checkForBT();
+  //MiniRHex.checkForBT();
+  
 }

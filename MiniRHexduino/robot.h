@@ -38,7 +38,7 @@ class Robot
 
         // Legs setup //
         int legs_active;
-        Leg legs[6];
+        Leg legs[7];
 
         // Packet Setup //
         int packet_length;

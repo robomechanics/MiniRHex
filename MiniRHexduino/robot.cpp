@@ -101,9 +101,17 @@ void Robot::update_leg_params()
 void Robot::update()
 {
   update_leg_params();
-  word packet[packet_length];
-
+  digitalWrite(BOARD_LED_PIN, LOW);
+  delay(5000);
+  word packet[12]; // this was originally packet_length instead of 12
+  digitalWrite(BOARD_LED_PIN, HIGH);
+  
+  //delay(1000);
+    //digitalWrite(BOARD_LED_PIN, LOW);
+    //delay(5000);
+    //digitalWrite(BOARD_LED_PIN, HIGH);
   for(int i = 0; i < legs_active; i++) {
+    
     packet[2*i] = legs[i].id;
 
     int actual_p = legs[i].position;
@@ -166,7 +174,7 @@ void Robot::checkForBT()
   // bluetooth control
   if (Serial2.available()) {
     char a = (char)(Serial2.read());
-
+    
     if (0x30 <= a && a <= 0x77) { // for compatibility with android app
       Serial.println(a);
 
