@@ -84,4 +84,4 @@ const Gait right_gait {
     {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2}
 };
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, walk_gait, reverse_gait, left_gait, right_gait};
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, walk_gait}; //, reverse_gait, left_gait, right_gait};
