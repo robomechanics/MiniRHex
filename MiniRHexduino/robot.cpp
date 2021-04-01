@@ -1,6 +1,10 @@
 #include "robot.h"
 #include "conversions.h"
 
+int tail_pos = 0; 
+int packet_pos[] = {7,0};
+int count = 0;
+
 Robot::Robot(Dynamixel * dxl) : Dxl(dxl)
 {
   legs_active = 6;
@@ -156,6 +160,22 @@ void Robot::update()
     }
   }
 
+  if(count%100 == 0)
+  {
+    packet_pos[0] = 7;
+    packet_pos[1] = tail_pos;
+    if(tail_pos == 0)
+    {
+      tail_pos = 100;
+    }
+    else
+    {
+      tail_pos = 0;
+    }
+  }
+  count++;
+  
+  Dxl->syncWrite(30, 1, packet_pos, 2);
   Dxl->syncWrite(MOVING_SPEED, 1, packet, packet_length); //simultaneously write to each of 6 servoes with updated commands
 }
 

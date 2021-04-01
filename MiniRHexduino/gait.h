@@ -1,7 +1,7 @@
 #ifndef _GAIT_PARAMETERS_H
 #define _GAIT_PARAMETERS_H
 
-#define TOTAL_GAITS 5
+#define TOTAL_GAITS 2
 
 #define STAND 0
 #define WALK 1
