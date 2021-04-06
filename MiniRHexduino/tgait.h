@@ -11,7 +11,7 @@ struct tGait
  // float num_phases; //number of discrete tail positions
   float period; //amount of time at each tail location in milliseconds
   int num_locs; // number of locations in the locations array
-  float locations[10]; //these should be positions or angles and then converted to positions
+  int locations[10]; //these should be positions or angles and then converted to positions
   int curr_loc_ind; 
   int phase_inc; //if we should be incrementing up the locations or down the location array
   int count; 

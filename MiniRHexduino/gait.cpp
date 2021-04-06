@@ -49,13 +49,15 @@ const float leg_phase2 = 0.0;
 
  */
 //TAIL GAITS
-//position 500 is horizontal (parallel to the ground) 
+int horizontal = 512;
+int vertical = 768;
+//position 512 is horizontal (parallel to the ground) 
 const tGait no_tail { 
   true,
   0, 0,
   1000, //needs to be one because we mod by period,
   1,
-  {500, 0, 0, 0, 0, 0,0,0,0,0},
+  {512, 0, 0, 0, 0, 0,0,0,0,0},
   0,
   1,
   0
@@ -64,8 +66,8 @@ const tGait standard_tail {
   true,
   kp_walk, kd_walk,
   5000, //milliseconds
-  2,
-  {500, 490, 0, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  4,
+  {512, 540, 560, 580, 0, 0, 0, 0, 0, 0}, // these are angles,
   0,
   1,
   0
@@ -94,7 +96,7 @@ const Gait walk_gait {
     {walk_period, walk_period, walk_period, walk_period, walk_period, walk_period},
     {leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf},
     {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2},
-    no_tail
+    standard_tail
 };
 
 const Gait reverse_gait {

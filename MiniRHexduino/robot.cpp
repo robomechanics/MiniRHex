@@ -173,19 +173,26 @@ void Robot::update()
   int elapsed_time = curr_t - legs[0].startMillis; 
   int tempCount;
   tempCount = elapsed_time/period; 
-  if(tempCount>curr_tgait.count)//elapsed_time///elapsed_time%period<=timeBuffer || period - (elapsed_time%period)<=timeBuffer)
+  if(tempCount>curr_tgait.count && curr_tgait.num_locs != 1)//elapsed_time///elapsed_time%period<=timeBuffer || period - (elapsed_time%period)<=timeBuffer)
   {
     curr_tgait.count = tempCount; 
-    curr_tgait.curr_loc_ind = curr_tgait.curr_loc_ind + curr_tgait.phase_inc; 
+    if(curr_tgait.count!=1)
+    {
+      curr_tgait.curr_loc_ind = curr_tgait.curr_loc_ind + curr_tgait.phase_inc; 
+    }
     if((curr_tgait.curr_loc_ind == curr_tgait.num_locs - 1 || curr_tgait.curr_loc_ind == 0) && curr_tgait.count!=1)
     {
       curr_tgait.phase_inc = -1*curr_tgait.phase_inc; 
+      Serial.println("I should be multiplying by -1: ");
+      Serial.println(curr_tgait.phase_inc); 
     }
+  
   }
   packet_pos[0] = 7;
   packet_pos[1] = curr_tgait.locations[curr_tgait.curr_loc_ind];
   currGait.tgait = curr_tgait; //update the currentGait property 
-  Serial.println(packet_pos[1]);
+  Serial.print("Send Tail to Position: ");
+  Serial.println(curr_tgait.locations[curr_tgait.curr_loc_ind]); 
   Dxl->syncWrite(30, 1, packet_pos, 2);
   Dxl->syncWrite(MOVING_SPEED, 1, packet, packet_length); //simultaneously write to each of 6 servoes with updated commands
 }
