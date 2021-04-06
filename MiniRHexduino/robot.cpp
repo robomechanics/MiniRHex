@@ -1,9 +1,10 @@
 #include "robot.h"
 #include "conversions.h"
 
-int tail_pos = 0; 
-int packet_pos[] = {7,0};
+//int tail_pos = 0; 
+int packet_pos[2];
 int count = 0;
+int timeBuffer = 10; //milliseconds
 
 Robot::Robot(Dynamixel * dxl) : Dxl(dxl)
 {
@@ -25,6 +26,7 @@ void Robot::startup()
   for (int i = 0; i < legs_active; i++) { // legs stored at their index
     legs[i].updateGait(stand_gait, t_start); // set initial parameters, initial_gait in gait_parameters
   }
+  currGait = stand_gait; 
 }
 
 int Robot::incrementGait()
@@ -39,8 +41,12 @@ int Robot::updateGait(Gait gait)
   for(int i = 0; i < legs_active; i++) {
     legs[i].updateGait(gait, t_start);
   }
+  currGait = gait_order[gait_idx]; 
   int packet[] = {1,0,2,0,3,0,4,0,5,0,6,0};
+  int packetTail[] = {7,0}; 
+  
   Dxl->syncWrite(30, 1, packet, packet_length);
+  Dxl->syncWrite(30, 1, packetTail, 2);
   delay(100);
   return gait_idx;
 }
@@ -104,7 +110,7 @@ void Robot::update()
 {
   update_leg_params();
   word packet[packet_length];
-
+  int curr_t; //so it can be used outside the for loop
   for(int i = 0; i < legs_active; i++) {
     packet[2*i] = legs[i].id;
 
@@ -120,7 +126,7 @@ void Robot::update()
         continue;
       }
 
-      int curr_t = millis();
+      curr_t = millis(); // used to be int curr_t = millis()
       float control_signal = 0;
       float desired_theta = 0;
       float desired_vel = 0;
@@ -160,21 +166,26 @@ void Robot::update()
     }
   }
 
-  if(count%100 == 0)
+  //int curr_t = millis();//redefine curr_t for more accuracy
+  //start appending tail stuff
+  tGait curr_tgait = currGait.tgait; 
+  float period = curr_tgait.period; 
+  int elapsed_time = curr_t - legs[0].startMillis; 
+  int tempCount;
+  tempCount = elapsed_time/period; 
+  if(tempCount>curr_tgait.count)//elapsed_time///elapsed_time%period<=timeBuffer || period - (elapsed_time%period)<=timeBuffer)
   {
-    packet_pos[0] = 7;
-    packet_pos[1] = tail_pos;
-    if(tail_pos == 0)
+    curr_tgait.count = tempCount; 
+    curr_tgait.curr_loc_ind = curr_tgait.curr_loc_ind + curr_tgait.phase_inc; 
+    if((curr_tgait.curr_loc_ind == curr_tgait.num_locs - 1 || curr_tgait.curr_loc_ind == 0) && curr_tgait.count!=1)
     {
-      tail_pos = 100;
-    }
-    else
-    {
-      tail_pos = 0;
+      curr_tgait.phase_inc = -1*curr_tgait.phase_inc; 
     }
   }
-  count++;
-  
+  packet_pos[0] = 7;
+  packet_pos[1] = curr_tgait.locations[curr_tgait.curr_loc_ind];
+  currGait.tgait = curr_tgait; //update the currentGait property 
+  Serial.println(packet_pos[1]);
   Dxl->syncWrite(30, 1, packet_pos, 2);
   Dxl->syncWrite(MOVING_SPEED, 1, packet, packet_length); //simultaneously write to each of 6 servoes with updated commands
 }

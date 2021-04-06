@@ -1,6 +1,8 @@
 #ifndef _GAIT_PARAMETERS_H
 #define _GAIT_PARAMETERS_H
 
+#include "tgait.h" 
+
 #define TOTAL_GAITS 2
 
 #define STAND 0
@@ -20,6 +22,8 @@ struct Gait
   int t_cc[6];
   float duty_f[6];
   float phases[6];
+  tGait tgait;
+  
 };
 
 extern const Gait gait_order[TOTAL_GAITS];

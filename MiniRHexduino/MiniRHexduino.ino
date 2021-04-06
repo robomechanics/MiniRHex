@@ -34,7 +34,6 @@ void setup() {
 
 unsigned long t = millis();
 void loop() {
-  Serial.println(7); 
   // Every second, find max voltage supplied to each leg and compare with nominal // 
   if (millis() - t > 1000) {
     t = millis();

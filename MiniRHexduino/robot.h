@@ -19,6 +19,7 @@ class Robot
         Dynamixel *Dxl;
 
         unsigned char gait_idx;
+        Gait currGait; //new 
 
         Robot(Dynamixel *dxl);
         ~Robot() {};
