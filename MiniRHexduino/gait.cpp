@@ -29,6 +29,28 @@ const float leg_down = 20.0;
 const float leg_phase1 = 0.50;
 const float leg_phase2 = 0.0;
 
+
+//Climbing parametrs
+
+//Leg 1 (Left Front) Parameters for Climbing:
+const float leg_dutyc = 0.75;
+const float leg_sweepc = 75.0;
+const float leg_downc = 20.0;
+const float leg_phase1c = 0.50;
+const float leg_phase2c = 0.0;
+const float leg_phase3c = 0.25; 
+
+const int walk_periodc = 2500; // 2000;
+
+
+
+//Tail Parameters 
+const float tail_dutyf = 0.42;
+const float tail_sweep = 40.0;
+const float tail_down = 20.0;
+const float tail_phase1 = 0.50;
+const float tail_phase2 = 0.0;
+
 // -------------------------------------- //
 
 
@@ -134,5 +156,18 @@ const Gait right_gait {
     {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2},
     no_tail
 };
+
+const Gait climbing_gait {
+    WALK,
+    kp_walk, kd_walk,
+    {leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep},
+    {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down},
+    {-1, -1, -1, -1, -1, -1},
+    {walk_period, walk_period, walk_period, walk_period, walk_period, walk_period},
+    {leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf},
+    {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2},
+    no_tail
+};
+
 
 const Gait gait_order[TOTAL_GAITS] = {stand_gait, walk_gait}; //, reverse_gait, left_gait, right_gait};
