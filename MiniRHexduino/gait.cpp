@@ -6,6 +6,7 @@
 const float kp_walk = 0.03; // 0.02
 const float kd_walk = 1.0;
 const int walk_period = 2000; // 720;
+const int climb_period = 2000; 
 
 /*
 Explanation of parameters:
@@ -158,16 +159,16 @@ const Gait right_gait {
 };
 
 const Gait climbing_gait {
-    WALK,
+    CLIMB,
     kp_walk, kd_walk,
     {leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep},
     {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down},
     {-1, -1, -1, -1, -1, -1},
-    {walk_period, walk_period, walk_period, walk_period, walk_period, walk_period},
+    {climb_period, climb_period, climb_period, climb_period, climb_period, climb_period},
     {leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf},
-    {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2},
+    {leg_phase2, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase1},
     no_tail
 };
 
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, walk_gait}; //, reverse_gait, left_gait, right_gait};
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, walk_gait, climbing_gait}; //, reverse_gait, left_gait, right_gait};

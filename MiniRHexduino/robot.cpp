@@ -43,7 +43,7 @@ int Robot::updateGait(Gait gait)
   }
   currGait = gait_order[gait_idx]; 
   int packet[] = {1,0,2,0,3,0,4,0,5,0,6,0};
-  int packetTail[] = {7,0}; 
+  int packetTail[] = {7,512}; 
   
   Dxl->syncWrite(30, 1, packet, packet_length);
   Dxl->syncWrite(30, 1, packetTail, 2);
