@@ -1,12 +1,10 @@
 #include "gait.h"
 #include "leg.h"
-//#include "tail.h"
 #include "tgait.h" 
 
 const float kp_walk = 0.03; // 0.02
 const float kd_walk = 1.0;
 const int walk_period = 2000; // 720;
-const int climb_period = 2000; 
 
 /*
 Explanation of parameters:
@@ -34,23 +32,14 @@ const float leg_phase2 = 0.0;
 //Climbing parametrs
 
 //Leg 1 (Left Front) Parameters for Climbing:
-const float leg_dutyc = 0.75;
-const float leg_sweepc = 75.0;
-const float leg_downc = 20.0;
+const float leg_dutyc = 0.7;
+const float leg_sweepc = 60;
+const float leg_downc = 270.0;
 const float leg_phase1c = 0.50;
 const float leg_phase2c = 0.0;
 const float leg_phase3c = 0.25; 
 
-const int walk_periodc = 2500; // 2000;
-
-
-
-//Tail Parameters 
-const float tail_dutyf = 0.42;
-const float tail_sweep = 40.0;
-const float tail_down = 20.0;
-const float tail_phase1 = 0.50;
-const float tail_phase2 = 0.0;
+const int walk_periodc = 5000; // 2000;
 
 // -------------------------------------- //
 
@@ -96,6 +85,16 @@ const tGait standard_tail {
   0
 };
 
+const tGait climb_tail { 
+  true,
+  kp_walk, kd_walk,
+  walk_periodc, //milliseconds
+  3,
+  {512, 400,300, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
 //----------------------------------------//
 const Gait stand_gait {
     STAND,
@@ -161,14 +160,25 @@ const Gait right_gait {
 const Gait climbing_gait {
     CLIMB,
     kp_walk, kd_walk,
-    {leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep, leg_sweep},
-    {leg_down, leg_down, leg_down, leg_down, leg_down, leg_down},
+    {leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc, leg_sweepc},
+    {leg_downc, leg_downc, leg_downc, leg_downc, leg_downc, leg_downc},
     {-1, -1, -1, -1, -1, -1},
-    {climb_period, climb_period, climb_period, climb_period, climb_period, climb_period},
-    {leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf, leg_dutyf},
-    {leg_phase2, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase1},
-    no_tail
+    {walk_period, walk_period, walk_period, walk_period, walk_period, walk_period},
+    {leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc, leg_dutyc},
+    {leg_phase1, leg_phase2, leg_phase1, leg_phase2, leg_phase1, leg_phase2},
+    standard_tail
 };
 
+const Gait alt_fb { 
+    CLIMB1,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 40, leg_sweepc, 1, 40},
+    {leg_downc, 130, 250, leg_downc, 130, 250},
+    {-1, -1, -1, -1, -1, -1},
+    {walk_periodc, 1000000, walk_periodc, walk_periodc, 1000000, walk_periodc},
+    {leg_dutyc, 1, 1, leg_dutyc, 1, 1},
+    {leg_phase1, .25, leg_phase2, leg_phase1, .25, leg_phase2},
+    climb_tail
+};
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, walk_gait, climbing_gait}; //, reverse_gait, left_gait, right_gait};
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, alt_fb}; //, reverse_gait, left_gait, right_gait};

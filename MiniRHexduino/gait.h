@@ -3,7 +3,7 @@
 
 #include "tgait.h" 
 
-#define TOTAL_GAITS 3
+#define TOTAL_GAITS 2
 
 #define STAND 0
 #define WALK 1
@@ -11,6 +11,7 @@
 #define LEFT 3
 #define RIGHT 4
 #define CLIMB 5
+#define CLIMB1 6
 
 struct Gait 
 {
@@ -33,6 +34,6 @@ extern const Gait walk_gait;
 extern const Gait reverse_gait;
 extern const Gait right_gait;
 extern const Gait left_gait;
-extern const Gait climb_gait; 
+extern const Gait climbing_gait; 
 
 #endif
