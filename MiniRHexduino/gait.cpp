@@ -34,12 +34,13 @@ const float leg_phase2 = 0.0;
 //Leg 1 (Left Front) Parameters for Climbing:
 const float leg_dutyc = 0.7;
 const float leg_sweepc = 60;
-const float leg_downc = 270.0;
+const float leg_downc = 280.0;
 const float leg_phase1c = 0.50;
 const float leg_phase2c = 0.0;
 const float leg_phase3c = 0.25; 
 
 const int walk_periodc = 5000; // 2000;
+const int tail_period = 4000; 
 
 // -------------------------------------- //
 
@@ -67,6 +68,7 @@ int vertical = 768;
 const tGait no_tail { 
   true,
   0, 0,
+  0,
   1000, //needs to be one because we mod by period,
   1,
   {512, 0, 0, 0, 0, 0,0,0,0,0},
@@ -77,6 +79,7 @@ const tGait no_tail {
 const tGait standard_tail { 
   true,
   kp_walk, kd_walk,
+  0,
   5000, //milliseconds
   4,
   {512, 540, 560, 580, 0, 0, 0, 0, 0, 0}, // these are angles,
@@ -88,9 +91,10 @@ const tGait standard_tail {
 const tGait climb_tail { 
   true,
   kp_walk, kd_walk,
-  walk_periodc, //milliseconds
-  3,
-  {512, 400,300, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  walk_periodc/3, 
+  walk_periodc/2, //milliseconds
+  2,
+  {480, 380,0, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
   0,
   1,
   0
@@ -181,4 +185,16 @@ const Gait alt_fb {
     climb_tail
 };
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, alt_fb}; //, reverse_gait, left_gait, right_gait};
+const Gait climb3 { 
+    CLIMB2,
+    kp_walk, kd_walk,
+    {leg_sweepc, 30, 30, leg_sweepc, 30, 30},
+    {leg_downc, 100, 100, leg_downc, 100, 100},
+    {-1, 1, 1, -1, 1, 1},
+    {walk_periodc, walk_periodc, walk_periodc, walk_periodc, walk_periodc, walk_periodc},
+    {leg_dutyc, 1, 1, leg_dutyc, 1, 1},
+    {leg_phase1, .33, .33, leg_phase1,.33, .33},
+    climb_tail
+};
+
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb3}; //, reverse_gait, left_gait, right_gait};
