@@ -82,7 +82,7 @@ const tGait standard_tail {
   0,
   5000, //milliseconds
   4,
-  {512, 540, 560, 580, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {512, 540, 560, 580, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -99,6 +99,31 @@ const tGait climb_tail {
   1,
   0
 };
+
+const tGait climb_tail2 { 
+  true,
+  kp_walk, kd_walk,
+  walk_periodc/3, 
+  walk_periodc/5, //milliseconds
+  3,
+  {480, 380, 380, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
+
+const tGait climb_tail3 { 
+  true,
+  kp_walk, kd_walk,
+  walk_periodc/3, 
+  walk_periodc/2, //milliseconds
+  2,
+  {480, 480, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
+
 //----------------------------------------//
 const Gait stand_gait {
     STAND,
@@ -197,4 +222,28 @@ const Gait climb3 {
     climb_tail
 };
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb3}; //, reverse_gait, left_gait, right_gait};
+const Gait alt_fb_static { 
+    CLIMB3,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 50, leg_sweepc, 1, 50},
+    {leg_downc, 130, 275, leg_downc, 130, 275},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, -1, -1, -1, -1},
+    {walk_periodc, 1000000, walk_periodc, walk_periodc, 1000000, walk_periodc},
+    {leg_dutyc, 1, 1, leg_dutyc, 1, 1},
+    {leg_phase1, .25, 0, leg_phase1, .25, 0},
+    climb_tail2
+};
+
+const Gait full_rot { 
+    CLIMB4,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, leg_sweepc, leg_sweepc, 1, leg_sweepc},
+    {leg_downc, 130, leg_downc, leg_downc, 130, leg_downc},
+    {-1, -1, -1, -1, -1, -1},
+    {walk_periodc, 1000000, walk_periodc, walk_periodc, 1000000, walk_periodc},
+    {leg_dutyc, 1, leg_dutyc, leg_dutyc, 1, leg_dutyc},
+    {0, .25, .5, 0, .25, .5},
+    climb_tail3
+};
+
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, alt_fb_static}; //, reverse_gait, left_gait, right_gait};
