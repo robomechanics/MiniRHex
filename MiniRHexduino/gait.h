@@ -16,6 +16,12 @@
 #define CLIMB3 8 
 #define CLIMB4 9 
 #define CLIMB5 10
+#define CLIMB6 11
+#define CLIMB7 12
+#define CLIMB8 13
+#define CLIMB9 14
+#define CLIMB10 15
+
 struct Gait 
 {
   int id;
