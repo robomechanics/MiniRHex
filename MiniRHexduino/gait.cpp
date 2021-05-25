@@ -172,6 +172,18 @@ const tGait climb_tail7 {
   0
 };
 
+const tGait climb_tail8 { 
+  true,
+  kp_walk, kd_walk,
+  7000/10, 
+  7000/4, //milliseconds
+  3,
+  {420, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
+
 //----------------------------------------//
 const Gait stand_gait {
     STAND,
@@ -355,7 +367,7 @@ const Gait climb9{
     climb_tail6
 };
 
-const Gait climb10{
+const Gait climb10{ //DO NOT CHANGE WORKS AT 50 DEGREES WITH CORKBOARD
     CLIMB9,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
@@ -367,4 +379,28 @@ const Gait climb10{
     climb_tail7
 };
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb10}; //, reverse_gait, left_gait, right_gait};
+const Gait climb11{ //works for 55
+    CLIMB10,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
+    {300, 130, 90, 300, 130, 90},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, 1, -1, -1, 1},
+    {7000, 1000000, 7000, 7000, 1000000, 7000},
+    {.5, 1, 1, .5, 1, 1},
+    {leg_phase1, .9, .8, leg_phase1, .9, .8},
+    climb_tail8
+};
+
+const Gait climb12{ 
+    CLIMB11,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
+    {300, 130, 90, 300, 130, 90},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, 1, -1, -1, 1},
+    {7000, 1000000, 7000, 7000, 1000000, 7000},
+    {1, 1, 1, 1, 1, 1},
+    {leg_phase1, .9, .8, leg_phase1, .9, .8},
+    climb_tail8
+};
+
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb11}; //, reverse_gait, left_gait, right_gait};

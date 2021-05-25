@@ -21,6 +21,7 @@
 #define CLIMB8 13
 #define CLIMB9 14
 #define CLIMB10 15
+#define CLIMB11 15
 
 struct Gait 
 {
