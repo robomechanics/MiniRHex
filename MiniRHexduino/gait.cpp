@@ -184,6 +184,18 @@ const tGait climb_tail8 {
   0
 };
 
+const tGait climb_tail9 { 
+  true,
+  kp_walk, kd_walk,
+  7000/10, 
+  7000/4, //milliseconds
+  3,
+  {410, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
+
 //----------------------------------------//
 const Gait stand_gait {
     STAND,
@@ -395,12 +407,27 @@ const Gait climb12{
     CLIMB11,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
-    {300, 130, 90, 300, 130, 90},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {300, 130, 80, 300, 130, 80},//  {leg_downc, 130, 265, leg_downc, 130, 265},
     {-1, -1, 1, -1, -1, 1},
     {7000, 1000000, 7000, 7000, 1000000, 7000},
-    {1, 1, 1, 1, 1, 1},
+    {.5, 1, 1, .5, 1, 1},
     {leg_phase1, .9, .8, leg_phase1, .9, .8},
     climb_tail8
 };
+
+const Gait climb13{ 
+    CLIMB12,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 35, leg_sweepc, 1, 35},
+    {300, 130, 80, 300, 130, 80},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, 1, -1, -1, 1},
+    {7000, 1000000, 7000, 7000, 1000000, 7000},
+    {.5, 1, 1, .5, 1, 1},
+    {leg_phase1, .9, .8, leg_phase1, .9, .8},
+    climb_tail9
+};
+
+
+
 
 const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb11}; //, reverse_gait, left_gait, right_gait};
