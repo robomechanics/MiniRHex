@@ -479,11 +479,11 @@ const Gait climb16{ //works for 55
     CLIMB15,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
-    {300, 130, 80, 300, 130, 80},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {300, 130, 88, 300, 130, 88},//  {leg_downc, 130, 265, leg_downc, 130, 265},
     {-1, -1, 1, -1, -1, 1},
     {7000, 1000000, 7000, 7000, 1000000, 7000},
     {.5, 1, 1, .5, 1, 1},
     {leg_phase1, .9, .8, leg_phase1, .9, .8},
     climb_tail8
 };
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb16}; //, reverse_gait, left_gait, right_gait};
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb11}; //, reverse_gait, left_gait, right_gait};
