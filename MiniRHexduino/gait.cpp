@@ -196,6 +196,29 @@ const tGait climb_tail9 {
   0
 };
 
+const tGait climb_tail10 { 
+  true,
+  kp_walk, kd_walk,
+  7000/10, 
+  7000/4, //milliseconds
+  3,
+  {440, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
+
+const tGait climb_tail11 { 
+  true,
+  kp_walk, kd_walk,
+  7000/10, 
+  7000/4, //milliseconds
+  3,
+  {470, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
+  0,
+  1,
+  0
+};
 //----------------------------------------//
 const Gait stand_gait {
     STAND,
@@ -415,7 +438,7 @@ const Gait climb12{
     climb_tail8
 };
 
-const Gait climb13{ 
+const Gait climb13{ //sort of working for 60
     CLIMB12,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 35, leg_sweepc, 1, 35},
@@ -428,6 +451,39 @@ const Gait climb13{
 };
 
 
+const Gait climb14{ //works for 55
+    CLIMB13,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
+    {300, 130, 80, 300, 130, 80},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, 1, -1, -1, 1},
+    {7000, 1000000, 7000, 7000, 1000000, 7000},
+    {.5, 1, 1, .5, 1, 1},
+    {leg_phase1, .9, .9, leg_phase1, .9, .9},
+    climb_tail10
+};
 
+const Gait climb15{ //works for 55
+    CLIMB14,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
+    {300, 130, 70, 300, 130,70},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, 1, -1, -1, 1},
+    {7000, 1000000, 7000, 7000, 1000000, 7000},
+    {.5, 1, 1, .5, 1, 1},
+    {leg_phase1, .9, .9, leg_phase1, .9, .9},
+    climb_tail11
+};
 
-const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb11}; //, reverse_gait, left_gait, right_gait};
+const Gait climb16{ //works for 55
+    CLIMB15,
+    kp_walk, kd_walk,
+    {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
+    {300, 130, 80, 300, 130, 80},//  {leg_downc, 130, 265, leg_downc, 130, 265},
+    {-1, -1, 1, -1, -1, 1},
+    {7000, 1000000, 7000, 7000, 1000000, 7000},
+    {.5, 1, 1, .5, 1, 1},
+    {leg_phase1, .9, .8, leg_phase1, .9, .8},
+    climb_tail8
+};
+const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb16}; //, reverse_gait, left_gait, right_gait};
