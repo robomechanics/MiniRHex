@@ -10,6 +10,8 @@
 #define REVERSE 2
 #define LEFT 3
 #define RIGHT 4
+
+//When you make a new gait, a new variable must be defined here
 #define CLIMB 5
 #define CLIMB1 6
 #define CLIMB2 7
@@ -26,6 +28,7 @@
 #define CLIMB13 18
 #define CLIMB14 19
 #define CLIMB15 20
+//add more ids here
 
 struct Gait 
 {
@@ -38,7 +41,7 @@ struct Gait
   int t_cc[6];
   float duty_f[6];
   float phases[6];
-  tGait tgait;
+  tGait tgait; //instance of the tail gait struct
   
 };
 

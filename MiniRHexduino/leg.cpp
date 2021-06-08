@@ -40,7 +40,7 @@ void Leg::updateGaitInternalParams(int startTime)
   float recovery_spd;
   int t_s = round(t_c * duty_factor);
 
-  if (gait.id == 100000) { // this used to be 5 but it was screwing with the code and i have no idea what it is for??? 
+  if (gait.id == 100000) { // this used to be 5 but it was screwing with the code and i have no idea what it is for??? Just make sure that this number is larger than the largest gait ID defined in gait.h
     ground_speed = theta_slow / t_s;
     recovery_spd = -theta_slow / (t_c - t_s);
 

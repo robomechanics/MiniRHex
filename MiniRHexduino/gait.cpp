@@ -46,32 +46,37 @@ const int tail_period = 4000;
 
 
 /*
- struct tGait 
+ *The last gait parameters is an instance of the tgait struct, which is defined in tgait.h and has properties defined as such: 
+ *Look at climb_tail8 for an example with comments
+struct tGait 
 {
   //int id;
-  bool first; //should always be set to true and will set be false during first run
+  bool first; //should always be set to true and will set be false during first run in the code
   float kp;
   float kd;
-  float period; //amount of time at each tail location in milliseconds
+  float initial_delay; // This times it at a specific part of the legs period 
+  float period; //amount of time at each tail location in milliseconds, probably want to go through all tail locations in one leg period
   int num_locs; // number of locations in the locations array
-  float locations[10]; //these should be positions or angles and then converted to positions
-  int curr_loc_ind; 
-  int phase_inc; //if we should be incrementing up the locations or down the location array
-  int count; 
+  int locations[10]; //these should be positions or angles and then converted to positions
+  //in arduino there's no easy way to allocate a variable length array, so fill locations array with as many values as needed then pad with zeros
+  int curr_loc_ind; // index in the locations array that tail is currently at. Should normally be initialized to 0 unless you want the tail to start somewhere other than the location at index 0
+  int phase_inc; //if we should be incrementing up the locations or down the location array initially (usually 1, can be -1) 
+  int count; //number of times the position of the tail has changed. Should be initialized as 0 always
 };
 
  */
-//TAIL GAITS
+//TAIL GAITS: Define Tail gaits here, and call them by variable name within the gait instances
 int horizontal = 512;
 int vertical = 768;
 //position 512 is horizontal (parallel to the ground) 
+
 const tGait no_tail { 
   true,
   0, 0,
   0,
   1000, //needs to be one because we mod by period,
   1,
-  {512, 0, 0, 0, 0, 0,0,0,0,0},
+  {512, 0, 0, 0, 0, 0,0,0,0,0}, // enter number of positions equal to number above, then pad with zeros
   0,
   1,
   0
@@ -81,8 +86,8 @@ const tGait standard_tail {
   kp_walk, kd_walk,
   0,
   5000, //milliseconds
-  4,
-  {512, 540, 560, 580, 0, 0, 0, 0, 0, 0}, // these are positions,
+  4, //4 because there are 4 values in the location array below
+  {512, 540, 560, 580, 0, 0, 0, 0, 0, 0}, // these are positions
   0,
   1,
   0
@@ -91,10 +96,10 @@ const tGait standard_tail {
 const tGait climb_tail { 
   true,
   kp_walk, kd_walk,
-  walk_periodc/3, 
-  walk_periodc/2, //milliseconds
+  walk_periodc/3,//initial delay at start of gait before first tail position is set (milliseconds)
+  walk_periodc/2, // (milliseconds) 
   2,
-  {480, 380,0, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {480, 380,0, 0, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -106,7 +111,7 @@ const tGait climb_tail2 {
   walk_periodc/3, 
   walk_periodc/5, //milliseconds
   3,
-  {480, 380, 380, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {480, 380, 380, 0, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -118,7 +123,7 @@ const tGait climb_tail3 {
   walk_periodc/3, 
   walk_periodc/2, //milliseconds
   2,
-  {480, 480, 0, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {480, 480, 0, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -130,7 +135,7 @@ const tGait climb_tail4 {
   walk_periodc/3, 
   walk_periodc/4, //milliseconds
   3,
-  {480, 365, 300, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {480, 365, 300, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -142,7 +147,7 @@ const tGait climb_tail5 {
   7000/10, 
   7000/4, //milliseconds
   3,
-  {490, 430, 400, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {490, 430, 400, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -154,7 +159,7 @@ const tGait climb_tail6 {
   7000/10, 
   7000/4, //milliseconds
   3,
-  {390, 490, 430, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {390, 490, 430, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -166,22 +171,24 @@ const tGait climb_tail7 {
   7000/10, 
   7000/4, //milliseconds
   3,
-  {435, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {435, 400, 490, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
 };
 
-const tGait climb_tail8 { 
-  true,
-  kp_walk, kd_walk,
-  7000/10, 
-  7000/4, //milliseconds
-  3,
-  {420, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
-  0,
-  1,
-  0
+const tGait climb_tail8 { //this is the tail struct used for climb11 which is the best of the climbing gaits
+  true, //always needs to be true
+  kp_walk, kd_walk, //pid constants 
+  7000/10, //Initial Delay (milliseconds) before first position is set
+  7000/4, //the time spent in each position (milliseconds). Ideally this should be set based on number of position locations such that 
+  //it loops through all the positions in the same time as one period of the legs. The leg period is defined in the gait struct. by dividing that 7000 millisecond period by 4, in this gait, 
+  //it goes from 420, to 400, to 490, to 400, and back to 420 in the same amount of time it takes for one period of the legs
+  3, //three positions in the below array
+  {420, 400, 490, 0, 0, 0, 0, 0, 0}, // these are positions that the tail loops through. When the tail hits the last number before the padded 0s, it increments back down to index 0. Then back up to index 2, and so on...
+  0, //set to index in location array of initial position desired, is updated in code 
+  1, //start incrementing up the position array
+  0 //should always be 0 
 };
 
 const tGait climb_tail9 { 
@@ -190,7 +197,7 @@ const tGait climb_tail9 {
   7000/10, 
   7000/4, //milliseconds
   3,
-  {410, 400, 490, 0, 0, 0, 0, 0, 0}, // these are angles,
+  {410, 400, 490, 0, 0, 0, 0, 0, 0}, // these are positions,
   0,
   1,
   0
@@ -414,7 +421,7 @@ const Gait climb10{ //DO NOT CHANGE WORKS AT 50 DEGREES WITH CORKBOARD
     climb_tail7
 };
 
-const Gait climb11{ //works for 55
+const Gait climb11{ //works for 55, out of these gaits, this should work best
     CLIMB10,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
@@ -451,7 +458,7 @@ const Gait climb13{ //sort of working for 60
 };
 
 
-const Gait climb14{ //works for 55
+const Gait climb14{ 
     CLIMB13,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
@@ -463,7 +470,7 @@ const Gait climb14{ //works for 55
     climb_tail10
 };
 
-const Gait climb15{ //works for 55
+const Gait climb15{ 
     CLIMB14,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
@@ -475,7 +482,7 @@ const Gait climb15{ //works for 55
     climb_tail11
 };
 
-const Gait climb16{ //works for 55
+const Gait climb16{ 
     CLIMB15,
     kp_walk, kd_walk,
     {leg_sweepc, 1, 20, leg_sweepc, 1, 20},
@@ -486,4 +493,7 @@ const Gait climb16{ //works for 55
     {leg_phase1, .9, .8, leg_phase1, .9, .8},
     climb_tail8
 };
+
+//TO ADD A NEW GAIT YOU MUST ADD A NEW ID IN GAIT.H
+//IF YOU CHANGE THE NUMBER OF GAITS IN GAIT_ORDER THEN YOU MUST CHANGE THE DEFINITION OF TOTAL_GAITS IN GAIT.H
 const Gait gait_order[TOTAL_GAITS] = {stand_gait, climb11}; //, reverse_gait, left_gait, right_gait};
