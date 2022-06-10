@@ -2,30 +2,20 @@
 
 | Item | Quantity per Robot | Price | Link |
 |------|--------------------|-------|------|
-| **McMaster-Carr Parts** | | | |
-| M3 x 0.50 mm Thread, 10 mm  Button Head Screws | 44 | $6.08 | https://www.mcmaster.com/#94500A223 |
-| M3 x 0.50 mm Thread, 15 mm | 12 | $4.80 | https://www.mcmaster.com/92095a119 |
-| M2.5 x 0.45 mm Thread, 25 mm (Additional Screws for Servo Horn) | 6 | $5.90 | https://www.mcmaster.com/92005a078 |
-| M3 Locknuts | 32 | $3.36 | https://www.mcmaster.com/#90576A102 |
-| 1/8" acrylic, 20 cm x 12 cm (min) | 1 | $5.73 | https://www.mcmaster.com/8560k275 |
-| Spacer | 4 | $4.48 | https://www.mcmaster.com/#93657A203 |
 | **Amazon Parts** | | | |
-| Battery | 1 | $8.99 | https://www.amazon.com/MJX-F645-Replacement-Battery-Meijiaxin/dp/B007XOMXMO/ref=sr_1_35?ie=UTF8&qid=1526604820&sr=8-35&keywords=7.4v+1500mah |
-| Plastidip | 1 | $9.52 | https://www.amazon.com/Performix-11602-6-075815116024-Yellow-Plasti/dp/B000ZN1T16/ref=sr_1_13?ie=UTF8&qid=1526518098&sr=8-13&keywords=plastidip |
-| Charger | 1 | $23.79 | https://www.amazon.com/QWinOut-Switching-Helicopter-Quadcopter-Hexacopter/dp/B01D10MWYW/ref=sr_1_3?s=toys-and-games&ie=UTF8&qid=1526605943&sr=1-3&keywords=liion+battery+charger&refinements=p_36%3A1253560011 |
-| Battery Connections | 1 | $6.49 | https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z |
+| Arduino MKR 1000 | 1 | $34.00 | https://www.amazon.com/ARDUINO-MKR1000-WiFi-with-HEADERS/dp/B071LRYYHH |
+| Battery and charger | 1 | $24.99 | [https://www.amazon.com/MJX-F645-Replacement-Battery-Meijiaxin/dp/B007XOMXMO/ref=sr_1_35?ie=UTF8&qid=1526604820&sr=8-35&keywords=7.4v+1500mah](https://www.amazon.com/1500mAh-Li-ion-Battery-Helicopter-Charger/dp/B089W89KCP) |
+| Plastidip | 1 | $20.00 | [https://www.amazon.com/Performix-11602-6-075815116024-Yellow-Plasti/dp/B000ZN1T16/ref=sr_1_13?ie=UTF8&qid=1526518098&sr=8-13&keywords=plastidip](https://www.amazon.com/Plasti-Dip-Multi-Purpose-Coating-Aerosol/dp/B07QCPXXBV) |
+| JST Plug Connectors | 1 | $5.99 | [https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z](https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z) |
+| 5V UBEC | 1 | $11.89 | https://www.amazon.com/ShareGoo-Converter-Module-Quadcopter-Holder/dp/B07DYXTX9H |
 | 8"x1/2" Velcro Straps | 1 | $4.49 | https://www.amazon.com/VELCRO-Brand-Reusable-Fastening-Organizing/dp/B0006BB9MG |
 | **Robotis Parts** | | | |
-| Main Board | 1 | $19.90 | http://www.robotis.us/opencm9-04-c-with-onboard-xl-type-connectors/ |
-| Dynamixels (servos) | 6 | $131.40 | http://www.robotis.us/dynamixel-xl-320/ |
-| Bluetooth (optional) | 1 | $32.90 | http://www.robotis.us/bt-210/ |
+| Arduino Shield | 1 | $19.90 | http://www.robotis.us/opencm9-04-c-with-onboard-xl-type-connectors/ |
+| Dynamixels (servos)  Dynamixel XL330-M077-T | 6 | $131.40 | https://www.robotis.us/dynamixel-xl330-m077-t/ |
 | **3D Printed Parts** | | | |
-| Servo Sleeve | 6 | | https://github.com/robomechanics/MiniRHex/tree/master/CAD |
-| Shaft-edge (hub) | 4 | | ""|
-| Shaft-mid (hub) | 2 | | "" |
+| Robot body | 1 | | https://github.com/robomechanics/MiniRHex/tree/master/CAD |
 | Leg | 6 | | "" |
-| Battery Case | 1 | | "" | 
-| Printing Subtotal | ~275g PLA | ~$5.50 | (Cost estimate is for material only, assuming an Ultimaker 3 Extended and the recommended gcode file from /CAD) |
-| **Total** | | **$216.64** | (as of 1-07-19 without Bluetooth or battery charger) |
+| Printing Subtotal | ~100g PLA | ~$2.50 | (Cost estimate is for material only) |
+| **Total** | | **$255.16** | (as of 6-10-22) |
 
-*Parts list also available as Excel Sheet, download above*
+
