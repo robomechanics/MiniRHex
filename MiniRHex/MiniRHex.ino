@@ -195,12 +195,12 @@ void loop(){
     actual_vel = dynV_to_V(Dxl.readWord(legs[i].id, PRESENT_SPEED)); // converted to degrees/ms, relative to leg
     if (!legs[i].deadzone){
       
-  //    if (actual_p == 0 || actual_p == 1023){ //entering deadzone
-    //    legs[i].deadzone = true;
-      //  if (actual_p == 0) legs[i].dead_from_neg = true;
-       // else legs[i].dead_from_neg = false;
-    //    continue;
-//      }
+      if (actual_p == 0 || actual_p == 1023){ //entering deadzone
+        legs[i].deadzone = true;
+        if (actual_p == 0) legs[i].dead_from_neg = true;
+        else legs[i].dead_from_neg = false;
+        continue;
+      }
 
       if (legs[i].gait == STAND){ //standing or sitting
         if (legs[i].right_side){
