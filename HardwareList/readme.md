@@ -3,7 +3,7 @@
 | Item | Quantity per Robot | Price | Link |
 |------|--------------------|-------|------|
 | **Amazon Parts** | | | |
-| Arduino MKR 1000 | 1 | $34.00 | https://www.amazon.com/ARDUINO-MKR1000-WiFi-with-HEADERS/dp/B071LRYYHH |
+| Arduino MKR WiFi 1010 | 1 | $41.99 | https://www.amazon.com/Arduino-MKR-WiFi-1010-ABX00023/dp/B07FYFF5YZ |
 | Battery and charger | 1 | $24.99 | [https://www.amazon.com/MJX-F645-Replacement-Battery-Meijiaxin/dp/B007XOMXMO/ref=sr_1_35?ie=UTF8&qid=1526604820&sr=8-35&keywords=7.4v+1500mah](https://www.amazon.com/1500mAh-Li-ion-Battery-Helicopter-Charger/dp/B089W89KCP) |
 | Plastidip | 1 | $20.00 | [https://www.amazon.com/Performix-11602-6-075815116024-Yellow-Plasti/dp/B000ZN1T16/ref=sr_1_13?ie=UTF8&qid=1526518098&sr=8-13&keywords=plastidip](https://www.amazon.com/Plasti-Dip-Multi-Purpose-Coating-Aerosol/dp/B07QCPXXBV) |
 | JST Plug Connectors | 1 | $5.99 | [https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z](https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z) |
@@ -16,6 +16,6 @@
 | Robot body | 1 | | https://github.com/robomechanics/MiniRHex/tree/master/CAD |
 | Leg | 6 | | "" |
 | Printing Subtotal | ~100g PLA | ~$2.50 | (Cost estimate is for material only) |
-| **Total** | | **$255.16** | (as of 6-10-22) |
+| **Total** | | **$263.15** | (as of 6-10-22) |
 
 
