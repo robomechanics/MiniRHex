@@ -24,7 +24,7 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 3. Upload code to robot
 
 ### Configure Servo ID's
-1. 
+1. Use Dynamixel Wizard 2.0
 
 
 ![MiniRHex](Images/miniOnStumpScaled.jpg)
@@ -32,17 +32,17 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 
 # Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
-2. Open MiniRHex.ino in the OpenCM IDE and check that under "Tools":
+2. Open MiniRHex.ino in the Arduino IDE and check that under "Tools":
    - "Board" is set to XX
    - "Port" is set to the correct COM port (whichever COM port is added when MiniRHex is plugged in)
-3. XXXEnsure the motor zeros in leg_info.cpp are correct
-4. Set desired gait parameters in gait_parameters.cpp
-5. Click the download icon in the upper left corner of the OpenCM IDE (wait until it reports "Done Downloading")
+3.
+4. 
+5. Upload the code to the robot
 6. Disconnect the Micro USB cable and connect the battery
 7. 
 8.
 9. 
-10. Press the "RESET" button again to return to the standing behavior
+10.
 
 # Robot Specifications
 ![MiniRHex Specifications](Images/Spec_Chart.png)
