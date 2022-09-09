@@ -71,7 +71,7 @@ Gait walk_gait = {{0, leg1_sweep, leg2_sweep, leg3_sweep, leg4_sweep, leg5_sweep
 int pronk_period = 220;
 float pronk_dutyf = 0.7;
 int pronk_sweep = 60;
-float kp_pronk = .03; //.1
-float kd_pronk = 1.0; //1.5
+float kp_pronk = .1; //.03
+float kd_pronk = 1.5; //1.0
 Gait pronk_gait = {{pronk_sweep, pronk_sweep, pronk_sweep, pronk_sweep, pronk_sweep, pronk_sweep, pronk_sweep}, {0, -45, -55, -75, -45, -55, -75}, {pronk_period, pronk_period, pronk_period, pronk_period, pronk_period, pronk_period, pronk_period}, {pronk_dutyf, pronk_dutyf, pronk_dutyf, pronk_dutyf, pronk_dutyf, pronk_dutyf, pronk_dutyf}, {0, 0, 0, 0, 0, 0, 0}, kp_pronk, kd_pronk};
 

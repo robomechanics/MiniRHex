@@ -36,6 +36,7 @@ void setup() {
   for (int i = 1; i <= legs_active; i++) {         // legs stored at their index
     dxl.torqueOff(legs[i].id);
     dxl.setOperatingMode(legs[i].id, OP_VELOCITY); // change servo to wheel mode
+    dxl.writeControlTableItem(RETURN_DELAY_TIME, legs[i].id, 0);
     dxl.torqueOn(legs[i].id);
     update_gait(i, initial_gait, t_start);         // set initial parameters, initial_gait in gait_parameters
   }
@@ -75,6 +76,7 @@ void jump() {
 }
 
 int count = 0;
+int t = 0;
 void loop() {
 
   // loop counter
@@ -84,30 +86,41 @@ void loop() {
   if (count % 10 == 0) {
     voltage = 0;
     for (int i = 1; i <= legs_active; i++) {
-      voltage_check = dxl.readControlTableItem(PRESENT_VOLTAGE, legs[i].id);
+      voltage_check = dxl.readControlTableItem(PRESENT_INPUT_VOLTAGE, legs[i].id);
       if (voltage_check > voltage) voltage = voltage_check;
     }
-    Serial.println(voltage);
+    Serial.print("Voltage: ");
+    Serial.print(voltage);
+    Serial.print(", Frequency: ");
+    Serial.print(10000/(millis()-t));
+    Serial.println("Hz");
+    t = millis();
 
-    if (voltage > 73) {
-      flash = false;                 // off (safe voltage)
+    bool update = false;
+    if (voltage > 45) {
+      if (flash) update = true;
+      flash = false;            // off (safe voltage)
       shutdown = false;
     }
-    else if (voltage > 70) {
-      flash = (millis() / 1000) % 2; // slow flashing (low voltage)
+    else if (voltage > 40) {
+      if (!flash) update = true;
+      flash = true;             // on (low voltage)
       shutdown = false;
     }
     else {
-      flash = (millis() / 200) % 2;  // fast flashing (very low voltage)
+      if (!flash) update = true;
+      flash = true;             // shutdown motors (very low voltage)
       shutdown = true;
     }
-  }
 
-  for (int i = 1; i <= legs_active; i++) {
-    if (flash) {
-      dxl.ledOn(legs[i].id);
-    } else {
-      dxl.ledOff(legs[i].id);
+    if (update) {
+      for (int i = 1; i <= legs_active; i++) {
+        if (flash) {
+          dxl.ledOn(legs[i].id);
+        } else {
+          dxl.ledOff(legs[i].id);
+        }
+      }
     }
   }
 
