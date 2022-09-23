@@ -9,6 +9,11 @@
 DynamixelShield dxl;
 using namespace ControlTableItem;
 
+// Sync read/write structs
+ParamForSyncWriteInst_t sync_write_param;
+ParamForSyncReadInst_t sync_read_param;
+RecvInfoFromStatusInst_t read_result;
+
 // Rewritable globals
 float desired_vel;
 float desired_theta;
@@ -19,6 +24,11 @@ float actual_p;
 
 // Legs setup
 const int legs_active = 6;
+
+// Motor values
+float present_velocity[legs_active+1];
+float present_position[legs_active+1];
+float goal_velocity[legs_active+1];
 
 // Battery status
 bool flash;         // LED on or off
@@ -39,6 +49,13 @@ void setup() {
     dxl.writeControlTableItem(RETURN_DELAY_TIME, legs[i].id, 0);
     dxl.torqueOn(legs[i].id);
     update_gait(i, initial_gait, t_start);         // set initial parameters, initial_gait in gait_parameters
+  }
+
+  sync_write_param.id_count = legs_active;         // set sync read/write motor IDs
+  sync_read_param.id_count = legs_active;
+  for (int i=1; i<=legs_active; i++) {
+    sync_write_param.xel[i-1].id = legs[i].id;
+    sync_read_param.xel[i-1].id = legs[i].id;
   }
 }
 
@@ -90,7 +107,7 @@ void loop() {
       if (voltage_check > voltage) voltage = voltage_check;
     }
     Serial.print("Voltage: ");
-    Serial.print(voltage);
+    Serial.print(voltage/10);
     Serial.print(", Frequency: ");
     Serial.print(10000/(millis()-t));
     Serial.println("Hz");
@@ -164,9 +181,11 @@ void loop() {
   }
 
   // primary for-loop
+  sync_read_position();
+  sync_read_velocity();
   for (int i = 1; i <= legs_active; i++) {
-    actual_theta = dxl.getPresentPosition(legs[i].id, UNIT_DEGREE); // degrees
-    actual_vel = dxl.getPresentVelocity(legs[i].id, UNIT_RPM) * .06; // convert to deg/ms
+    actual_theta = present_position[i]; // degrees
+    actual_vel = present_velocity[i];   // degrees/millisecond
     if (!legs[i].deadzone) {
       if (legs[i].gait == STAND) { // standing or sitting
         if (legs[i].right_side) {
@@ -193,12 +212,45 @@ void loop() {
 
         control_signal = pd_controller(actual_theta, desired_theta, actual_vel, desired_vel, legs[i].kp, legs[i].kd);
       }
-      int new_vel = actual_vel + control_signal;
+      float new_vel = actual_vel + control_signal;
       if (shutdown) {
-        dxl.setGoalVelocity(legs[i].id, 0, UNIT_RPM);
+        goal_velocity[i] = 0;
       } else {
-        dxl.setGoalVelocity(legs[i].id, new_vel / .06, UNIT_RPM);
+        goal_velocity[i] = new_vel;
       }
     }
   }
+  sync_write_velocity();
+}
+
+void sync_read_velocity() {
+  sync_read_param.addr = 128; // Present Velocity of DYNAMIXEL-X series
+  sync_read_param.length = 4;
+  dxl.syncRead(sync_read_param, read_result);
+  int raw;
+  for (int i=1; i<=legs_active; i++) {
+    memcpy(&raw, read_result.xel[i-1].data, read_result.xel[i-1].length);
+    present_velocity[i] = raw * .06 * 0.229;
+  }
+}
+
+void sync_read_position() {
+  sync_read_param.addr = 132; // Present Position of DYNAMIXEL-X series
+  sync_read_param.length = 4;
+  dxl.syncRead(sync_read_param, read_result);
+  int raw;
+  for (int i=1; i<=legs_active; i++) {
+    memcpy(&raw, read_result.xel[i-1].data, read_result.xel[i-1].length);
+    present_position[i] = raw * 0.088;
+  }
+}
+
+void sync_write_velocity() {
+  sync_write_param.addr = 104; // Goal Velocity of DYNAMIXEL-X series
+  sync_write_param.length = 4;
+  for (int i=1; i<=legs_active; i++) {
+    int raw = goal_velocity[i] / .06 / 0.229;
+    memcpy(sync_write_param.xel[i-1].data, &raw, 4);
+  }
+  dxl.syncWrite(sync_write_param);
 }
