@@ -9,12 +9,14 @@ const int LEFT = 2;
 const int REVERSE = 3;
 const int RIGHT = 4;
 const int PRONK = 5;
+const int RUN = 6;
 
 
 void update_gait(int leg_index, int gait, int startMillis){
   Gait new_gait = (gait == PRONK) ? pronk_gait: walk_gait;
+  if (gait == RUN) new_gait = run_gait;
   printf("Gait %d\n", new_gait.t_cc[leg_index]);
-  legs[leg_index].gait = gait;
+  legs[leg_index].gait = gait != 6 ? gait : 1;
   legs[leg_index].theta_slow = new_gait.theta_s[leg_index];
   legs[leg_index].theta_down = new_gait.theta_d[leg_index];
   legs[leg_index].t_c = new_gait.t_cc[leg_index];
@@ -105,4 +107,3 @@ leg leg4 =      {IDS[3], 0, {1,  1, -1, -1, 1},    0, zeros[3],  true,  false, f
 leg leg5 =      {IDS[4], 0, {1,  1, -1, -1, 1},    0, zeros[4],  true,  false, false};
 leg leg6 =      {IDS[5], 0, {1,  1, -1, -1, 1},    0, zeros[5],  true,  false, false};
 leg legs[] = {fake_leg0, leg1, leg2, leg3, leg4, leg5, leg6};
-

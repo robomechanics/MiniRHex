@@ -47,6 +47,7 @@ extern const int LEFT;
 extern const int REVERSE;
 extern const int RIGHT;
 extern const int PRONK;
+extern const int RUN;
 
 
 #endif

@@ -107,7 +107,7 @@ void loop() {
       if (voltage_check > voltage) voltage = voltage_check;
     }
     Serial.print("Voltage: ");
-    Serial.print(voltage/10);
+    Serial.print(voltage/10.0);
     Serial.print(", Frequency: ");
     Serial.print(10000/(millis()-t));
     Serial.println("Hz");
@@ -163,6 +163,9 @@ void loop() {
         break;
       case 'e': // pronk
         gait = PRONK;
+        break;
+      case 'r': // run
+        gait = RUN;
         break;
       case 'x': // prepare jump
         jump_ready();
