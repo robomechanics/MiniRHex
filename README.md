@@ -26,8 +26,8 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 3. Under "Tools" hover over "Board" and select "Boards Manager..."
    - Type "Arduino SAMD Boards" into the search bar
    - Select "Install" for the Arduino SAMD Boards (32-bits ARM Cortex-M0+)
-4a. (Non-developers) Download the MiniRHex repository from https://github.com/robomechanics/MiniRHex/archive/refs/heads/minirhex_redesign_2022.zip and extract the downloaded zip file
-4b. (Developers) Clone the MiniRHex repository from https://github.com/robomechanics/MiniRHex.git and checkout the "minirhex_redesign_2022" branch
+4. (Non-developers) Download the MiniRHex repository from https://github.com/robomechanics/MiniRHex/archive/refs/heads/minirhex_redesign_2022.zip and extract the downloaded zip file
+5. (Developers) Clone the MiniRHex repository from https://github.com/robomechanics/MiniRHex.git and checkout the "minirhex_redesign_2022" branch
 
 ### Configure Servo ID's
 1. Use Dynamixel Wizard 2.0
