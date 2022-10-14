@@ -29,8 +29,26 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 4. (Non-developers) Download the MiniRHex repository from https://github.com/robomechanics/MiniRHex/archive/refs/heads/minirhex_redesign_2022.zip and extract the downloaded zip file
 5. (Developers) Clone the MiniRHex repository from https://github.com/robomechanics/MiniRHex.git and checkout the "minirhex_redesign_2022" branch
 
-### Configure Servo ID's
-1. Use Dynamixel Wizard 2.0
+### Configure Servo ID Numbers
+The correct Dynamixel servo positions are:
+- ID 1 = front left
+- ID 2 = center left
+- ID 3 = rear left
+- ID 4 = front right
+- ID 5 = center right
+- ID 6 = rear right
+
+To set the Dynamixel ID numbers, follow these steps:
+1. Disconnect all Dynamixel servos except for the one in position 2
+2. Open the Arduino IDE and check that under "Tools":
+   - "Board" is set to "Arduino MKR WiFi 1010" (under "Arduino SAMD (32-bits ARM Cortex-M0+) Boards")
+   - "Port" is set to the correct COM port, e.g. "COM# (Arduino MKR WiFi 1010)"
+3. Select "File" > "Examples" > "DynamixelShield" > "Basic" > "id" to open the ID-setting example script
+4. Find the line "new_id = DEFAULT_DXL_ID;" and delete it or comment it out: "// new_id = DEFAULT_DXL_ID;"
+5. Find the line "new_id = 100;" and edit it to "new_id = 2;"
+6. Upload code to the robot (the circular button near the top left with an arrow pointing to the right)
+7. Open the Serial Monitor in the Arduino IDE (the circular button in the top right with a magnifying glass) and verify the ID has been changed
+8. Unplug the Dynamixel and repeat from step 5 with the Dynamixel servos in positions 3, 4, 5 and 6 (setting "new_id = 3;" for ID 3, etc.)
 
 
 ![MiniRHex](Images/miniOnStumpScaled.jpg)
@@ -39,12 +57,12 @@ Assembly Instructions available at [Assembly Instructions](https://github.com/ro
 # Operating Instructions
 1. Connect the MiniRHex to your computer via the Micro USB port
 2. Open MiniRHex.ino (located in the MiniRHex subfolder) in the Arduino IDE and check that under "Tools":
-   - "Board" is set to "Arduino MKR WiFi 1010"
+   - "Board" is set to "Arduino MKR WiFi 1010" (under "Arduino SAMD (32-bits ARM Cortex-M0+) Boards")
    - "Port" is set to the correct COM port, e.g. "COM# (Arduino MKR WiFi 1010)"
 3. Upload code to the robot (the circular button near the top left with an arrow pointing to the right)
 4. Insert the battery, fasten the velcro straps, and connect the battery cable
 5. Open the Serial Monitor in the Arduino IDE (the circular button in the top right with a magnifying glass)
-6. Type "w" into the text box and hit enter to start walking! ("q" to stop, "s" to reverse", "A" to turn left, "D" to turn right)
+6. Type "w" into the text box and hit enter to start walking! ("q" to stop, "s" to reverse", "a" to turn left, "d" to turn right)
 7. To modify the walking gait, go to the "gait_parameters.cpp" tab in the Arduino IDE and edit the parameters for each leg, then upload code again (see comments in the file for more details)
 8. When finished, unplug the battery and store it in a fireproof container (never leave a battery in the robot!)
 
