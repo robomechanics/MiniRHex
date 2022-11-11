@@ -5,6 +5,7 @@
 #include "gait_parameters.h"
 
 #include <DynamixelShield.h>
+#include <WiFiNINA.h>
 
 DynamixelShield dxl;
 using namespace ControlTableItem;
@@ -36,11 +37,13 @@ bool shutdown;      // Disable motor movement
 int voltage;        // Current battery voltage
 int voltage_check;  // Current motor voltage
 
+bool wifi;          // WiFi connection active
+
 void setup() {
   Serial.begin(57600);                             // set the Serial Monitor to match this baud rate
   dxl.begin(57600);                                // 57600 is the default baud rate for XL330 motors
   dxl.setPortProtocolVersion(2.0);                 // XL330 motors use protocol 2
-
+  
   pinMode(LED_BUILTIN, OUTPUT);                    // setup LED
   int t_start = millis();
   for (int i = 1; i <= legs_active; i++) {         // legs stored at their index
@@ -57,6 +60,8 @@ void setup() {
     sync_write_param.xel[i-1].id = legs[i].id;
     sync_read_param.xel[i-1].id = legs[i].id;
   }
+
+  begin_wifi();
 }
 
 void jump_ready() {
@@ -95,7 +100,6 @@ void jump() {
 int count = 0;
 int t = 0;
 void loop() {
-
   // loop counter
   count++;
 
@@ -142,8 +146,13 @@ void loop() {
   }
 
   // teleop control
-  if (Serial.available()) {
-    char a = (char)(Serial.read());
+  if (Serial.available() || wifi) {
+    char a;
+    if (Serial.available()) {
+      a = (char)(Serial.read());
+    } else {
+      a = update_wifi();
+    }
     int gait = -1;
     switch (a) {
       case 'q': // stand
