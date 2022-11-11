@@ -59,6 +59,7 @@ char update_wifi() {
     }
     client.stop();                                   // close the connection
   }
+  if (output == ' ') output = 'q';                   // space is also e-stop
   return(output);
 }
 
@@ -70,18 +71,26 @@ void display_website(WiFiClient client) {
 
   // Controls
   client.print("<div style=\"display:inline-grid; grid-template-columns: 70px 70px 70px; grid-template-rows: 70px 70px 70px 70px;\">");
-  client.print("<b></b><button onclick=\"window.location.href='/r';\">Run</button><b></b>");
-  client.print("<b></b><button onclick=\"window.location.href='/w';\">Forward</button><b></b>");
-  client.print("<button onclick=\"window.location.href='/a';\">Left</button>");
-  client.print("<button onclick=\"window.location.href='/q';\">Stop</button>");
-  client.print("<button onclick=\"window.location.href='/d';\">Right</button>");
-  client.print("<b></b><button onclick=\"window.location.href='/s';\">Reverse</button>");
+  client.print("<b></b><button onclick=\"window.location.href='/r';\">Run<br>(r)</button><b></b>");
+  client.print("<b></b><button onclick=\"window.location.href='/w';\">Forward<br>(w)</button><b></b>");
+  client.print("<button onclick=\"window.location.href='/a';\">Left<br>(a)</button>");
+  client.print("<button onclick=\"window.location.href='/q';\">Stop<br>(space/q)</button>");
+  client.print("<button onclick=\"window.location.href='/d';\">Right<br>(d)</button>");
+  client.print("<b></b><button onclick=\"window.location.href='/s';\">Reverse<br>(s)</button>");
   client.print("</div><br><br>");
 
   // Battery display
   int randomReading = analogRead(A1);
   client.print("Voltage: ");
   client.print(voltage/10.0);
+
+  // Key listener
+  client.print("<script>");
+  client.print("document.onkeydown = function(evt) {");
+  client.print("evt = evt || window.event;");
+  client.print("window.location.href = \"/\"+evt.key;");
+  client.print("};");
+  client.print("</script>");
 
   // Terminate http response
   client.println();
