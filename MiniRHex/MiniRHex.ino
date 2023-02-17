@@ -208,7 +208,11 @@ void loop() {
         }
         actual_theta = actual_theta - legs[i].zero; // zero out leg thetas, accounts for small servo irregularities
         control_signal = pd_controller(actual_theta, desired_theta, actual_vel, 0, kp_hold, kd_hold);
-      } else { // walking, turning
+      } else if (legs[i].gait == RUN){
+        float v = 20;
+        control_signal = v*(-legs[i].right_side*2+1) - actual_vel;
+      }
+      else { // walking, turning
         // compute absolute desired values (theta and velocity) from clock time
         vals v = get_desired_vals(millis(), legs[i]);
         // translate theta and v to relative (left and right)
