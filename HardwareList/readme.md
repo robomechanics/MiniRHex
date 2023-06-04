@@ -14,7 +14,9 @@
 | Arduino Shield | 1 | $19.10 | https://www.robotis.us/dynamixel-shield-for-arduino-mkr-series/ |
 | Dynamixels (servos)  Dynamixel XL330-M077-T | 6 | $143.40 | https://www.robotis.us/dynamixel-xl330-m077-t/ |
 | **3D Printed Parts** | | | |
-| Robot body | 1 | | https://github.com/robomechanics/MiniRHex/tree/master/CAD |
+| Robot body | 1 | | https://github.com/robomechanics/MiniRHex/tree/minirhex_redesign_2022/CAD |
+| Short Leg Hubs | 4 | | "" |
+| Long Hubs | 4 | | "" |
 | Leg | 6 | | "" |
 | Printing Subtotal | ~100g PLA | ~$2.50 | (Cost estimate is for material only) |
 | **Total** | | **$263.15** | (as of 6-10-22) |
