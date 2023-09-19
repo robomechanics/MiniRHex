@@ -95,7 +95,7 @@ MiniRHex was designed by the following people in the [Robomechanics Lab](https:/
 * Scott Phillips (BS ME '20)
 * J. Joe Payne (Ph.D ME)
 * Joe Norby (Ph.D ME '22)
-* Catherine Pavlov (Ph.D ME)
+* Catherine Pavlov (Ph.D ME '23)
 * Aaron Johnson (Advisor)
 
 
