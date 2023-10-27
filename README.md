@@ -1,22 +1,20 @@
 **MiniRHex: An Open-Source Hexapod Robot**
 
 ![MiniRHex Running](Images/miniOnStumpScaled.jpg)
-Contact: 
+Contact: https://www.cmu.edu/me/robomechanicslab/contact.html
 
-MiniRHex is a miniature scale hexapod designed by the [Robomechanics Lab](https://www.cmu.edu/me/robomechanicslab/) based on the design of RHex. Notable features include a laser-cut frame and 3D printed legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool to allow students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
+MiniRHex is a miniature-scale hexapod designed by the [Robomechanics Lab](https://www.cmu.edu/me/robomechanicslab/) based on the design of the cockroach-inspired [RHex](https://robotsguide.com/robots/rhex/). Notable features include a 3D printed chassis and legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool enabling students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
 
 ![MiniRHex Running](Images/miniOnStumpScaled.jpg)
 
 # Setup Instructions
 Building a MiniRhex requires access to a 3D printer. The links for off the shelf parts can be found below.
 
-![MiniRHex Prototype](Images/mini1.jpg)
-
 ### Acquire Parts
 The Parts List and Links to order can be found in [Parts List](https://github.com/robomechanics/MiniRHex/tree/master/HardwareList).
 
 ### Assemble Robot
-Assembly Instructions available at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly).
+Assembly Instructions are available at [Assembly Instructions](https://github.com/robomechanics/MiniRHex/tree/master/Assembly).
 
 ### Install Software
 1. Install the Arduino IDE from https://www.arduino.cc/en/software
