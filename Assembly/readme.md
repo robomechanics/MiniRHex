@@ -7,7 +7,7 @@
    * Soldering station (advanced users only)
 
 2. Purchase necessary components from the [Hardware List](/HardwareList).
-   * Amazon: Arduino MKR, Battery, Plastidip, JST Connector, 5V UBEC, and Velcro Straps
+   * Amazon: Arduino MKR, Battery, Plastidip, JST Connector, 5V UBEC, Velcro Straps, LiPo Voltage Monitor, and LiPo Safe Bag
    * Robotis: Dynamixel Servos, Arduino Shield
 
 # Fabrication
@@ -31,7 +31,6 @@
    * Between each coat, let dry for at least one hour.
    * Make sure the dip is evenly coated around the leg.
    * Do not cover the through holes for the screws.
-
 <img src="Images/plastidipLeg.jpg" width="50%">
 
 # Assembly
@@ -40,54 +39,87 @@
     * You will need 4 short screws (M2x6) and 48 long screws (M2x8) to assemble the robot.
   
 2. Mount the servos to the robot body.
-    * Each motor needs 4 long screws. The screws will tap directly into the motor's plastic, so do not over tighten them.
-
+    * Each motor requires 4 long screws. The screws will tap directly into the motor's plastic, so do not over tighten them.
 <img src="Images/motorMounting.jpg" width="50%">
 
 3. Trim the leads on the Arduino shield.
     * The Robotis Arduino shield comes with leads that are too long. Using wire cutters, trim them to within 1-2mm of the board.
     * Only trim the leads on the shield, not the Arduino itself!
-
 <img src="Images/shieldPinsRemoved.jpg" width="50%">
 
-4. Attach the JST connectors to the Arduino shield.
+4. Attach the JST connector to the Arduino shield.
     * Basic users can insert the red and black wires into the green screw terminals (red goes into the + side, and black goes into the - side), then tighten them using the flat head screwdriver. Do not swap the colors, or it could severely damage the electronics!
-    * Advanced users can instead solder the wires directly to the Arduino shield for a more robust connection, as pictured below.
+    * Advanced users can instead solder the wires directly to the Arduino shield for a more robust connection, as pictured.
 <img src="Images/shieldSolderConnectorFull.jpg" width="50%">
 
 5. Mount the Arduino shield to the robot body.
     * You will needs 4 short screws. The screws will tap directly into the motor's plastic, so do not over tighten them.
+    * The screw terminals and JST connector should face the center of the robot body.
 <img src="Images/shieldMounting.jpg" width="50%">
 
 6. Stack the Arduino on top of the Arduino shield.
+    * The header pins should line up, with the micro USB port facing the edge of the robot.
 <img src="Images/arduinoMounting.jpg" width="50%">
 
-7. Mount each leg to the robot
-    * Each leg needs 4 long screws. The screws will tap directly into the motor hub's plastic, do not over tighten them.
-    * Ensure that the notch on the leg aligns with the single notch on the motor hub. If the notches are misaligned, the legs will not move to the correct angles.
+7. Wire up the motors using the included Dynamixel cables.
+    * The motors should be daisy-chained to each other in series, with the Arduino shield as one end of the chain.
+    * A suggested ordering is: Arduino Shield -> Motor 6 -> Motor 5 -> Motor 4 -> Motor 1 -> Motor 2 -> Motor 3.
+    * Use either the included wire wraps or zip ties to manage the wires, as pictured.
+<img src="Images/motorWiring.jpg" width="50%">
 
-  ![Leg Mounting](/Images/legMounting.jpg)
+8. Attach the 5V UBEC to the JST connector.
+    * The JST connector is not reversible, so it will only connect if oriented correctly (red to red, black to black).
+<img src="Images/voltageRegulator.jpg" width="50%">
 
-9. Configure the servo IDs for each leg
-  * Before connecting each servo sleeve to the foundation, configure each of the servo IDs by connecting them with the provided wires individually to the Arduino shield.
+9. Thread the Velcro straps through the slits in the robot body.
+    * Ensure the ends of each strap come out on top of the robot body for ease of access.
+<img src="Images/velcroStraps.jpg" width="50%">
 
-Instructions on how to [Configure Servo IDs](/#configure-servo-id-numbers).
+10. Align each servo horn.
+    * Each servo horn has 3 small circular indents forming a triangle. Rotate the motor by hand until the circle closest to a screw mounting hole is at the top.
+<img src="Images/motorHubAlignment.jpg" width="50%">
 
-10. Connect power distribution to boards and mount boards
-  * TODO add directions
+11. Mount a quick-connect hub to each servo horn (quick-connect leg users only).
+    * Each quick-connect hub requires 3 long screws. The screws will tap directly into the motor's plastic, so do not over tighten them.
+    * Ensure that the opening in the hub faces upwards, and the little notch in the hub is on the side closer to the front of the robot (the side without the Arduino).
+<img src="Images/quickConnectHubMounting.jpg" width="50%">
 
-11. Connect motor cables
-  * Daisy chain cables between motors and connect one motor to the port on the Aduino shield. 
-  
-12. Charge battery(ies) and check voltage(s)
-  * Maximum voltage:  8.4V
-  * Charge if below:  7.0V
-  * Dispose if below: 5.0V
+12. Mount a leg to each servo horn.
+    * Quick-connect legs require 1 additional long screw, while standard legs require 4 long screws. The screws will tap directly into the motor's plastic, so do not over tighten them.
+    * The middle legs extend out further from the robot, to prevent collisions between neighboring legs.
+    * Ensure that the curved side of each leg faces the rear of the robot (the side with the Arduino) and the end of the leg is directly below the robot (with the servo horn aligned as in step 10), as pictured for both leg types.
+<img src="Images/standardLegMounting.jpg" width="50%">
+<img src="Images/quickConnectLegMounting.jpg" width="50%">
+<img src="Images/noBattery.jpg" width="50%">
 
-13. Upload code using the micro-USB port. More detailed instructions can be found [here](/#install-software).
+# Battery Usage
+1. Fully charge a battery.
+    * **WARNING**: Improper handling of LiPo batteries is very dangerous and can cause fires.
+    * Never allow a battery to charge unsupervised.
+    * When not in use, always store batteries in a LiPo safe bag or fireproof cabinet.
+    * Carefully follow all instructions from the manufacturer of the battery and charger.
+    * Safely dispose of batteries according to manufacturer instructions if the battery becomes puffy or if the voltage drops below 5V. Do not just throw LiPo batteries in the trash!
 
-14. Plug in the battery and run the robot!
+2. Connect the LiPo voltage monitor to the battery. Never run the robot without the voltage monitor connected!
+    * The black wire on the white battery connector should plug into the minus port (far left) of the voltage monitor.
+    * It is advised to cover the top of the voltage monitor with a finger while connecting it to the battery, to dampen the loud beep it produces.
+    * The voltage monitor will sound an alarm if the battery dips below a safe level. When this happens, immediately unplug the battery from the robot and recharge it. Continuing to operate the battery below the safe voltage level will cause permanent damage, and possibly start a fire.
+    * The maximum battery voltage is 8.4V, charge the battery if it falls below 7.0V, the alarm will sound at 6.6V, and dispose of the battery if it falls below 5.0V.
+<img src="Images/voltageMonitor.jpg" width="50%">
+   
+3. Connect the battery to the robot.
+    * Slide the battery through the Velcro straps, then tighten them to hold it in place.
+    * Connect the battery to the 5V UBEC. Never connect the battery directly to the Arduino shield!
+<img src="Images/assembledRobotFront.jpg" width="50%">
 
+# Software Setup
+1. Install the Arduino IDE and download the MiniRHex repository.
+    * Instructions are available at [Install Software](/#install-software).
 
+2. Configure the servo IDs for each leg.
+    * Instructions are available at [Configure Servo IDs](/#configure-servo-id-numbers).
 
+3. Upload code using the micro-USB port. You can now operate the robot using the Serial Monitor or the web interface!
+    * Instructions are available at [Operating Instructions](/#operating-instructions).
 
+4. When finished, unplug the battery and store it in a fireproof container. Never leave a battery in the robot!
