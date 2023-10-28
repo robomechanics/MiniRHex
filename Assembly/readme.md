@@ -116,8 +116,27 @@
 1. Install the Arduino IDE and download the MiniRHex repository.
     * Instructions are available at [Install Software](/#install-software).
 
-2. Configure the servo IDs for each leg.
-    * Instructions are available at [Configure Servo IDs](/#configure-servo-id-numbers).
+2. Configure the servo IDs for each leg. The correct Dynamixel servo positions are:
+    - ID 1 = front left
+    - ID 2 = center left
+    - ID 3 = rear left
+    - ID 4 = front right
+    - ID 5 = center right
+    - ID 6 = rear right
+
+    To set the Dynamixel ID numbers, follow these steps:
+    1. Disconnect all Dynamixel servos except for the one in position 2
+    2. Open the Arduino IDE and check that under "Tools":
+       - "Board" is set to "Arduino MKR WiFi 1010" (under "Arduino SAMD (32-bits ARM Cortex-M0+) Boards")
+       - "Port" is set to the correct COM port, e.g. "COM# (Arduino MKR WiFi 1010)"
+    3. Select "File" > "Examples" > "DynamixelShield" > "Basic" > "id" to open the ID-setting example script
+    4. Find the line "new_id = DEFAULT_DXL_ID;" and delete it or comment it out: "// new_id = DEFAULT_DXL_ID;"
+    5. Find the line "new_id = 100;" and edit it to "new_id = 2;"
+    6. Upload code to the robot (the circular button near the top left with an arrow pointing to the right)
+    7. Open the Serial Monitor in the Arduino IDE (the circular button in the top right with a magnifying glass) and verify the ID has been changed
+    8. Unplug the Dynamixel and repeat from step 5 with the Dynamixel servos in positions 3, 4, 5 and 6 (setting "new_id = 3;" for ID 3, etc.)
+
+<img src="Images/motorID.jpg" width="37.5%">
 
 3. Upload code using the micro-USB port. You can now operate the robot using the Serial Monitor or the web interface!
     * Instructions are available at [Operating Instructions](/#operating-instructions).
