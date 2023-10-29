@@ -13,7 +13,9 @@
 | **Robotis**       | Arduino Shield         | 1                   | $19.10      | [Robotis](https://www.robotis.us/dynamixel-shield-for-arduino-mkr-series/)                              |
 |                   | Dynamixel XL330-M077-T | 6                   | $143.40     | [Robotis](https://www.robotis.us/dynamixel-xl330-m077-t/)                                               |
 | **3D Print**      | Robot Body             | 1                   |             | [STL File](/CAD/STL/robot_body.STL)                                                                     |
-|                   | Front & Back Legs      | 4                   |             | [STL File](/CAD/STL/standard_leg.STL)                                                                   |
-|                   | Middle Legs            | 2                   |             | [STL File](/CAD/STL/standard_leg_middle.STL)                                                            |
+|                   | Front & Rear Left Legs | 2                   |             | [STL File](/CAD/STL/standard_leg_left.STL)                                                              |
+|                   | Front & Rear Right Legs| 2                   |             | [STL File](/CAD/STL/standard_leg_right.STL)                                                             |
+|                   | Middle Left Leg        | 1                   |             | [STL File](/CAD/STL/standard_leg_left_middle.STL)                                                       |
+|                   | Middle Right Leg       | 1                   |             | [STL File](/CAD/STL/standard_leg_right_middle.STL)                                                      |
 |                   | PLA Filament           | ~100g PLA           | ~$2.50      | [Amazon](https://www.amazon.com/HATCHBOX-3D-Filament-Dimensional-Accuracy/dp/B015I1CZUI)                |
 | **Total Cost**    |                        | 1 robot             | **$289.62** | (as of 10-27-23)                                                                                        |
