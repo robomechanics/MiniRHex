@@ -14,15 +14,21 @@
 1. 3D print the following parts. STL files can be found in [CAD/STL](/CAD/STL) and SolidWorks files are provided in [CAD](/CAD) to allow modification if needed. It is recommended to print with PLA, using the provided settings. Make sure to remove any support material from the legs before assembly.
 
    * 1 robot body ([robot_body.STL](/CAD/STL/robot_body.STL)): 15%-20% infill, no supports
-   * 4 standard front/back legs ([standard_leg.STL](/CAD/STL/standard_leg.STL)): 100% infill, support on build plate
-   * 2 standard middle legs ([standard_leg_middle.STL](/CAD/STL/standard_leg_middle.STL)): 100% infill, support on build plate
+   * 2 standard left front/back legs ([standard_leg_left.STL](/CAD/STL/standard_leg_left.STL)): 100% infill, support on build plate
+   * 2 standard right front/back legs ([standard_leg_right.STL](/CAD/STL/standard_leg_right.STL)): 100% infill, support on build plate
+   * 1 standard left middle leg ([standard_leg_left_middle.STL](/CAD/STL/standard_leg_left_middle.STL)): 100% infill, support on build plate
+   * 1 standard right middle leg ([standard_leg_right_middle.STL](/CAD/STL/standard_leg_right_middle.STL)): 100% infill, support on build plate
+<img src="Images/standard_leg_print.PNG" width="50%">
 
    Certain users may desire to frequently switch out different legs, for which a quick-connect leg design is also available. The quick-connect legs are faster to swap, but less durable. Quick-connect leg users should instead print the following.
 
    * 1 robot body ([robot_body.STL](/CAD/STL/robot_body.STL)): 15%-20% infill, no supports
-   * 4 quick-connect front/back legs ([quick_connect_leg.STL](/CAD/STL/quick_connect_leg.STL)): 100% infill, support on build plate
-   * 2 quick-connect middle legs ([quick_connect_leg_middle.STL](/CAD/STL/quick_connect_leg_middle.STL)): 100% infill, support on build plate
+   * 2 quick-connect left front/back legs ([quick_connect_leg_left.STL](/CAD/STL/quick_connect_leg_left.STL)): 100% infill, support on build plate
+   * 2 quick-connect right front/back legs ([quick_connect_leg_right.STL](/CAD/STL/quick_connect_leg_right.STL)): 100% infill, support on build plate
+   * 1 quick-connect middle left leg ([quick_connect_leg_left_middle.STL](/CAD/STL/quick_connect_leg_left_middle.STL)): 100% infill, support on build plate
+   * 1 quick-connect middle right leg ([quick_connect_leg_right_middle.STL](/CAD/STL/quick_connect_leg_right_middle.STL)): 100% infill, support on build plate
    * 6 quick-connect hubs ([quick_connect_hub.STL](/CAD/STL/quick_connect_hub.STL)): 100% infill, support on build plate
+<img src="Images/quick_connect_leg_print.PNG" width="50%">
 
    Several additional leg variants exist, all compatible with the quick-connect system. For each additional set of legs you will need to 3D print 4 front/back legs and 2 middle legs of the appropriate type (but no additional hubs are needed).
 
