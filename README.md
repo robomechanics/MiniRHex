@@ -53,17 +53,19 @@ Assembly Instructions are available at [Assembly Instructions](/Assembly).
 4. Use the buttons or the indicated keys to wirelessly control the robot!
 
 # Robot Specifications
-|                     | MiniRHex              | X-RHex (2010)         |
-|---------------------|-----------------------|-----------------------|
-| Mass                | 0.425 kg              | 8.6 kg                |
-| Carrying Capacity   | 1.8-3 kg              | 5-10 kg               |
-| Length              | 0.186 m               | 0.53 m                |
-| Width               | 0.100 m               | 0.39 m                |
-| Leg Diameter        | 0.058 m               | 0.175 m               |
-| Leg Spring Constant | 1.98 N/mm             | 1.4-1.7 N/mm          |
-| Leg Actuation       | Dynamixel XL330 Servo | Maxon Brushless Motor |
-| Onboard Processor   | Arduino MKR WiFi 1010 | PC104, Intel Atom     |
-| Single Unit Price   | <$300                 | ~$20,000              |
+|                       | MiniRHex              | X-RHex (2010)         |
+|-----------------------|-----------------------|-----------------------|
+| Mass                  | 0.40 kg               | 8.6 kg                |
+| Carrying Capacity [^1]| 1.8-3 kg              | 5-10 kg               |
+| Length                | 0.186 m               | 0.53 m                |
+| Width                 | 0.100 m               | 0.39 m                |
+| Leg Diameter          | 0.064 m               | 0.175 m               |
+| Leg Spring Constant   | 0.3 N/mm              | 1.4-1.7 N/mm          |
+| Leg Actuation         | Dynamixel XL330 Servo | Maxon Brushless Motor |
+| Onboard Processor     | Arduino MKR WiFi 1010 | PC104, Intel Atom     |
+| Single Unit Price     | <$300                 | ~$20,000              |
+
+[^1]: Evaluated using legs with higher spring constant
 
 <img src="/Images/brickStanding.jpg" width="50%">
 
