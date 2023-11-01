@@ -6,28 +6,28 @@
    * Small flat head screwdriver (basic users only)
    * Soldering station (advanced users only)
 
-2. Purchase necessary components from the [Hardware List](/HardwareList).
+2. Purchase necessary components from the [Hardware List](../HardwareList).
    * Amazon: Arduino MKR, Battery, Plastidip, JST Connector, 5V UBEC, Velcro Straps, LiPo Voltage Monitor, and LiPo Safe Bag
    * Robotis: Dynamixel Servos, Arduino Shield
 
 # Fabrication
-1. 3D print the following parts. STL files can be found in [CAD/STL](/CAD/STL) and SolidWorks files are provided in [CAD](/CAD) to allow modification if needed. It is recommended to print with PLA, using the provided settings. Users of Prusa i3 MK3S 3D printers can also use the PrusaSlicer project files and g-code in the [CAD/Prusa](/CAD/Prusa) folder. Make sure to remove any support material from the legs before assembly.
+1. 3D print the following parts. STL files can be found in [CAD/STL](https://github.com/robomechanics/MiniRHex/tree/main/CAD/STL) and SolidWorks files are provided in [CAD](https://github.com/robomechanics/MiniRHex/tree/main/CAD) to allow modification if needed. It is recommended to print with PLA, using the provided settings. Users of Prusa i3 MK3S 3D printers can also use the PrusaSlicer project files and g-code in the [CAD/Prusa](https://github.com/robomechanics/MiniRHex/tree/main/CAD/Prusa) folder. Make sure to remove any support material from the legs before assembly.
 
-   * 1 robot body ([robot_body.STL](/CAD/STL/robot_body.STL)): 15%-20% infill, no supports
-   * 2 standard left front/back legs ([standard_leg_left.STL](/CAD/STL/standard_leg_left.STL)): 100% infill, support on build plate
-   * 2 standard right front/back legs ([standard_leg_right.STL](/CAD/STL/standard_leg_right.STL)): 100% infill, support on build plate
-   * 1 standard left middle leg ([standard_leg_left_middle.STL](/CAD/STL/standard_leg_left_middle.STL)): 100% infill, support on build plate
-   * 1 standard right middle leg ([standard_leg_right_middle.STL](/CAD/STL/standard_leg_right_middle.STL)): 100% infill, support on build plate  
+   * 1 robot body ([robot_body.STL](../CAD/STL/robot_body.STL)): 15%-20% infill, no supports
+   * 2 standard left front/back legs ([standard_leg_left.STL](../CAD/STL/standard_leg_left.STL)): 100% infill, support on build plate
+   * 2 standard right front/back legs ([standard_leg_right.STL](../CAD/STL/standard_leg_right.STL)): 100% infill, support on build plate
+   * 1 standard left middle leg ([standard_leg_left_middle.STL](../CAD/STL/standard_leg_left_middle.STL)): 100% infill, support on build plate
+   * 1 standard right middle leg ([standard_leg_right_middle.STL](../CAD/STL/standard_leg_right_middle.STL)): 100% infill, support on build plate  
 <img src="Images/robot_body_print.PNG" width="30%"><img src="Images/standard_leg_print.PNG" width="29%">  
 
    Certain users may desire to frequently switch out different legs, for which a quick-connect leg design is also available. The quick-connect legs are faster to swap, but less durable. Quick-connect leg users should instead print the following.
 
-   * 1 robot body ([robot_body.STL](/CAD/STL/robot_body.STL)): 15%-20% infill, no supports
-   * 2 quick-connect left front/back legs ([quick_connect_leg_left.STL](/CAD/STL/quick_connect_leg_left.STL)): 100% infill, support on build plate
-   * 2 quick-connect right front/back legs ([quick_connect_leg_right.STL](/CAD/STL/quick_connect_leg_right.STL)): 100% infill, support on build plate
-   * 1 quick-connect middle left leg ([quick_connect_leg_left_middle.STL](/CAD/STL/quick_connect_leg_left_middle.STL)): 100% infill, support on build plate
-   * 1 quick-connect middle right leg ([quick_connect_leg_right_middle.STL](/CAD/STL/quick_connect_leg_right_middle.STL)): 100% infill, support on build plate
-   * 6 quick-connect hubs ([quick_connect_hub.STL](/CAD/STL/quick_connect_hub.STL)): 100% infill, support on build plate  
+   * 1 robot body ([robot_body.STL](../CAD/STL/robot_body.STL)): 15%-20% infill, no supports
+   * 2 quick-connect left front/back legs ([quick_connect_leg_left.STL](../CAD/STL/quick_connect_leg_left.STL)): 100% infill, support on build plate
+   * 2 quick-connect right front/back legs ([quick_connect_leg_right.STL](../CAD/STL/quick_connect_leg_right.STL)): 100% infill, support on build plate
+   * 1 quick-connect middle left leg ([quick_connect_leg_left_middle.STL](../CAD/STL/quick_connect_leg_left_middle.STL)): 100% infill, support on build plate
+   * 1 quick-connect middle right leg ([quick_connect_leg_right_middle.STL](../CAD/STL/quick_connect_leg_right_middle.STL)): 100% infill, support on build plate
+   * 6 quick-connect hubs ([quick_connect_hub.STL](../CAD/STL/quick_connect_hub.STL)): 100% infill, support on build plate  
 <img src="Images/robot_body_print.PNG" width="30%"><img src="Images/quick_connect_leg_print.PNG" width="27.53%">
 
    Several additional leg variants exist, all compatible with the quick-connect system. For each additional set of legs you will need to 3D print 4 front/back legs and 2 middle legs of the appropriate type (but no additional hubs are needed).
@@ -133,7 +133,7 @@
 
 # Software Setup
 1. Install the Arduino IDE and download the MiniRHex repository.
-    * Instructions are available at [Install Software](/#install-software).
+    * Instructions are available at [Install Software](../#install-software).
 
 2. Configure the servo IDs for each leg. The correct Dynamixel servo positions are:
     - ID 1 = front left
@@ -158,6 +158,8 @@
 <img src="Images/motorID.jpg" width="37.5%">
 
 3. Upload code using the micro-USB port. You can now operate the robot using the Serial Monitor or the web interface!
-    * Instructions are available at [Operating Instructions](/#operating-instructions).
+    * Instructions are available at [Operating Instructions](../#operating-instructions).
 
 4. When finished, unplug the battery and store it in a fireproof container. Never leave a battery in the robot!
+
+[Return to homepage](https://robomechanics.github.io/MiniRHex/).

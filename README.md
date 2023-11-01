@@ -4,16 +4,16 @@
 
 MiniRHex is a miniature-scale hexapod designed by the [Robomechanics Lab](https://www.cmu.edu/me/robomechanicslab/) based on the design of the cockroach-inspired [RHex](https://repository.upenn.edu/handle/20.500.14332/34172). Notable features include a 3D printed chassis and legs for low cost construction and an intuitive software package that allows for highly-customizable control over the robot’s behavior. MiniRHex is designed to be an educational and outreach tool enabling students to experiment with a fully functional walking robot at a much lower cost. The low price tag lets research groups maintain a fleet of machines, allowing each student more hands-on interaction with the hardware. Possible educational principles include gait design and optimization, leg design and control, and mobile robot sensor incorporation.
 
-<img src="/Images/assembledRobotFront.jpg" width="50%">
+<img src="Images/assembledRobotFront.jpg" width="50%">
 
 # Setup Instructions
 Building a MiniRHex requires access to a 3D printer. The links for off the shelf parts can be found below.
 
 ## Acquire Parts
-The Parts List and Links to order can be found in [Parts List](/HardwareList).
+The Parts List and Links to order can be found in [Parts List](HardwareList).
 
 ## Assemble Robot
-Assembly Instructions are available at [Assembly Instructions](/Assembly).
+Assembly Instructions are available at [Assembly Instructions](Assembly).
 
 ## Install Software
 1. Install the Arduino IDE from https://www.arduino.cc/en/software
@@ -23,7 +23,7 @@ Assembly Instructions are available at [Assembly Instructions](/Assembly).
 3. Under "Tools" hover over "Board" and select "Boards Manager..."
    - Type "Arduino SAMD Boards" into the search bar
    - Select "Install" for the Arduino SAMD Boards (32-bits ARM Cortex-M0+)
-4. (Non-developers) Download the MiniRHex repository from https://github.com/robomechanics/MiniRHex/archive/refs/heads/main.zip and extract the downloaded zip file
+4. (Non-developers) Download the [MiniRHex repository](https://github.com/robomechanics/MiniRHex/archive/refs/heads/main.zip) and extract the downloaded zip file
 5. (Developers) Clone the MiniRHex repository from https://github.com/robomechanics/MiniRHex.git
 
 # Operating Instructions
@@ -64,11 +64,11 @@ Assembly Instructions are available at [Assembly Instructions](/Assembly).
 
 [^1]: Evaluated using legs with higher spring constant
 
-<img src="/Images/brickStanding.jpg" width="50%">
+<img src="Images/brickStanding.jpg" width="50%">
 
 # Useful Links
 ### Parts List
-The part list can be found at [Parts List](/HardwareList).
+The part list can be found at [Parts List](HardwareList).
 ### MiniRHex Repository
 The MiniRHex repository can be found at [MiniRHex Repository](https://github.com/robomechanics/MiniRHex.git).
 ### Cite MiniRHex
@@ -77,7 +77,7 @@ Use [this BibTeX](/citation.txt) for citations:
 > M. Barragan, N. Flowers, and A. M. Johnson. "MiniRHex: A Small, Open-source, Fully Programmable Walking Hexapod". In *Robotics: Science and Systems Workshop on ``Design and Control of Small Legged Robots''*, Pittsburgh, PA, June 2018.
 
 ### Images
-See the [image gallery](/Images) for more MiniRHex pictures.
+See the [image gallery](Images) for more MiniRHex pictures.
         
 ### Videos
 Check out the Robomechanics Lab [YouTube Page](https://www.youtube.com/watch?v=ldLXVDNCCzc&list=PLxHmBiQi0bD2aFgPKIrXhYXCCOGhTQmmk) for videos of MiniRHex in action!
