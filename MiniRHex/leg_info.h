@@ -8,7 +8,7 @@ typedef struct leg_info_header leg;
 struct leg_info_header{
   int id;
   float desired_theta; //only utilized in position control mode
-  int forwards[5]; //changeable, direction of rotation in current gait
+  int forwards[6]; //changeable, direction of rotation in current gait
   int gait; //current gait
   float zero;
   bool right_side; //if right side we must convert absolute velocity and theta to relative velocity theta
@@ -47,6 +47,7 @@ extern const int LEFT;
 extern const int REVERSE;
 extern const int RIGHT;
 extern const int PRONK;
+extern const int RUN;
 
 
 #endif

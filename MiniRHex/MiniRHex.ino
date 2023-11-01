@@ -1,22 +1,21 @@
 #include "leg_info.h"
 #include "control_parameters.h"
 #include "desired_values.h"
-#include "conversions.h"
 #include "pd_control.h"
 #include "gait_parameters.h"
 
-// Dynamixel Setup //
-#define DXL_BUS_SERIAL1 1  //Dynamixel on Serial1(USART1)  <-OpenCM9.04
-Dynamixel Dxl(DXL_BUS_SERIAL1);
+#include <DynamixelShield.h>
+#include <WiFiNINA.h>
 
-// Control Table //
-#define MOVING_SPEED 32
-#define PRESENT_POS 37
-#define PRESENT_SPEED 39
-#define PRESENT_VOLTAGE 45
-#define LED 25
+DynamixelShield dxl;
+using namespace ControlTableItem;
 
-//Rewritable globals
+// Sync read/write structs
+ParamForSyncWriteInst_t sync_write_param;
+ParamForSyncReadInst_t sync_read_param;
+RecvInfoFromStatusInst_t read_result;
+
+// Rewritable globals
 float desired_vel;
 float desired_theta;
 float actual_vel;
@@ -24,227 +23,250 @@ float actual_theta;
 float control_signal;
 float actual_p;
 
-
-//Deadzone
-int dead_buffer = 40;
-
-// Legs setup //
+// Legs setup
 const int legs_active = 6;
 
-// Packet Setup //
-const int packet_length =  2 * legs_active;
-word packet[packet_length]; 
+// Motor values
+float present_velocity[legs_active+1];
+float present_position[legs_active+1];
+float goal_velocity[legs_active+1];
 
-// Button Setup //
-int button_state;
-int last_button_state = 0;
+// Battery status
+bool flash;         // LED on or off
+bool shutdown;      // Disable motor movement
+int voltage;        // Current battery voltage
+int voltage_check;  // Current motor voltage
 
-// Battery Check //
-int low_battery = 1; // 1 = red, 3 = yellow, 2 = green
-int prev_low_battery = 0;
-int voltage;
-int voltage_check;
+bool wifi;          // WiFi connection active
 
-void setup(){
-  Dxl.begin(3); //baudrate set to 1 Mbps (max)
-  Serial2.begin(57600); //set up serial usb input
-  pinMode(BOARD_BUTTON_PIN, INPUT_PULLDOWN); //setup user button
-  pinMode(BOARD_LED_PIN, OUTPUT); //setup LED
-  int t_start = millis();
-  for (int i = 1; i <= legs_active; i++){ //legs stored at their index
-    Dxl.wheelMode(legs[i].id); //change servo to wheel mode
-    update_gait(i, initial_gait, t_start); //set initial parameters, initial_gait in gait_parameters
-  }
-}
-
-void user_button_pressed(){
+void setup() {
+  Serial.begin(57600);                             // set the Serial Monitor to match this baud rate
+  dxl.begin(57600);                                // 57600 is the default baud rate for XL330 motors
+  dxl.setPortProtocolVersion(2.0);                 // XL330 motors use protocol 2
   
-  digitalWrite(BOARD_LED_PIN, LOW); //turn led on
-  //compute new gait
-  int new_gait = (legs[1].gait + 1) % num_gaits;
+  pinMode(LED_BUILTIN, OUTPUT);                    // setup LED
   int t_start = millis();
-  for(int i = 1; i <= legs_active; i++){
-    update_gait(i, new_gait, t_start);
+  for (int i = 1; i <= legs_active; i++) {         // legs stored at their index
+    dxl.torqueOff(legs[i].id);
+    dxl.setOperatingMode(legs[i].id, OP_VELOCITY); // change servo to wheel mode
+    dxl.writeControlTableItem(RETURN_DELAY_TIME, legs[i].id, 0);
+    dxl.torqueOn(legs[i].id);
+    update_gait(i, initial_gait, t_start);         // set initial parameters, initial_gait in gait_parameters
   }
-  
+
+  sync_write_param.id_count = legs_active;         // set sync read/write motor IDs
+  sync_read_param.id_count = legs_active;
+  for (int i=1; i<=legs_active; i++) {
+    sync_write_param.xel[i-1].id = legs[i].id;
+    sync_read_param.xel[i-1].id = legs[i].id;
+  }
+
+  begin_wifi();
 }
 
-void user_button_released(){
-  digitalWrite(BOARD_LED_PIN, HIGH);
-}
-
-void jump_ready(){
-  int t_start = millis(); 
-  for (int i = 1; i <= legs_active; i++){
+void jump_ready() {
+  int t_start = millis();
+  for (int i = 1; i <= legs_active; i++) {
     legs[i].desired_theta = 90;
     update_gait(i, STAND, t_start);
   }
-  SerialUSB.println("JUMP READY");
+  Serial.println("JUMP READY");
 }
 
-void jump(){
+void jump() {
 
   int t_start = millis();
-  while (millis() - t_start < 900){
-    SerialUSB.println(t_start - millis());
-    if (millis() - t_start > 0){
-      Dxl.writeWord(1, MOVING_SPEED, 1023);
-      Dxl.writeWord(4, MOVING_SPEED, 2047);
+  while (millis() - t_start < 900) {
+    Serial.println(t_start - millis());
+    if (millis() - t_start > 0) {
+      dxl.setGoalVelocity(legs[1].id, 100, UNIT_PERCENT);
+      dxl.setGoalVelocity(legs[4].id, -100, UNIT_PERCENT);
     }
-    if (millis() - t_start > 100){
-      Dxl.writeWord(2, MOVING_SPEED, 1023);
-      Dxl.writeWord(5, MOVING_SPEED, 2047);
+    if (millis() - t_start > 100) {
+      dxl.setGoalVelocity(legs[2].id, 100, UNIT_PERCENT);
+      dxl.setGoalVelocity(legs[5].id, -100, UNIT_PERCENT);
     }
-    if (millis() - t_start > 190){
-      Dxl.writeWord(3, MOVING_SPEED, 1023);
-      Dxl.writeWord(6, MOVING_SPEED, 2047);
+    if (millis() - t_start > 190) {
+      dxl.setGoalVelocity(legs[3].id, 100, UNIT_PERCENT);
+      dxl.setGoalVelocity(legs[6].id, -100, UNIT_PERCENT);
     }
   }
-  for (int i = 1; i <= legs_active; i++){
+  for (int i = 1; i <= legs_active; i++) {
     legs[i].desired_theta = 0;
     update_gait(i, STAND, t_start);
   }
-
 }
 
 int count = 0;
-void loop(){
-
-  //time count
+int t = 0;
+void loop() {
+  // loop counter
   count++;
-  
-  prev_low_battery = low_battery;
-  //Every 100 loop iterations, find max voltage supplied to each leg and compare with nominal
-  if (count%10 == 0){
+
+  // Every 10 loop iterations, find max voltage supplied to each leg and compare with nominal
+  if (count % 10 == 0) {
     voltage = 0;
-    for (int i = 1; i <= legs_active; i++){
-      voltage_check = Dxl.readByte(legs[1].id, PRESENT_VOLTAGE);
+    for (int i = 1; i <= legs_active; i++) {
+      voltage_check = dxl.readControlTableItem(PRESENT_INPUT_VOLTAGE, legs[i].id);
       if (voltage_check > voltage) voltage = voltage_check;
     }
-    SerialUSB.println(voltage);
+    Serial.print("Voltage: ");
+    Serial.print(voltage/10.0);
+    Serial.print(", Frequency: ");
+    Serial.print(10000/(millis()-t));
+    Serial.println("Hz");
+    t = millis();
 
-    if (voltage > 73){ //green
-      low_battery = 2;
+    bool update = false;
+    if (voltage > 45) {
+      if (flash) update = true;
+      flash = false;            // off (safe voltage)
+      shutdown = false;
     }
-    else if (voltage < 71){ //red
-      low_battery = 1;
+    else if (voltage > 40) {
+      if (!flash) update = true;
+      flash = true;             // on (low voltage)
+      shutdown = false;
     }
-    else{
-      low_battery = 3; //yellow
+    else {
+      if (!flash) update = true;
+      flash = true;             // shutdown motors (very low voltage)
+      shutdown = true;
+    }
+
+    if (update) {
+      for (int i = 1; i <= legs_active; i++) {
+        if (flash) {
+          dxl.ledOn(legs[i].id);
+        } else {
+          dxl.ledOff(legs[i].id);
+        }
+      }
     }
   }
 
-  if (prev_low_battery != low_battery){
-    SerialUSB.println("Should switch led color here");
-    for (int i = 1; i <= legs_active; i++){
-      Dxl.writeByte(legs[i].id, LED, low_battery);
+  // teleop control
+  if (Serial.available() || wifi) {
+    char a;
+    if (Serial.available()) {
+      a = (char)(Serial.read());
+    } else {
+      a = update_wifi();
     }
-  }
-  
-  //bluetooth control
-  if (Serial2.available()){ 
-    char a = (char)(Serial2.read());
     int gait = -1;
-    switch (a){
-    case 'q': 
-      gait = STAND; 
-      break; //stand
-    case 'w': 
-      gait = WALK; 
-      break; //forwards
-    case 'a': 
-      gait = LEFT; 
-      break; //left
-    case 's': 
-      gait = REVERSE; 
-      break; //reverse
-    case 'd': 
-      gait = RIGHT; 
-      break; //right 
-    case 'e':
-      gait = PRONK;
-      break;
-    case 'x':
-      jump_ready();
-      break;
-    case 'j':
-      jump();
-      break;
+    switch (a) {
+      case 'q': // stand
+        gait = STAND;
+        break;
+      case 'w': // forwards
+        gait = WALK;
+        break;
+      case 'a': // left
+        gait = LEFT;
+        break;
+      case 's': // reverse
+        gait = REVERSE;
+        break;
+      case 'd': // right
+        gait = RIGHT;
+        break;
+      case 'e': // pronk
+        gait = PRONK;
+        break;
+      case 'r': // run
+        gait = RUN;
+        break;
+      case 'x': // prepare jump
+        jump_ready();
+        break;
+      case 'j': // jump
+        jump();
+        break;
     }
 
-    if (gait != -1){
-      int t_start = millis(); 
-      for (int i = 1; i <= legs_active; i++){
+    if (gait != -1) {
+      int t_start = millis();
+      for (int i = 1; i <= legs_active; i++) {
         update_gait(i, gait, t_start);
       }
     }
   }
 
-  //button control
-  button_state = digitalRead(BOARD_BUTTON_PIN);
-  if (button_state > last_button_state) user_button_pressed();
-  else if (button_state < last_button_state) user_button_released();
-  last_button_state = button_state;
-
-
-  //primary for-loop
-  for(int i = 1; i <= legs_active; i++){
-    packet[(i-1) * 2] = legs[i].id;
-    actual_p = Dxl.readWord(legs[i].id, PRESENT_POS);
-    actual_theta = P_to_Theta(actual_p); // converted to degrees, relative to leg
-    actual_vel = dynV_to_V(Dxl.readWord(legs[i].id, PRESENT_SPEED)); // converted to degrees/ms, relative to leg
-    if (!legs[i].deadzone){
-      
-      if (actual_p == 0 || actual_p == 1023){ //entering deadzone
-        legs[i].deadzone = true;
-        if (actual_p == 0) legs[i].dead_from_neg = true;
-        else legs[i].dead_from_neg = false;
-        continue;
-      }
-
-      if (legs[i].gait == STAND){ //standing or sitting
-        if (legs[i].right_side){
-          desired_theta = Theta_to_ThetaR(legs[i].desired_theta);
+  // primary for-loop
+  sync_read_position();
+  sync_read_velocity();
+  for (int i = 1; i <= legs_active; i++) {
+    actual_theta = present_position[i]; // degrees
+    actual_vel = present_velocity[i];   // degrees/millisecond
+    if (!legs[i].deadzone) {
+      if (legs[i].gait == STAND) { // standing or sitting
+        if (legs[i].right_side) {
+          desired_theta = -legs[i].desired_theta;
         }
-        else{
+        else {
           desired_theta = legs[i].desired_theta;
         }
-        actual_theta = actual_theta - legs[i].zero; //zero out leg thetas, accounts for small servo irregularities
-        control_signal = pd_controller(actual_theta, desired_theta, actual_vel, 0, kp_hold, kd_hold); 
+        actual_theta = actual_theta - legs[i].zero; // zero out leg thetas, accounts for small servo irregularities
+        control_signal = pd_controller(actual_theta, desired_theta, actual_vel, 0, kp_hold, kd_hold);
+      } else if (legs[i].gait == RUN){
+        float v = 20;
+        control_signal = v*(-legs[i].right_side*2+1) - actual_vel;
       }
-      else { //walking, turning
-        //compute absolute desired values (theta and velocity) from clock time
+      else { // walking, turning
+        // compute absolute desired values (theta and velocity) from clock time
         vals v = get_desired_vals(millis(), legs[i]);
-        //translate theta and v to relative (left and right)
-        if (legs[i].right_side){
-          desired_vel = -v.global_velocity; //relative
-          desired_theta = Theta_to_ThetaR(v.global_theta); // relative
+        // translate theta and v to relative (left and right)
+        if (legs[i].right_side) {
+          desired_vel = -v.global_velocity; // relative
+          desired_theta = -v.global_theta; // relative
         }
-        else{ //left side, relative is same as global
+        else { // left side, relative is same as global
           desired_vel = v.global_velocity;
           desired_theta = v.global_theta;
         }
         actual_theta = actual_theta - legs[i].zero;
-        
-        control_signal = pd_controller(actual_theta, desired_theta, actual_vel, desired_vel, legs[i].kp, legs[i].kd);  
+
+        control_signal = pd_controller(actual_theta, desired_theta, actual_vel, desired_vel, legs[i].kp, legs[i].kd);
       }
-
-
-      int new_vel = V_to_dynV(actual_vel + control_signal);
-      packet[(i-1) * 2 + 1] = new_vel;
-    }
-
-    else{ //deadzone
-      if ((actual_p > 0) & (actual_p < dead_buffer) || (actual_p < 1023) & (actual_p > 1023 -dead_buffer)){ //exiting deadzone
-        legs[i].deadzone = false;
+      float new_vel = actual_vel + control_signal;
+      if (shutdown) {
+        goal_velocity[i] = 0;
+      } else {
+        goal_velocity[i] = new_vel;
       }
-      float signed_recovery_speed = legs[i].dead_from_neg == true ? -legs[i].recovery_speed : legs[i].recovery_speed;
-      packet[(i-1) * 2 + 1] = V_to_dynV(signed_recovery_speed);
     }
   }
-
-  Dxl.syncWrite(MOVING_SPEED, 1, packet, packet_length); //simultaneously write to each of 6 servoes with updated commands
+  sync_write_velocity();
 }
 
+void sync_read_velocity() {
+  sync_read_param.addr = 128; // Present Velocity of DYNAMIXEL-X series
+  sync_read_param.length = 4;
+  dxl.syncRead(sync_read_param, read_result);
+  int raw;
+  for (int i=1; i<=legs_active; i++) {
+    memcpy(&raw, read_result.xel[i-1].data, read_result.xel[i-1].length);
+    present_velocity[i] = raw * .06 * 0.229;
+  }
+}
 
+void sync_read_position() {
+  sync_read_param.addr = 132; // Present Position of DYNAMIXEL-X series
+  sync_read_param.length = 4;
+  dxl.syncRead(sync_read_param, read_result);
+  int raw;
+  for (int i=1; i<=legs_active; i++) {
+    memcpy(&raw, read_result.xel[i-1].data, read_result.xel[i-1].length);
+    present_position[i] = raw * 0.088;
+  }
+}
 
+void sync_write_velocity() {
+  sync_write_param.addr = 104; // Goal Velocity of DYNAMIXEL-X series
+  sync_write_param.length = 4;
+  for (int i=1; i<=legs_active; i++) {
+    int raw = goal_velocity[i] / .06 / 0.229;
+    memcpy(sync_write_param.xel[i-1].data, &raw, 4);
+  }
+  dxl.syncWrite(sync_write_param);
+}

@@ -1,31 +1,21 @@
 # Hardware List
 
-| Item | Quantity per Robot | Price | Link |
-|------|--------------------|-------|------|
-| **McMaster-Carr Parts** | | | |
-| M3 x 0.50 mm Thread, 10 mm  Button Head Screws | 44 | $6.08 | https://www.mcmaster.com/#94500A223 |
-| M3 x 0.50 mm Thread, 15 mm | 12 | $4.80 | https://www.mcmaster.com/92095a119 |
-| M2.5 x 0.45 mm Thread, 25 mm (Additional Screws for Servo Horn) | 6 | $5.90 | https://www.mcmaster.com/92005a078 |
-| M3 Locknuts | 32 | $3.36 | https://www.mcmaster.com/#90576A102 |
-| 1/8" acrylic, 20 cm x 12 cm (min) | 1 | $5.73 | https://www.mcmaster.com/8560k275 |
-| Spacer | 4 | $4.48 | https://www.mcmaster.com/#93657A203 |
-| **Amazon Parts** | | | |
-| Battery | 1 | $8.99 | https://www.amazon.com/MJX-F645-Replacement-Battery-Meijiaxin/dp/B007XOMXMO/ref=sr_1_35?ie=UTF8&qid=1526604820&sr=8-35&keywords=7.4v+1500mah |
-| Plastidip | 1 | $9.52 | https://www.amazon.com/Performix-11602-6-075815116024-Yellow-Plasti/dp/B000ZN1T16/ref=sr_1_13?ie=UTF8&qid=1526518098&sr=8-13&keywords=plastidip |
-| Charger | 1 | $23.79 | https://www.amazon.com/QWinOut-Switching-Helicopter-Quadcopter-Hexacopter/dp/B01D10MWYW/ref=sr_1_3?s=toys-and-games&ie=UTF8&qid=1526605943&sr=1-3&keywords=liion+battery+charger&refinements=p_36%3A1253560011 |
-| Battery Connections | 1 | $6.49 | https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z |
-| 8"x1/2" Velcro Straps | 1 | $4.49 | https://www.amazon.com/VELCRO-Brand-Reusable-Fastening-Organizing/dp/B0006BB9MG |
-| **Robotis Parts** | | | |
-| Main Board | 1 | $19.90 | http://www.robotis.us/opencm9-04-c-with-onboard-xl-type-connectors/ |
-| Dynamixels (servos) | 6 | $131.40 | http://www.robotis.us/dynamixel-xl-320/ |
-| Bluetooth (optional) | 1 | $32.90 | http://www.robotis.us/bt-210/ |
-| **3D Printed Parts** | | | |
-| Servo Sleeve | 6 | | https://github.com/robomechanics/MiniRHex/tree/master/CAD |
-| Shaft-edge (hub) | 4 | | ""|
-| Shaft-mid (hub) | 2 | | "" |
-| Leg | 6 | | "" |
-| Battery Case | 1 | | "" | 
-| Printing Subtotal | ~275g PLA | ~$5.50 | (Cost estimate is for material only, assuming an Ultimaker 3 Extended and the recommended gcode file from /CAD) |
-| **Total** | | **$216.64** | (as of 1-07-19 without Bluetooth or battery charger) |
-
-*Parts list also available as Excel Sheet, download above*
+| Supplier          | Item                   | Quantity            | Price       | Link                                                                                                    |
+|-------------------|------------------------|---------------------|-------------|---------------------------------------------------------------------------------------------------------|
+| **Amazon**        | Arduino MKR WiFi 1010  | 1                   | $39.99      | [Amazon](https://www.amazon.com/Arduino-MKR-WiFi-1010-ABX00023/dp/B07FYFF5YZ)                           |
+|                   | Batteries and charger  | 1 (2 batteries)     | $22.99      | [Amazon](https://www.amazon.com/1500mAh-Li-ion-Battery-Helicopter-Charger/dp/B089W89KCP)                |
+|                   | Plastidip              | 1 (per 5 robots)    | $19.00      | [Amazon](https://www.amazon.com/Plasti-Dip-Multi-Purpose-Coating-Aerosol/dp/B07QCPXXBV)                 |
+|                   | JST Plug Connectors    | 1 (per 10 robots)   | $6.29       | [Amazon](https://www.amazon.com/eBoot-Connector-Female-Cable-Battery/dp/B01M5AHF0Z)                     |
+|                   | 5V UBEC                | 1 (per 2 robots)    | $11.69      | [Amazon](https://www.amazon.com/ShareGoo-Converter-Module-Quadcopter-Holder/dp/B07DYXTX9H)              |
+|                   | 8"x1/2" Velcro Straps  | 1 (per 8 robots)    | $8.18       | [Amazon](https://www.amazon.com/VELCRO-Brand-Reusable-Fastening-Organizing/dp/B0006BB9MG)               |
+|                   | LiPo Voltage Monitor   | 1                   | $5.49       | [Amazon](https://www.amazon.com/Battery-Monitor-Voltage-Checker-Indicator/dp/B013U1CP08)                |
+|                   | LiPo Safe Bag          | 1 (per 8 batteries) | $10.99      | [Amazon](https://www.amazon.com/DerBlue-Fireproof-Explosionproof-Battery-Bag185x75x60mm/dp/B01GCHBQJS/) |
+| **Robotis**       | Arduino Shield         | 1                   | $19.10      | [Robotis](https://www.robotis.us/dynamixel-shield-for-arduino-mkr-series/)                              |
+|                   | Dynamixel XL330-M077-T | 6                   | $143.40     | [Robotis](https://www.robotis.us/dynamixel-xl330-m077-t/)                                               |
+| **3D Print**      | Robot Body             | 1                   |             | [STL File](/CAD/STL/robot_body.STL)                                                                     |
+|                   | Front & Rear Left Legs | 2                   |             | [STL File](/CAD/STL/standard_leg_left.STL)                                                              |
+|                   | Front & Rear Right Legs| 2                   |             | [STL File](/CAD/STL/standard_leg_right.STL)                                                             |
+|                   | Middle Left Leg        | 1                   |             | [STL File](/CAD/STL/standard_leg_left_middle.STL)                                                       |
+|                   | Middle Right Leg       | 1                   |             | [STL File](/CAD/STL/standard_leg_right_middle.STL)                                                      |
+|                   | PLA Filament           | ~100g PLA           | ~$2.50      | [Amazon](https://www.amazon.com/HATCHBOX-3D-Filament-Dimensional-Accuracy/dp/B015I1CZUI)                |
+| **Total Cost**    |                        | 1 robot             | **$289.62** | (as of 10-27-23)                                                                                        |

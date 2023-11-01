@@ -17,5 +17,6 @@ extern int active_mini;
 extern int initial_gait;
 extern Gait walk_gait;
 extern Gait pronk_gait;
+extern Gait run_gait;
 
 #endif
