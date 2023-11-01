@@ -41,12 +41,9 @@ Assembly Instructions are available at [Assembly Instructions](/Assembly).
 
 ## Connect to Wi-Fi
 1. After uploading code, the Serial monitor should initially print a message like the following:
-> Starting WiFi network...
-> 
-> SSID: minirhex
->
-> Password: minirhex
->
+> Starting WiFi network...  
+> SSID: minirhex  
+> Password: minirhex  
 > Website: http://192.168.4.1/
 2. Connect to the wifi network listed after "SSID" from your phone or laptop, using the provided password.
 3. On your device, navigate to the provided website.

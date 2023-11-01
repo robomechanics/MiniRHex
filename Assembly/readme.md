@@ -17,7 +17,7 @@
    * 2 standard left front/back legs ([standard_leg_left.STL](/CAD/STL/standard_leg_left.STL)): 100% infill, support on build plate
    * 2 standard right front/back legs ([standard_leg_right.STL](/CAD/STL/standard_leg_right.STL)): 100% infill, support on build plate
    * 1 standard left middle leg ([standard_leg_left_middle.STL](/CAD/STL/standard_leg_left_middle.STL)): 100% infill, support on build plate
-   * 1 standard right middle leg ([standard_leg_right_middle.STL](/CAD/STL/standard_leg_right_middle.STL)): 100% infill, support on build plate
+   * 1 standard right middle leg ([standard_leg_right_middle.STL](/CAD/STL/standard_leg_right_middle.STL)): 100% infill, support on build plate  
 <img src="Images/robot_body_print.PNG" width="30%"><img src="Images/standard_leg_print.PNG" width="29%">  
 
    Certain users may desire to frequently switch out different legs, for which a quick-connect leg design is also available. The quick-connect legs are faster to swap, but less durable. Quick-connect leg users should instead print the following.
