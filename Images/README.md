@@ -8,4 +8,4 @@
 
 ![MiniRHex Carrying Brick](brickStanding.jpg)
 
-[Return to homepage](https://robomechanics.github.io/MiniRHex/).
+[Return to homepage](../).

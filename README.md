@@ -40,13 +40,12 @@ Assembly Instructions are available at [Assembly Instructions](Assembly).
 8. When finished, unplug the battery and store it in a fireproof container (never leave a battery in the robot!)
 
 ## Connect to Wi-Fi
-1. After uploading code, the Serial monitor should initially print a message like the following:
+1. After uploading code, the LED on the Arduino will turn green and the Serial monitor should initially print the following message:
 > Starting WiFi network...  
-> SSID: minirhex  
-> Password: minirhex  
-> Website: http://192.168.4.1/
-2. Connect to the wifi network listed after "SSID" from your phone or laptop, using the provided password.
-3. On your device, navigate to the provided website.
+> SSID: minirhex    
+> Website: http://10.0.0.1
+2. Connect to the wifi network listed after "SSID" from your phone or computer. The LED on the Arduino will turn blue and start flashing.
+3. On your device, navigate to the provided website. Make sure to use http, not https.
 4. Use the buttons or the indicated keys to wirelessly control the robot!
 
 # Robot Specifications
@@ -92,9 +91,5 @@ MiniRHex was designed by the following people in the [Robomechanics Lab](https:/
 * J. Joe Payne (Ph.D ME)
 * Joe Norby (Ph.D ME '22)
 * Catherine Pavlov (Ph.D ME '23)
+* Paul Nadan (Ph.D RI)
 * Aaron Johnson (Advisor)
-
-
-
-
-

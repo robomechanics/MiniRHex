@@ -4,12 +4,22 @@
 */
 
 #include <WiFiNINA.h>
+#include <utility/wifi_drv.h>
 
 char ssid[] = "minirhex";
-char pass[] = "minirhex";
 WiFiServer server(80);
+const int RED = 25;
+const int GREEN = 26;
+const int BLUE = 27;
 
 void begin_wifi() {
+  WiFiDrv::pinMode(GREEN, OUTPUT);
+  WiFiDrv::pinMode(RED, OUTPUT);
+  WiFiDrv::pinMode(BLUE, OUTPUT);
+  WiFiDrv::analogWrite(GREEN, 0);
+  WiFiDrv::analogWrite(RED, 0);
+  WiFiDrv::analogWrite(BLUE, 0);
+
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("No WiFi module present");
     return;
@@ -17,23 +27,38 @@ void begin_wifi() {
   if (WiFi.firmwareVersion() < WIFI_FIRMWARE_LATEST_VERSION) {
     Serial.println("Please upgrade the WiFi firmware");
   }
-  if (WiFi.beginAP(ssid, pass) != WL_AP_LISTENING) {
+  WiFi.config(IPAddress(10, 0, 0, 1));
+  if (WiFi.beginAP(ssid) != WL_AP_LISTENING) {
     Serial.println("Creating WiFi network failed");
     return;
   }
-  delay(10000);
   server.begin();
   wifi = true;
 
   Serial.print("SSID: ");
   Serial.println(WiFi.SSID());
-  Serial.print("Password: ");
-  Serial.println(pass);
   Serial.print("Website: http://");
   Serial.println(WiFi.localIP());
 }
 
 char update_wifi() {
+  if (WiFi.status() == WL_AP_LISTENING) {
+    WiFiDrv::analogWrite(RED, 0);
+    WiFiDrv::analogWrite(GREEN, 20);
+    WiFiDrv::analogWrite(BLUE, 0);
+  } else if (WiFi.status() == WL_AP_CONNECTED) {
+    WiFiDrv::analogWrite(RED, 0);
+    WiFiDrv::analogWrite(GREEN, 0);
+    if (millis() % 250 > 125) {
+      WiFiDrv::analogWrite(BLUE, 20);
+    } else {
+      WiFiDrv::analogWrite(BLUE, 0);
+    }
+  } else {
+    WiFiDrv::analogWrite(RED, 20);
+    WiFiDrv::analogWrite(GREEN, 0);
+    WiFiDrv::analogWrite(BLUE, 0);
+  }
   WiFiClient client = server.available();   // listen for incoming clients
   char output = 0;
   if (client) {                             // if you get a client,
@@ -51,8 +76,8 @@ char update_wifi() {
         }
         else if (c != '\r') {    // if you got anything else but a carriage return character,
           currentLine += c;      // add it to the end of the currentLine
-          if (currentLine.substring(currentLine.length()-6, currentLine.length()-1) == "GET /") {
-            output = currentLine[currentLine.length()-1];   // return the command
+          if (currentLine.substring(currentLine.length() - 6, currentLine.length() - 1) == "GET /") {
+            output = currentLine[currentLine.length() - 1]; // return the command
           }
         }
       }
@@ -60,7 +85,7 @@ char update_wifi() {
     client.stop();                                   // close the connection
   }
   if (output == ' ') output = 'q';                   // space is also e-stop
-  return(output);
+  return (output);
 }
 
 void display_website(WiFiClient client) {
@@ -78,11 +103,6 @@ void display_website(WiFiClient client) {
   client.print("<button onclick=\"window.location.href='/d';\">Right<br>(d)</button>");
   client.print("<b></b><button onclick=\"window.location.href='/s';\">Reverse<br>(s)</button>");
   client.print("</div><br><br>");
-
-  // Battery display
-  int randomReading = analogRead(A1);
-  client.print("Voltage: ");
-  client.print(voltage/10.0);
 
   // Key listener
   client.print("<script>");

@@ -18,6 +18,6 @@
 |                   | Middle Left Leg        | 1                   |             | [STL File](../CAD/STL/standard_leg_left_middle.STL)                                                     |
 |                   | Middle Right Leg       | 1                   |             | [STL File](../CAD/STL/standard_leg_right_middle.STL)                                                    |
 |                   | PLA Filament           | ~120g PLA           | ~$3.00      | [Amazon](https://www.amazon.com/HATCHBOX-3D-Filament-Dimensional-Accuracy/dp/B015I1CZUI)                |
-| **Total Cost**    |                        | 1 robot             | **$289.62** | (as of 10-27-23)                                                                                        |
+| **Total Cost**    |                        | 1 robot             | **$290.12** | (as of 10-27-23)                                                                                        |
 
-[Return to homepage](https://robomechanics.github.io/MiniRHex/).
+[Return to homepage](../).
